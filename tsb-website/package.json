@@ -1,0 +1,30 @@
+{
+  "name": "tsb-website",
+  "version": "1.0.0",
+  "description": "bezirksregionen explorer",
+  "author": "hhack <hans.f.hack@googlemail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "mapbox-gl": "^0.45.0",
+    "normalize-scss": "^7.0.1",
+    "nuxt": "^1.4.0",
+    "topojson": "^3.0.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1"
+  }
+}

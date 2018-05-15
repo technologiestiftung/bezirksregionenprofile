@@ -1,0 +1,147 @@
+.page, .page-header, .page-nav , .page-footer, .columns {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.page {
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $color-accent;
+}
+
+.page-header,.page-footer,.page-content {
+  // margin: 0 15vw 0;
+  width: 100vw;
+}
+
+.page-content {
+  background-color: #f9f9f9;
+  flex: 1;
+  padding-bottom: $spacing * 2;
+  // height: 100vh;
+}
+
+.page-header {
+  min-height: 80px;
+  height: 8vh; /* size is based on the height of the device */
+  align-items: center;
+}
+
+.page-header, .page-footer {
+  color: #fff;
+  background-color: blue;
+
+  a {
+    color: #fff;
+  }
+
+}
+
+.page-header {
+  .page-nav {
+    flex: 2;
+    text-align: right;
+    display: block;
+
+    ul li + li {
+      margin-left: $spacing;
+    }
+  }
+}
+
+
+.page-content {
+
+  .content-intro{
+
+    height: 20vh;
+
+  }
+
+  .content-main{
+
+    height: 50vh;
+    
+  }
+
+}
+
+// .page-footer, .page-explainer {
+//   font-size: 0.85em;
+//   padding: 3rem 0;
+// }
+
+// .page-container {
+//   & > * {
+//     padding: $spacing 0;
+//   }
+
+//   & > .inpage-nav, & > .content {
+//     padding: 0;
+//   }
+
+//   .content .wrapper {
+//     margin-top: $spacing;
+//     margin-bottom: $spacing;
+//   }
+// }
+
+.column, .columns > * {
+  flex: 1;
+}
+
+// .columns-gutter > * {
+//   margin-left: $spacing / 2;
+//   margin-right: $spacing / 2;
+
+//   &:first-child {
+//     margin-left: 0;
+//   }
+
+//   &:last-child {
+//     margin-right: 0;
+//   }
+// }
+
+// .columns-rows > * {
+//   padding: $spacing 0;
+
+//   &:first-child {
+//     padding-top: 0;
+//   }
+
+//   &:last-child {
+//     padding-bottom: 0;
+//   }
+// }
+
+// .content {
+//   padding: 0;
+
+//   section {
+//     padding: $spacing 0;
+//   }
+
+//   .section-wrapper {
+//     display: flex;
+//     align-items: center;
+
+//     .section-text {
+//       flex: 1;
+//     }
+
+//     .section-img {
+//       flex: 1;
+//       text-align: center;
+//     }
+//   }
+// }
+
+// .box {
+//   background-color: #fff;
+//   border: 1px solid #F1F2F4;
+//   border-radius: 8px;
+//   padding: 3rem;
+//   box-shadow: 5px 5px 20px 0px rgba(116, 116, 116, 0.25);
+// }
