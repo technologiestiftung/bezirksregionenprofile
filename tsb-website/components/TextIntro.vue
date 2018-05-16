@@ -1,7 +1,18 @@
 <template>
   <div class="content-intro">
 
-    Intro Text
+    <div class="content-intro-text">
+
+
+    	some intro text here
+    	
+    </div>
+
+    <div class="content-intro-logo">
+
+    	here be Logo
+    	
+    </div>
 
   </div>
 

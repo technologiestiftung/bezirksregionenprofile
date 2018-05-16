@@ -1,4 +1,4 @@
-.page, .page-header, .page-nav , .page-footer, .columns {
+.page, .page-header, .page-nav , .page-footer, .columns,.content-intro,.content-main {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -12,13 +12,18 @@
 
 .page-header,.page-footer,.page-content {
   // margin: 0 15vw 0;
-  width: 100vw;
 }
+
+.page-header, .page-content , .page-footer {
+  margin: 0 15vw 0;
+  width: 70vw;
+}
+
 
 .page-content {
   background-color: #f9f9f9;
   flex: 1;
-  padding-bottom: $spacing * 2;
+  // padding-bottom: $spacing * 2;
   // height: 100vh;
 }
 
@@ -55,17 +60,42 @@
 
   .content-intro{
 
-    height: 20vh;
+    height: 300px;
+    flex: 1;
 
   }
 
   .content-main{
-
-    height: 50vh;
+    height: 60vh;
+    flex: 1;
+    position: relative;
     
   }
 
 }
+
+
+
+.content-intro{
+
+  .content-intro-text{
+
+    flex: 2;
+    height: 100%;
+    background-color: #ddd;
+
+  }
+
+  .content-intro-logo{
+
+    flex:1;
+    height: 100%;
+    background-color: #ccc;
+
+  }
+
+}
+
 
 // .page-footer, .page-explainer {
 //   font-size: 0.85em;
