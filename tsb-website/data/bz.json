@@ -1,5 +1,7 @@
 {
-	"Charlottenburg-Wilmersdorf":{},
+	"Charlottenburg-Wilmersdorf":{
+		"urlName":"charlottenburg-wilmersdorf"
+	},
 	"Friedrichshain-Kreuzberg":{},
 	"Lichtenberg":{},
 	"Marzahn-Hellersdorf":{},
@@ -9,6 +11,8 @@
 	"Reinickendorf":{},
 	"Spandau":{},
 	"Steglitz-Zehlendorf":{},
-	"Tempelhof-Schöneberg":{},
+	"Tempelhof-Schöneberg":{
+		"urlName":"tempelhof-schoeneberg"
+	},
 	"Treptow-Köpenick":{}
 }

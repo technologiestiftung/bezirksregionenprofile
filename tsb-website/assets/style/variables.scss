@@ -5,14 +5,31 @@ $font-weight-bold: 700 !default;
 $base-line-height: 1.7 !default;
 
 $spacing:     2rem !default;
+$padding:     1em !default;
 
-$color-default:     #222 !default;
+
+$color-text: #000 !default;
+
+$color-default:     #223A8F !default;
+$color-light:       #424BFB !default;
+
+$color-second: #D9C744 !default;
+
 $color-accent:      #04A6F0 !default;
 $color-mute:        #a5a49f !default;
-$color-light:       #f2f2f2 !default;
+
 
 $color-border-mute:        rgba(0, 0, 0, .2) !default;
 
 $color-dns:       #F1B31C;
 $color-okf:       #04A6F0;
 $color-okf-alt:   #3ef5c9;
+
+
+
+$color-indGr1: red;
+$color-indGr2: blue;
+$color-indGr3: green;
+$color-indGr4: pink;
+$color-indGr5: yellow;
+$color-indGr6: purple;

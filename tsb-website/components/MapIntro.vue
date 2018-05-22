@@ -5,7 +5,7 @@
     <div class="navigation">
       <h3>Bezirk auswählen:</h3>
       <select @change="onSelect()" v-model="selected">
-        <option v-for="bz in bezirksNamen" :key="bz" :value="bz">{{bz}}</option>
+        <option v-for="bz in bezirksNamen" :key="bz.name" :value="bz.name">{{bz.name}}</option>
       </select> 
 
     </div>
@@ -20,20 +20,16 @@
 <script>
 
 import { mapState, mapGetters } from 'vuex';
-
-function toUrl(str){
-  return str.toLowerCase().replace(/\u00fc/g, "ue").replace(/\u00e4/g, "ae").replace(/\u00f6/g, "oe").replace(/\u00df/g, "ss");
-}
+import toUrl from '~/assets/js/tourl.js'
 
 export default {
 
     computed: {
       ...mapState([
-        'stylefile','bezirksgrenzen','bezirksNamen'
+        'nostyle','bezirksgrenzen','bezirksNamen','mainColor'
       ]),
-      ...mapGetters([
-        // 'toUrl'
-      ]),    
+      // ...mapGetters([
+      // ]),    
     },
     components: {
     },
@@ -45,11 +41,13 @@ export default {
           selected:"Charlottenburg-Wilmersdorf"
         }
     },
-    props: ["mainColor"],
+    // props: ["mainColor"],
     methods:{
     onSelect(){
 
       let selectedBz = this.selected;
+      if(selectedBz!="Tempelhof-Schöneberg"){return};
+
       selectedBz = toUrl(selectedBz);
       this.$router.push({ path: 'bezirk/' + selectedBz});
 
@@ -66,7 +64,7 @@ export default {
 
         const map = new mapboxgl.Map({
             container: 'map',
-            style: this.stylefile,
+            style: this.nostyle,
             center: [13.391, 52.519],
             zoom: 8,
             pitch: 0,
@@ -91,7 +89,7 @@ export default {
                 "type":"fill",
                 "source":"bezirksgrenzen",
                 "paint":{
-                  "fill-outline-color":"rgba(46, 145, 210, 1)",
+                  "fill-outline-color":this.mainColor,
                   "fill-color":"rgba(46, 145, 210, 0)"
                 },
                 "visibiltiy":"none"
@@ -102,7 +100,7 @@ export default {
                 "type": "fill",
                 "source": "bezirksgrenzen",
                 "paint": {
-                    "fill-color": "rgba(46, 145, 210, 1)",
+                    "fill-color": this.mainColor,
                     "fill-opacity": .7
                 },
                 "filter": ["==", "Gemeinde_name", ""]
@@ -148,6 +146,9 @@ export default {
             map.on('click', "bezirksgrenzen", (e)=> {
 
                 const bezirk = e.features[0].properties.Gemeinde_name;
+
+                // if(bezirk!="Tempelhof-Schöneberg"){return};
+
                 this.$router.push({ path: 'bezirk/' + toUrl(bezirk) });
 
             })
@@ -179,6 +180,7 @@ export default {
   z-index: 1;
   top: 20px;
   left: 20px;
+  color: #000 !important;
 
   select{
     width: 100px;

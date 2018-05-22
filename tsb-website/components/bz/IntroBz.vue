@@ -1,22 +1,38 @@
 <template>
-  <div class="content-intro">
-
-    <div class="intro-text">
 
 
-    	<h4>Wie Geht es den Berliner Bezirken?</h4>
+<div class="content-intro">
+
+  <div class="intro-text">
+
+      <h5>BEZIRK</h5>
+      <h4>{{bezirk}}</h4>
 
     	<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-    	
-    </div>
 
-    <div class="content-intro-logo">
 
-    	here be Logo
-    	
-    </div>
+      <div class="intro-stats">
+        
+        <div>
+          Fläche
+          <h4>45464 km²</h4>
+        </div>
+        <div>
+          Einwohner
+          <h4>45464</h4>
+        </div>
+        <div>
+          Bevölkerungsdichte
+          <h4>45464 EW/km²</h4>
+        </div>
+      </div>
+
 
   </div>
+
+</div>
+    	
+
 
 </template>
 
@@ -24,7 +40,7 @@
 <script>
 
 export default {
-  name: 'TextIntro'
+  props: ["bezirk"]
 }
 
 </script>
@@ -35,25 +51,11 @@ export default {
 	
 @import "~@/assets/style/variables";
 
+.intro-text{
 
-.content-intro{
+  display:block;
+  // padding:2em;
 
-  .intro-text{
-
-    // flex: 2;
-    // height: 100%;
-    background-color: $color-light;
-    flex-basis: 66%;
-
-  }
-
-  .content-intro-logo{
-
-    flex:1;
-    // height: 100%;
-    background-color: #ccc;
-
-  }
 
 }
 

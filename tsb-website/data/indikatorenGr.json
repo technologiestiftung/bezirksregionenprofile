@@ -1,0 +1,8 @@
+{
+"1":{"name":"Wohnen","class":"indGr1","id":"1"},
+"2":{"name":"Demographie","class":"indGr2","id":"2"},
+"3":{"name":"Dynamik","class":"indGr3","id":"3"},
+"4":{"name":"Arbeitsmarkt","class":"indGr4","id":"4"},
+"5":{"name":"Kinder & Jugend","class":"indGr5","id":"5"},
+"6":{"name":"Soziales","class":"indGr6","id":"6"}
+}

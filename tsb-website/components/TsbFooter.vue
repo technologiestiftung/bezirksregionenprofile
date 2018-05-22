@@ -4,9 +4,6 @@
       Technologistiftung Berlin<br />
       Grunewaldstraße 61-62, 10825 Berlin, Deutschland<br /><br />
 
-      some info<br />
-      some info<br />
-      some info
     </address>
     <ul>
       <li><nuxt-link to="/impressum">Impressum</nuxt-link></li>

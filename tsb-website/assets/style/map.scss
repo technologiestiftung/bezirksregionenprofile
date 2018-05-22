@@ -1,0 +1,22 @@
+@import
+  "variables"
+;
+
+.mapboxgl-popup-tip{
+  // display:none;
+  opacity:0;
+  z-index: 100;
+}
+
+.mapboxgl-popup-content{
+  border-radius: 0px !important;
+  border-left: 2px solid $color-default;
+  z-index: 100;
+}
+
+
+.content-main-map .mapboxgl-popup-content{
+  border-radius: 0px !important;
+  border-left: 2px solid $color-second;
+  z-index: 100;
+}

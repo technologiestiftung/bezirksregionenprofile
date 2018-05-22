@@ -1,3 +1,7 @@
+@import
+  "variables"
+;
+
 .page, .page-header, .page-nav , .page-footer, .columns,.content-intro,.content-main {
   display: flex;
   justify-content: space-between;
@@ -17,6 +21,7 @@
 .page-header, .page-content , .page-footer {
   margin: 0 15vw 0;
   width: 70vw;
+  // max-width: 1200px;
 }
 
 
@@ -35,7 +40,8 @@
 
 .page-header, .page-footer {
   color: #fff;
-  background-color: blue;
+  background-color: $color-default;
+  padding: $padding;
 
   a {
     color: #fff;
@@ -60,8 +66,10 @@
 
   .content-intro{
 
-    height: 300px;
+    min-height: 300px;
     flex: 1;
+    border-bottom: 1px solid 
+    // padding: 2em;
 
   }
 
@@ -75,26 +83,56 @@
 }
 
 
+.content-main{
+
+  .content-main-map{
+    flex:1;
+    flex-basis: 50%;
+  }
+
+  .content-main-info{
+    flex:1;
+    display:block;
+    padding: 1em;
+    flex-basis: 50%;
+  }
+
+}
+
+
+
 
 .content-intro{
 
-  .content-intro-text{
+      // padding: 2em;
 
-    flex: 2;
-    height: 100%;
-    background-color: #ddd;
+  // .intro-text{
+  //   margin-bottom: 2em;
+  //       // flex-basis: 33%;
+  //       // padding: 2em;
+  // }
 
+  .intro-text{
+    // flex-basis: 33%;
+    padding: 2em;
+    // flex-basis: 66%;
+    // margin-bottom: 2em;
   }
 
-  .content-intro-logo{
 
-    flex:1;
-    height: 100%;
-    background-color: #ccc;
+
+  .intro-stats{
+
+    display: flex;
+
+    div{
+      padding-right:20px;
+    }
 
   }
 
 }
+
 
 
 // .page-footer, .page-explainer {

@@ -19,15 +19,6 @@
       }
     }
   },
-  "sources": {
-    "openmaptiles": {
-      "attribution": "<a href='http://openmaptiles.org'>© OpenMapTiles</a> <a href='http://www.openstreetmap.org/copyright'>© OpenStreetMap</a>",
-      "type": "vector",
-      "tiles": ["http://localhost:3000/tiles/{z}/{x}/{y}.pbf"]
-    }
-  },
-  "sprite": "http://localhost:3000/sprites/positron",
-  "glyphs": "http://localhost:3000/glyphs/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",

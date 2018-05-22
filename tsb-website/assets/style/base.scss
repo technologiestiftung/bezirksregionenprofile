@@ -39,7 +39,7 @@ html {
        -o-font-feature-settings: "kern" 1;
           font-feature-settings: "kern" 1;
   font-kerning: normal;
-  color: $color-default;
+  color: $color-text;
 }
 
 .mobile-invisible {
@@ -112,5 +112,6 @@ address {
 
 @import
   "typography",
-  "layout"
+  "layout",
+  "map"
 ;
