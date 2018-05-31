@@ -1,5 +1,5 @@
-$font-family-default: 'Chivo', "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", Helvetica, sans-serif !default;
-$font-family-modern: 'Roboto Mono', 'Lucida Console', Monaco, monospace;
+$font-family-default: "clan-book", Helvetica, sans-serif !default;
+$font-family-modern: 'clan-book', Monaco, monospace;
 $font-weight: 400 !default;
 $font-weight-bold: 700 !default;
 $base-line-height: 1.7 !default;
@@ -27,9 +27,10 @@ $color-okf-alt:   #3ef5c9;
 
 
 
-$color-indGr1: red;
-$color-indGr2: blue;
-$color-indGr3: green;
-$color-indGr4: pink;
-$color-indGr5: yellow;
-$color-indGr6: purple;
+$color-indGr1: #9466c9;
+$color-indGr2: #5ba85f;
+$color-indGr3: #c85990;
+$color-indGr4: #ac973d;
+$color-indGr5: #6295cd;
+$color-indGr6: #cb6046;
+

@@ -25,7 +25,7 @@ nostyle.sources = {};
 
 
 const topojson = require('topojson');
-const bezirksregionen = topojson.feature(bzr_lor, bzr_lor.objects["lor_bezirksregionen"]);
+
 const bezirksgrenzen = topojson.feature(bzr_lor, bzr_lor.objects["bezirksgrenzen"]);
 
 let bezirksNamen = {};
@@ -35,14 +35,25 @@ for (var i = 0; i < bezirksgrenzen.features.length; i++) {
   bezirksNamen[name].name = name;
   bezirksNamen[name].url = toUrl(name);
 }
-
 const bezirksNamenOrdered = {};
 Object.keys(bezirksNamen).sort().forEach(function(key) {
   bezirksNamenOrdered[key] = bezirksNamen[key];
 });
 
+const bezirksregionen = topojson.feature(bzr_lor, bzr_lor.objects["lor_bezirksregionen"]);
+let bezirksregionenNamen = {};
+for (var i = 0; i < bezirksregionen.features.length; i++) {
+  let name = bezirksregionen.features[i].properties.BZR_NAME;
+  bezirksregionenNamen[name] = {};
+  bezirksregionenNamen[name].name = name;
+  bezirksregionenNamen[name].url = toUrl(name);
+}
+const bezirksregionenNamenOrdered = {};
+Object.keys(bezirksregionenNamen).sort().forEach(function(key) {
+  bezirksregionenNamenOrdered[key] = bezirksregionenNamen[key];
+});
 
-
+console.log(bezirksNamenOrdered)
 
 // let bezirksRegionenNamen = {};
 // for (var i = 0; i < bezirksregionen.features.length; i++) {
@@ -61,7 +72,8 @@ const store = () => new Vuex.Store({
   state: {
     bezirksgrenzen: bezirksgrenzen,
     bezirksregionen: bezirksregionen,
-    bezirksNamen:bezirksNamenOrdered,
+    bzNamen:bezirksNamenOrdered,
+    bzrNamen: bezirksregionenNamenOrdered,
     brightstyle: bright,
     nostyle: nostyle,
     mainColor: "rgba(46, 145, 210, 1)",

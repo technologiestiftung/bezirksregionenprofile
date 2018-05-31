@@ -8,22 +8,22 @@
       <h5>BEZIRK</h5>
       <h4>{{bezirk}}</h4>
 
-    	<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+    	<p>{{bzData.introText}}</p>
 
 
       <div class="intro-stats">
         
         <div>
-          Fläche
-          <h4>45464 km²</h4>
+          <i class="demo-icon icon-map-o" />Fläche
+          <h4>{{bzData.facts.flaeche}} km²</h4>
         </div>
         <div>
-          Einwohner
-          <h4>45464</h4>
+          <i class="demo-icon icon-users" />Einwohner
+          <h4>{{bzData.facts.einw}}</h4>
         </div>
         <div>
-          Bevölkerungsdichte
-          <h4>45464 EW/km²</h4>
+          <i class="demo-icon icon-grid" />Bevölkerungsdichte
+          <h4>{{bzData.facts.dichte}} EW/km²</h4>
         </div>
       </div>
 
@@ -39,8 +39,34 @@
 
 <script>
 
+
+// import d3 from 'd3-dsv';
+  // import * as d3 from "d3";
+
+// import axios from 'axios'
+
+
 export default {
-  props: ["bezirk"]
+  data() {
+    return {
+
+    }
+  },
+  props: ["bezirk","bzData"],
+  // created() {
+
+  //   this.getData();
+
+  // },
+  // methods:{
+  //   getData(){
+  //     // console.log(this)
+  //     const url = process.env.NODE_ENV === 'production' ? 'http://localhost:8080' : 'http://localhost:3000';
+  //     axios.get(url + '/data/bz-data/'+this.bezirk+'/overview.json').then((response)=>
+  //       this.bzDataLoaded = response.data
+  //     )
+  //   }
+  // }
 }
 
 </script>
@@ -56,7 +82,16 @@ export default {
   display:block;
   // padding:2em;
 
+  .intro-stats{
+    margin-top: 1em;
+  }
 
+}
+
+.intro-stats{
+  div i{
+    margin-right: 5px;
+  }
 }
 
 </style>

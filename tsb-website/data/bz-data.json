@@ -1,0 +1,50 @@
+{
+  "Charlottenburg-Wilmersdorf": {
+    "name": "Charlottenburg-Wilmersdorf",
+    "url": "charlottenburg-wilmersdorf"
+  },
+  "Friedrichshain-Kreuzberg": {
+    "name": "Friedrichshain-Kreuzberg",
+    "url": "friedrichshain-kreuzberg"
+  },
+  "Lichtenberg": {
+    "name": "Lichtenberg",
+    "url": "lichtenberg"
+  },
+  "Marzahn-Hellersdorf": {
+    "name": "Marzahn-Hellersdorf",
+    "url": "marzahn-hellersdorf"
+  },
+  "Mitte": {
+    "name": "Mitte",
+    "url": "mitte"
+  },
+  "Neukölln": {
+    "name": "Neukölln",
+    "url": "neukoelln"
+  },
+  "Pankow": {
+    "name": "Pankow",
+    "url": "pankow"
+  },
+  "Reinickendorf": {
+    "name": "Reinickendorf",
+    "url": "reinickendorf"
+  },
+  "Spandau": {
+    "name": "Spandau",
+    "url": "spandau"
+  },
+  "Steglitz-Zehlendorf": {
+    "name": "Steglitz-Zehlendorf",
+    "url": "steglitz-zehlendorf"
+  },
+  "Tempelhof-Schöneberg": {
+    "name": "Tempelhof-Schöneberg",
+    "url": "tempelhof-schoeneberg"
+  },
+  "Treptow-Köpenick": {
+    "name": "Treptow-Köpenick",
+    "url": "treptow-koepenick"
+  }
+}

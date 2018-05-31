@@ -1,0 +1,554 @@
+{
+  "Adlershof": {
+    "name": "Adlershof",
+    "url": "adlershof"
+  },
+  "Albrechtstraße": {
+    "name": "Albrechtstraße",
+    "url": "albrechtstrasse"
+  },
+  "Alexanderplatz": {
+    "name": "Alexanderplatz",
+    "url": "alexanderplatz"
+  },
+  "Allende-Viertel": {
+    "name": "Allende-Viertel",
+    "url": "allende-viertel"
+  },
+  "Alt-Hohenschönhausen Nord": {
+    "name": "Alt-Hohenschönhausen Nord",
+    "url": "alt-hohenschoenhausen nord"
+  },
+  "Alt-Hohenschönhausen Süd": {
+    "name": "Alt-Hohenschönhausen Süd",
+    "url": "alt-hohenschoenhausen sued"
+  },
+  "Alt-Lichtenberg": {
+    "name": "Alt-Lichtenberg",
+    "url": "alt-lichtenberg"
+  },
+  "Alt-Treptow": {
+    "name": "Alt-Treptow",
+    "url": "alt-treptow"
+  },
+  "Altglienicke": {
+    "name": "Altglienicke",
+    "url": "altglienicke"
+  },
+  "Altstadt Kietz": {
+    "name": "Altstadt Kietz",
+    "url": "altstadt kietz"
+  },
+  "Barstraße": {
+    "name": "Barstraße",
+    "url": "barstrasse"
+  },
+  "Baumschulenweg": {
+    "name": "Baumschulenweg",
+    "url": "baumschulenweg"
+  },
+  "Biesdorf": {
+    "name": "Biesdorf",
+    "url": "biesdorf"
+  },
+  "Blankenburg/Heinersdorf/Märchenland": {
+    "name": "Blankenburg/Heinersdorf/Märchenland",
+    "url": "blankenburg/heinersdorf/maerchenland"
+  },
+  "Blankenfelde/Niederschönhausen": {
+    "name": "Blankenfelde/Niederschönhausen",
+    "url": "blankenfelde/niederschoenhausen"
+  },
+  "Bohnsdorf": {
+    "name": "Bohnsdorf",
+    "url": "bohnsdorf"
+  },
+  "Britz": {
+    "name": "Britz",
+    "url": "britz"
+  },
+  "Brunnenstraße Nord": {
+    "name": "Brunnenstraße Nord",
+    "url": "brunnenstrasse nord"
+  },
+  "Brunnenstraße Süd": {
+    "name": "Brunnenstraße Süd",
+    "url": "brunnenstrasse sued"
+  },
+  "Brunsbütteler Damm": {
+    "name": "Brunsbütteler Damm",
+    "url": "brunsbuetteler damm"
+  },
+  "Buch": {
+    "name": "Buch",
+    "url": "buch"
+  },
+  "Buchholz": {
+    "name": "Buchholz",
+    "url": "buchholz"
+  },
+  "Buckow": {
+    "name": "Buckow",
+    "url": "buckow"
+  },
+  "Buckow Nord": {
+    "name": "Buckow Nord",
+    "url": "buckow nord"
+  },
+  "Charlottenburg Nord": {
+    "name": "Charlottenburg Nord",
+    "url": "charlottenburg nord"
+  },
+  "Dammvorstadt": {
+    "name": "Dammvorstadt",
+    "url": "dammvorstadt"
+  },
+  "Drakestraße": {
+    "name": "Drakestraße",
+    "url": "drakestrasse"
+  },
+  "Düsseldorfer Straße": {
+    "name": "Düsseldorfer Straße",
+    "url": "duesseldorfer strasse"
+  },
+  "Falkenhagener Feld": {
+    "name": "Falkenhagener Feld",
+    "url": "falkenhagener feld"
+  },
+  "Fennpfuhl": {
+    "name": "Fennpfuhl",
+    "url": "fennpfuhl"
+  },
+  "Forst Grunewald": {
+    "name": "Forst Grunewald",
+    "url": "forst grunewald"
+  },
+  "Frankfurter Allee Nord": {
+    "name": "Frankfurter Allee Nord",
+    "url": "frankfurter allee nord"
+  },
+  "Frankfurter Allee Süd": {
+    "name": "Frankfurter Allee Süd",
+    "url": "frankfurter allee sued"
+  },
+  "Frankfurter Allee Süd FK": {
+    "name": "Frankfurter Allee Süd FK",
+    "url": "frankfurter allee sued fk"
+  },
+  "Friedenau": {
+    "name": "Friedenau",
+    "url": "friedenau"
+  },
+  "Friedrichsfelde Nord": {
+    "name": "Friedrichsfelde Nord",
+    "url": "friedrichsfelde nord"
+  },
+  "Friedrichsfelde Süd": {
+    "name": "Friedrichsfelde Süd",
+    "url": "friedrichsfelde sued"
+  },
+  "Friedrichshagen": {
+    "name": "Friedrichshagen",
+    "url": "friedrichshagen"
+  },
+  "Gatow/Kladow": {
+    "name": "Gatow/Kladow",
+    "url": "gatow/kladow"
+  },
+  "Gropiusstadt": {
+    "name": "Gropiusstadt",
+    "url": "gropiusstadt"
+  },
+  "Grunewald": {
+    "name": "Grunewald",
+    "url": "grunewald"
+  },
+  "Grünau": {
+    "name": "Grünau",
+    "url": "gruenau"
+  },
+  "Hakenfelde": {
+    "name": "Hakenfelde",
+    "url": "hakenfelde"
+  },
+  "Halensee": {
+    "name": "Halensee",
+    "url": "halensee"
+  },
+  "Haselhorst": {
+    "name": "Haselhorst",
+    "url": "haselhorst"
+  },
+  "Heerstraße": {
+    "name": "Heerstraße",
+    "url": "heerstrasse"
+  },
+  "Heerstraße Nord": {
+    "name": "Heerstraße Nord",
+    "url": "heerstrasse nord"
+  },
+  "Hellersdorf Nord": {
+    "name": "Hellersdorf Nord",
+    "url": "hellersdorf nord"
+  },
+  "Hellersdorf Ost": {
+    "name": "Hellersdorf Ost",
+    "url": "hellersdorf ost"
+  },
+  "Hellersdorf Süd": {
+    "name": "Hellersdorf Süd",
+    "url": "hellersdorf sued"
+  },
+  "Helmholtzplatz": {
+    "name": "Helmholtzplatz",
+    "url": "helmholtzplatz"
+  },
+  "Johannisthal": {
+    "name": "Johannisthal",
+    "url": "johannisthal"
+  },
+  "Kantstraße": {
+    "name": "Kantstraße",
+    "url": "kantstrasse"
+  },
+  "Karl-Marx-Allee Nord": {
+    "name": "Karl-Marx-Allee Nord",
+    "url": "karl-marx-allee nord"
+  },
+  "Karl-Marx-Allee Süd": {
+    "name": "Karl-Marx-Allee Süd",
+    "url": "karl-marx-allee sued"
+  },
+  "Karlshorst": {
+    "name": "Karlshorst",
+    "url": "karlshorst"
+  },
+  "Karow": {
+    "name": "Karow",
+    "url": "karow"
+  },
+  "Kaulsdorf": {
+    "name": "Kaulsdorf",
+    "url": "kaulsdorf"
+  },
+  "Kurfürstendamm": {
+    "name": "Kurfürstendamm",
+    "url": "kurfuerstendamm"
+  },
+  "Köllnische Heide": {
+    "name": "Köllnische Heide",
+    "url": "koellnische heide"
+  },
+  "Köllnische Vorstadt/Spindlersfeld": {
+    "name": "Köllnische Vorstadt/Spindlersfeld",
+    "url": "koellnische vorstadt/spindlersfeld"
+  },
+  "Köpenick Nord": {
+    "name": "Köpenick Nord",
+    "url": "koepenick nord"
+  },
+  "Köpenick Süd": {
+    "name": "Köpenick Süd",
+    "url": "koepenick sued"
+  },
+  "Lankwitz": {
+    "name": "Lankwitz",
+    "url": "lankwitz"
+  },
+  "Lichtenrade": {
+    "name": "Lichtenrade",
+    "url": "lichtenrade"
+  },
+  "MV 1 - Märkisches Viertel": {
+    "name": "MV 1 - Märkisches Viertel",
+    "url": "mv 1 - maerkisches viertel"
+  },
+  "MV 2 - Rollbergesiedlung": {
+    "name": "MV 2 - Rollbergesiedlung",
+    "url": "mv 2 - rollbergesiedlung"
+  },
+  "Mahlsdorf": {
+    "name": "Mahlsdorf",
+    "url": "mahlsdorf"
+  },
+  "Malchow, Wartenberg und Falkenberg": {
+    "name": "Malchow, Wartenberg und Falkenberg",
+    "url": "malchow, wartenberg und falkenberg"
+  },
+  "Mariendorf": {
+    "name": "Mariendorf",
+    "url": "mariendorf"
+  },
+  "Marienfelde": {
+    "name": "Marienfelde",
+    "url": "marienfelde"
+  },
+  "Marzahn Mitte": {
+    "name": "Marzahn Mitte",
+    "url": "marzahn mitte"
+  },
+  "Marzahn Nord": {
+    "name": "Marzahn Nord",
+    "url": "marzahn nord"
+  },
+  "Marzahn Süd": {
+    "name": "Marzahn Süd",
+    "url": "marzahn sued"
+  },
+  "Mierendorffplatz": {
+    "name": "Mierendorffplatz",
+    "url": "mierendorffplatz"
+  },
+  "Moabit Ost": {
+    "name": "Moabit Ost",
+    "url": "moabit ost"
+  },
+  "Moabit West": {
+    "name": "Moabit West",
+    "url": "moabit west"
+  },
+  "Müggelheim": {
+    "name": "Müggelheim",
+    "url": "mueggelheim"
+  },
+  "Neu-Hohenschönhausen Nord": {
+    "name": "Neu-Hohenschönhausen Nord",
+    "url": "neu-hohenschoenhausen nord"
+  },
+  "Neu-Hohenschönhausen Süd": {
+    "name": "Neu-Hohenschönhausen Süd",
+    "url": "neu-hohenschoenhausen sued"
+  },
+  "Neu-Lichtenberg": {
+    "name": "Neu-Lichtenberg",
+    "url": "neu-lichtenberg"
+  },
+  "Neue Kantstraße": {
+    "name": "Neue Kantstraße",
+    "url": "neue kantstrasse"
+  },
+  "Neuköllner Mitte/Zentrum": {
+    "name": "Neuköllner Mitte/Zentrum",
+    "url": "neukoellner mitte/zentrum"
+  },
+  "Niederschöneweide": {
+    "name": "Niederschöneweide",
+    "url": "niederschoeneweide"
+  },
+  "Nord 1 - Frohnau/Hermsdorf": {
+    "name": "Nord 1 - Frohnau/Hermsdorf",
+    "url": "nord 1 - frohnau/hermsdorf"
+  },
+  "Nord 2 - Waidmannslust/Wittenau/Lübars": {
+    "name": "Nord 2 - Waidmannslust/Wittenau/Lübars",
+    "url": "nord 2 - waidmannslust/wittenau/luebars"
+  },
+  "Nördliche Luisenstadt": {
+    "name": "Nördliche Luisenstadt",
+    "url": "noerdliche luisenstadt"
+  },
+  "Oberschöneweide": {
+    "name": "Oberschöneweide",
+    "url": "oberschoeneweide"
+  },
+  "Osloer Straße": {
+    "name": "Osloer Straße",
+    "url": "osloer strasse"
+  },
+  "Ost 1 - Reginhardstr.": {
+    "name": "Ost 1 - Reginhardstr.",
+    "url": "ost 1 - reginhardstr."
+  },
+  "Ost 2 Alt-Reinickendorf": {
+    "name": "Ost 2 Alt-Reinickendorf",
+    "url": "ost 2 alt-reinickendorf"
+  },
+  "Ostpreußendamm": {
+    "name": "Ostpreußendamm",
+    "url": "ostpreussendamm"
+  },
+  "Otto-Suhr-Allee": {
+    "name": "Otto-Suhr-Allee",
+    "url": "otto-suhr-allee"
+  },
+  "Pankow Süd": {
+    "name": "Pankow Süd",
+    "url": "pankow sued"
+  },
+  "Pankow Zentrum": {
+    "name": "Pankow Zentrum",
+    "url": "pankow zentrum"
+  },
+  "Parkviertel": {
+    "name": "Parkviertel",
+    "url": "parkviertel"
+  },
+  "Plänterwald": {
+    "name": "Plänterwald",
+    "url": "plaenterwald"
+  },
+  "Prenzlauer Berg Nord": {
+    "name": "Prenzlauer Berg Nord",
+    "url": "prenzlauer berg nord"
+  },
+  "Prenzlauer Berg Nordwest": {
+    "name": "Prenzlauer Berg Nordwest",
+    "url": "prenzlauer berg nordwest"
+  },
+  "Prenzlauer Berg Ost": {
+    "name": "Prenzlauer Berg Ost",
+    "url": "prenzlauer berg ost"
+  },
+  "Prenzlauer Berg Süd": {
+    "name": "Prenzlauer Berg Süd",
+    "url": "prenzlauer berg sued"
+  },
+  "Prenzlauer Berg Südwest": {
+    "name": "Prenzlauer Berg Südwest",
+    "url": "prenzlauer berg suedwest"
+  },
+  "Rahnsdorf/Hessenwinkel": {
+    "name": "Rahnsdorf/Hessenwinkel",
+    "url": "rahnsdorf/hessenwinkel"
+  },
+  "Regierungsviertel": {
+    "name": "Regierungsviertel",
+    "url": "regierungsviertel"
+  },
+  "Reuterstraße": {
+    "name": "Reuterstraße",
+    "url": "reuterstrasse"
+  },
+  "Rixdorf": {
+    "name": "Rixdorf",
+    "url": "rixdorf"
+  },
+  "Rudow": {
+    "name": "Rudow",
+    "url": "rudow"
+  },
+  "Rummelsburger Bucht": {
+    "name": "Rummelsburger Bucht",
+    "url": "rummelsburger bucht"
+  },
+  "Schillerpromenade": {
+    "name": "Schillerpromenade",
+    "url": "schillerpromenade"
+  },
+  "Schloß Charlottenburg": {
+    "name": "Schloß Charlottenburg",
+    "url": "schloss charlottenburg"
+  },
+  "Schloßstraße": {
+    "name": "Schloßstraße",
+    "url": "schlossstrasse"
+  },
+  "Schmargendorf": {
+    "name": "Schmargendorf",
+    "url": "schmargendorf"
+  },
+  "Schmöckwitz/Karolinenhof/Rauchfangswerder": {
+    "name": "Schmöckwitz/Karolinenhof/Rauchfangswerder",
+    "url": "schmoeckwitz/karolinenhof/rauchfangswerder"
+  },
+  "Schöneberg Nord": {
+    "name": "Schöneberg Nord",
+    "url": "schoeneberg nord"
+  },
+  "Schöneberg Süd": {
+    "name": "Schöneberg Süd",
+    "url": "schoeneberg sued"
+  },
+  "Schönholz/Wilhelmsruh/Rosenthal": {
+    "name": "Schönholz/Wilhelmsruh/Rosenthal",
+    "url": "schoenholz/wilhelmsruh/rosenthal"
+  },
+  "Siemensstadt": {
+    "name": "Siemensstadt",
+    "url": "siemensstadt"
+  },
+  "Spandau Mitte": {
+    "name": "Spandau Mitte",
+    "url": "spandau mitte"
+  },
+  "Südliche Friedrichstadt": {
+    "name": "Südliche Friedrichstadt",
+    "url": "suedliche friedrichstadt"
+  },
+  "Südliche Luisenstadt": {
+    "name": "Südliche Luisenstadt",
+    "url": "suedliche luisenstadt"
+  },
+  "Teltower Damm": {
+    "name": "Teltower Damm",
+    "url": "teltower damm"
+  },
+  "Tempelhof": {
+    "name": "Tempelhof",
+    "url": "tempelhof"
+  },
+  "Tempelhofer Vorstadt": {
+    "name": "Tempelhofer Vorstadt",
+    "url": "tempelhofer vorstadt"
+  },
+  "Tiergarten Süd": {
+    "name": "Tiergarten Süd",
+    "url": "tiergarten sued"
+  },
+  "Volkspark Wilmersdorf": {
+    "name": "Volkspark Wilmersdorf",
+    "url": "volkspark wilmersdorf"
+  },
+  "Wedding Zentrum": {
+    "name": "Wedding Zentrum",
+    "url": "wedding zentrum"
+  },
+  "Weißensee": {
+    "name": "Weißensee",
+    "url": "weissensee"
+  },
+  "Weißensee Ost": {
+    "name": "Weißensee Ost",
+    "url": "weissensee ost"
+  },
+  "West 1 Tegel-Süd/Flughafensee": {
+    "name": "West 1 Tegel-Süd/Flughafensee",
+    "url": "west 1 tegel-sued/flughafensee"
+  },
+  "West 2 - Heiligensee/Konradshöhe": {
+    "name": "West 2 - Heiligensee/Konradshöhe",
+    "url": "west 2 - heiligensee/konradshoehe"
+  },
+  "West 3 - Borsigwalde/Freie Scholle": {
+    "name": "West 3 - Borsigwalde/Freie Scholle",
+    "url": "west 3 - borsigwalde/freie scholle"
+  },
+  "West 4 - Auguste-Viktoria-Allee": {
+    "name": "West 4 - Auguste-Viktoria-Allee",
+    "url": "west 4 - auguste-viktoria-allee"
+  },
+  "West 5 - Tegel/Tegeler Forst": {
+    "name": "West 5 - Tegel/Tegeler Forst",
+    "url": "west 5 - tegel/tegeler forst"
+  },
+  "Westend": {
+    "name": "Westend",
+    "url": "westend"
+  },
+  "Wiesbadener Straße": {
+    "name": "Wiesbadener Straße",
+    "url": "wiesbadener strasse"
+  },
+  "Wilhelmstadt": {
+    "name": "Wilhelmstadt",
+    "url": "wilhelmstadt"
+  },
+  "Zehlendorf Nord": {
+    "name": "Zehlendorf Nord",
+    "url": "zehlendorf nord"
+  },
+  "Zehlendorf Südwest": {
+    "name": "Zehlendorf Südwest",
+    "url": "zehlendorf suedwest"
+  }
+}

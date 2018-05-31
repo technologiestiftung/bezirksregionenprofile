@@ -17,7 +17,14 @@
 
       </div>
 
+
       {{activeInd}}
+
+      <div class="viz-container">
+        <viz-bz></viz-bz>
+      </div>
+
+    
 
 
   </div>
@@ -28,7 +35,8 @@
 <script>
 
 import { mapState } from 'vuex';
-// import toUrl from '~/assets/js/tourl.js'
+
+import VizBz from '~/components/bz/VizBz.vue';
 
 export default {
 
@@ -41,6 +49,7 @@ export default {
     },
     props: ["bzrSelected"],
     components: {
+      VizBz
     },
     mounted(){
 
@@ -108,7 +117,7 @@ export default {
       cursor: pointer;
 
       h5{
-        border-bottom:2px solid #000;
+        border-bottom:3px solid #000;
       }
     }
 
@@ -116,27 +125,27 @@ export default {
     .active{
       .indGr1{
         color:$color-indGr1;
-        border-bottom:2px solid $color-indGr1;
+        border-bottom:3px solid $color-indGr1;
       }
       .indGr2{
         color:$color-indGr2;
-        border-bottom:2px solid $color-indGr2;
+        border-bottom:3px solid $color-indGr2;
       }
       .indGr3{
         color:$color-indGr3;
-        border-bottom:2px solid $color-indGr3;
+        border-bottom:3px solid $color-indGr3;
       }
       .indGr4{
         color:$color-indGr4;
-        border-bottom:2px solid $color-indGr4;
+        border-bottom:3px solid $color-indGr4;
       }
       .indGr5{
         color:$color-indGr5;
-        border-bottom:2px solid $color-indGr5;
+        border-bottom:3px solid $color-indGr5;
       }
       .indGr6{
-        color:$color-indGr5;
-        border-bottom:2px solid $color-indGr6;
+        color:$color-indGr6;
+        border-bottom:3px solid $color-indGr6;
       }
     }
 

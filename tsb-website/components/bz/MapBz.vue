@@ -27,7 +27,7 @@ export default {
 
     computed: {
       ...mapState([
-        'brightstyle','bezirksgrenzen','bezirksregionen','bezirksNamen','mainColor','secondColor'
+        'nostyle','brightstyle','bezirksgrenzen','bezirksregionen','mainColor','secondColor'
       ]),
       bzrNamen(){
         let namen = [];
@@ -68,7 +68,7 @@ export default {
     },
     createMap(){
 
-        console.log("xxx bezirk",this.bezirk,this.bezirksNamen)
+        console.log("xxx bezirk",this.bezirk)
 
         const bezirk = this.bezirk;
 
@@ -98,9 +98,9 @@ export default {
         mapboxgl.accessToken = "";
         const map = new mapboxgl.Map({
             container: 'map',
-            style: this.brightstyle,
+            style: this.nostyle,
             center: [13.391, 52.519],
-            zoom: 8,
+            zoom:5,
             pitch: 0,
             minZoom: 2,
             maxZoom: 20,
@@ -224,8 +224,9 @@ export default {
                 // const bezirk = e.features[0].properties.BZR_NAME;
 
                 // if(bezirk!="Tempelhof-Schöneberg"){return};
+                console.log()
 
-                this.$router.push({ path: '../bezirksregion/' + toUrl(bezirk) });
+                // this.$router.push({ path: '../bezirksregion/' + toUrl(bzr) });
 
             })
 

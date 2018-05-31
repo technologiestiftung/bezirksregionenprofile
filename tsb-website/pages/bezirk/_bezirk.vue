@@ -1,6 +1,6 @@
 <template>
-  <section>
-    <intro-bz :bezirk="bezirk"></intro-bz>
+  <section v-if='bzData'>
+    <intro-bz :bezirk="bezirk" :bzData="bzData"></intro-bz>
     <div class="content-main">
       <map-bz :bezirk="bezirk" v-on:bzRChanged="changeBzR"></map-bz>
       <info-bz :bzrSelected="bzrSelected"></info-bz>
@@ -14,10 +14,13 @@
 <script>
 
   import { mapState } from 'vuex';
+  import axios from 'axios'
 
   import IntroBz from '~/components/bz/IntroBz.vue';
   import MapBz from '~/components/bz/MapBz.vue';
   import InfoBz from '~/components/bz/InfoBz.vue';
+
+
 
   export default {
     head () {
@@ -26,17 +29,18 @@
         // titleTemplate: '2030 Watch - %s'
       }
     },
-    methods: {
-      // format: format
-    },
     data(){
       return {
-        bzrSelected : this.bezirk
+        bzrSelected : this.bezirk,
+        bzData:undefined
       }
+    },
+    created() {
+      this.getData();
     },
     computed: {
       ...mapState([
-        'bezirksNamen'
+        'bzNamen'
       ]),
       bezirk () {
 
@@ -46,7 +50,7 @@
           return Object.keys(object).find(key => object[key].url === value);
         }
 
-        const selectedBz = getKeyByValue(this.bezirksNamen,selectedBzUrl);
+        const selectedBz = getKeyByValue(this.bzNamen,selectedBzUrl);
 
         return selectedBz
 
@@ -56,12 +60,32 @@
       IntroBz,MapBz,InfoBz
     },
     methods:{
-      changeBzR(x){
-        this.bzrSelected = x;
-        console.log("hi",x)
+      changeBzR(name){
+        this.bzrSelected = name;
+        console.log("hiiiiiii",name)
 
+      },
+      getData(){
+        const url = process.env.NODE_ENV === 'production' ? 'http://localhost:8080' : 'http://localhost:3000';
+        axios.get(url + '/data/bz-data/'+this.$route.params.bezirk+'/bz-data.json').then((response)=>
+          this.bzData = response.data
+        )
       }
+      // getObjects() {
+      //    // this.$http.get('/data/bz-data/tempelhof-schoeneberg/overview.json')
+      //    //    .then((response) => {
+      //    //      console.log(response);
+      //    //      this.object = response.body.objects.find(item => item.id == this.id)
+      //    //    })
+
+      //   // let data = JSON.parse(require('fs').readFileSync('/data/bz-data/tempelhof-schoeneberg/overview.json', 'utf8'))
+      //    console.log(this)
+
+      // }
     }
+    // mounted() {
+    //   this.getObjects();
+    // }
   }
 </script>
 

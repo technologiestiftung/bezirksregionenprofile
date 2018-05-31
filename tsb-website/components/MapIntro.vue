@@ -5,7 +5,7 @@
     <div class="navigation">
       <h3>Bezirk auswählen:</h3>
       <select @change="onSelect()" v-model="selected">
-        <option v-for="bz in bezirksNamen" :key="bz.name" :value="bz.name">{{bz.name}}</option>
+        <option v-for="bz in bzNamen" :key="bz.name" :value="bz.name">{{bz.name}}</option>
       </select> 
 
     </div>
@@ -26,7 +26,7 @@ export default {
 
     computed: {
       ...mapState([
-        'nostyle','bezirksgrenzen','bezirksNamen','mainColor'
+        'nostyle','bezirksgrenzen','bzNamen','mainColor'
       ]),
       // ...mapGetters([
       // ]),    

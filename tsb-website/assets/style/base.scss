@@ -27,7 +27,7 @@ blockquote, body, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, ol, p, pre, time, 
 }
 
 html {
-  font: normal normal 105%/1.7 $font-family-default;
+  font: normal normal 105%/1.7 $font-family-default !important;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;

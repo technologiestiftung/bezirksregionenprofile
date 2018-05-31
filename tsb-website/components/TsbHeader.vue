@@ -3,7 +3,7 @@
     <header class="page-header columns">
       <strong class="logo"><nuxt-link to="/">
       	<!-- <img src="../assets/img/bzr.png" alt=""> -->
-      	HOME
+      	Berliner Bezirksregionen Monitor
       </nuxt-link></strong>
       <nav class="page-nav">
         <ul>

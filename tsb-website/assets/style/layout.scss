@@ -11,7 +11,7 @@
 .page {
   flex-direction: column;
   min-height: 100vh;
-  background-color: $color-accent;
+  background-color: #f9f9f9;
 }
 
 .page-header,.page-footer,.page-content {
@@ -26,7 +26,7 @@
 
 
 .page-content {
-  background-color: #f9f9f9;
+  background-color: #fff;
   flex: 1;
   // padding-bottom: $spacing * 2;
   // height: 100vh;
@@ -36,20 +36,12 @@
   min-height: 80px;
   height: 8vh; /* size is based on the height of the device */
   align-items: center;
-}
-
-.page-header, .page-footer {
-  color: #fff;
-  background-color: $color-default;
-  padding: $padding;
-
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
   a {
-    color: #fff;
+    color: #000;
   }
 
-}
-
-.page-header {
   .page-nav {
     flex: 2;
     text-align: right;
@@ -59,7 +51,23 @@
       margin-left: $spacing;
     }
   }
+
 }
+
+
+.page-footer{
+  background-color: $color-default;
+  a {
+    color: #fff;
+  }
+}
+
+.page-header, .page-footer {
+  
+  padding: $padding;
+
+}
+
 
 
 .page-content {
@@ -117,6 +125,7 @@
     padding: 2em;
     // flex-basis: 66%;
     // margin-bottom: 2em;
+    background-color: #fff;
   }
 
 

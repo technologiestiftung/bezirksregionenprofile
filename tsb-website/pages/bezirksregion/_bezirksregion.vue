@@ -2,8 +2,8 @@
   <section>
     <intro-bz :bezirk="bezirk"></intro-bz>
     <div class="content-main">
-      <map-bz :bezirk="bezirk" v-on:bzRChanged="changeBzR"></map-bz>
-      <info-bz :bzrSelected="bzrSelected"></info-bz>
+      <!-- <map-bz :bezirk="bezirk" v-on:bzRChanged="changeBzR"></map-bz> -->
+
     </div>
 
   </section>
@@ -36,17 +36,19 @@
     },
     computed: {
       ...mapState([
-        'bezirksNamen'
+        'bzrNamen'
       ]),
       bezirk () {
 
-        const selectedBzUrl = this.$route.params.bezirk;
+        const selectedBzUrl = this.$route.params.bezirksregion;
+
+        console.log(selectedBzUrl)
 
         function getKeyByValue(object, value) {
           return Object.keys(object).find(key => object[key].url === value);
         }
 
-        const selectedBz = getKeyByValue(this.bezirksNamen,selectedBzUrl);
+        const selectedBz = getKeyByValue(this.bzrNamen,selectedBzUrl);
 
         return selectedBz
 
@@ -58,7 +60,7 @@
     methods:{
       changeBzR(x){
         this.bzrSelected = x;
-        console.log("hi",x)
+        console.log("hzzzi",x)
 
       }
     }
