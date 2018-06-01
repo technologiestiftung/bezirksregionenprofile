@@ -4,7 +4,7 @@
 
       <h4>Themen & Daten - {{bzrSelected}}</h4>
 
-      <div class="index-opt">
+      <div id="index-opt">
 
         <div v-for="indikator in indikatorenGr" 
           class="opt" 
@@ -17,12 +17,46 @@
 
       </div>
 
+      <div id="viz-container">
 
-      {{activeInd}}
+        <div v-for="indikator in indikatorenGr[activeInd].indikatoren"
+          class="viz"
+          :key="indikator[activeInd]" 
+          >
 
-      <div class="viz-container">
-        <viz-bz></viz-bz>
+          <viz-bz 
+            :activeIndClass="activeIndClass" 
+            :indData="indData"
+            :indikator="indikator.name">
+
+          </viz-bz>
+          <div class="viz-text">{{indikator['text-sm']}}</div>
+
+          <div class="viz-ampel-container">
+            <div class="viz-ampel">
+
+                <div :class="indData[indikator.name].phase==1?'phase'+indData[indikator.name].phase:''"></div>
+                <div :class="indData[indikator.name].phase==2?'phase'+indData[indikator.name].phase:''"></div>
+                <div :class="indData[indikator.name].phase==3?'phase'+indData[indikator.name].phase:''"></div>
+                <div :class="indData[indikator.name].phase==4?'phase'+indData[indikator.name].phase:''"></div>
+
+            </div>
+          </div>
+
+        </div>
+
       </div>
+
+
+<!--       {{"active id: " + activeInd}} -->
+
+
+<!--       <div class="viz-container">
+        <viz-bz></viz-bz>
+      </div> -->
+
+
+      <div class="info">info/Legende</div>
 
     
 
@@ -47,7 +81,7 @@ export default {
       // ...mapGetters([
       // ]),    
     },
-    props: ["bzrSelected"],
+    props: ["bzrSelected","indData"],
     components: {
       VizBz
     },
@@ -56,7 +90,8 @@ export default {
     },
     data(){
         return{
-          activeInd :1
+          activeInd :1,
+          activeIndClass:"indGr1"
         }
     },
     // props: ["mainColor"],
@@ -64,6 +99,7 @@ export default {
       onIndClick(x){
         console.log(x)
         this.activeInd =x.id;
+        this.activeIndClass=x.class;
         // this.hi = "new something yeah" + this.newInput;
       }
     }
@@ -79,32 +115,85 @@ export default {
 @import "~@/assets/style/variables";
 
 
-#map {
+  #map {
 
-  width:100%;
-  height: 60vh;
-  position: absolute;
-
-}
-
-.navigation{
-
-  position: relative;
-  z-index: 1;
-  top: 20px;
-  left: 20px;
-  color: #000 !important;
-
-  select{
-    width: 100px;
-    height: 30px;
+    width:100%;
+    height: 60vh;
+    position: absolute;
 
   }
 
-}
+  .navigation{
+
+    position: relative;
+    z-index: 1;
+    top: 20px;
+    left: 20px;
+    color: #000 !important;
+
+    select{
+      width: 100px;
+      height: 30px;
+
+    }
+
+  }
 
 
-  .index-opt{
+  #viz-container{
+
+    display:flex;
+    flex-flow: wrap;
+    margin: 0px -0.5em;
+    margin-top: 2em;
+
+    .viz{
+      flex:1;
+      flex-basis: 33%;
+      padding: 0.5em 1.5em 0em 0em;
+      padding-bottom: 1.3em;
+      cursor: pointer;
+    }
+
+    .viz-text{
+      font-size: .7em;
+      margin-top: 0.5em;
+    }
+
+    .viz-ampel-container{
+
+
+      .viz-ampel{
+
+        div{
+          margin: 4px;
+          width: 13px;
+          height: 13px;
+          border-radius: 20px;      
+          float: left; 
+          background-color:#ddd;
+        }
+        .phase1{
+          background-color:$color-phase1;
+          border: 2px solid #ddd; 
+        }
+        .phase2{
+          background-color:$color-phase2;
+        }
+        .phase3{
+          background-color:$color-phase3;
+        }
+        .phase4{
+          background-color:$color-phase4;
+        }
+
+      }
+
+    }
+
+  }
+
+  #index-opt{
 
     display:flex;
     flex-flow: wrap;
@@ -113,7 +202,7 @@ export default {
     .opt{
       flex:1;
       flex-basis: 33%;
-      padding: 0px 0.5em;
+      padding: 0.3em 0.5em;
       cursor: pointer;
 
       h5{
@@ -149,6 +238,20 @@ export default {
       }
     }
 
+  }
+
+
+  .info{
+    padding: 0.5em;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: #ddd;
+    cursor:pointer;
+
+    &:hover{
+      opacity:.8;
+    }
   }
 
 </style>

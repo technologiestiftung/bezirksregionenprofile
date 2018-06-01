@@ -31,6 +31,11 @@ h3 {
   color: $color-accent;
 }
 
+h5 {
+  font-size: 0.7rem;
+}
+
+
 h1, h2, h3 {
   max-width: 1000px;
 }
@@ -40,7 +45,7 @@ p + p {
 }
 
 p {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   max-width: 800px;
 
   .dns {
@@ -119,7 +124,7 @@ table {
 
 .page-header {
   .logo {
-    font-size: 0.7rem;
+    font-size: 0.7em;
     line-height: 1.2;
     // text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -142,6 +147,11 @@ table {
       }
     }
   }
+}
+
+.page-footer{
+  font-size: 0.7em;
+
 }
 
 .btn {

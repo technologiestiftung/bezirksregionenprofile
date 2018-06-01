@@ -1,8 +1,100 @@
 {
-"1":{"name":"Wohnen","class":"indGr1","id":"1"},
-"2":{"name":"Demographie","class":"indGr2","id":"2"},
-"3":{"name":"Dynamik","class":"indGr3","id":"3"},
-"4":{"name":"Arbeitsmarkt","class":"indGr4","id":"4"},
-"5":{"name":"Kinder & Jugend","class":"indGr5","id":"5"},
-"6":{"name":"Soziales","class":"indGr6","id":"6"}
+	"1":{
+		"name":"Wohnen",
+		"class":"indGr1",
+		"id":"1",
+		"indikatoren":{
+			"A1":{
+				"name":"A1",
+				"text-sm":"Einfacher Wohnlage",
+				"text-lg":"Einwohner/innen in einfacher Wohnlage"
+			},
+			"A2":{
+				"name":"A2",
+				"text-sm":"Mittlere Wohnlage",
+				"text-lg":"Einwohner/innen in mittlerer Wohnlage"
+			},
+			"A3":{
+				"name":"A3",
+				"text-sm":"Gute Wohnlage",
+				"text-lg":"Anteil der Einwohner/innen in guter Wohnlage nach Mietspiegel an EW gesamt"
+			},
+			"A4":{
+				"name":"A4",
+				"text-sm":"Grünanlagen",
+				"text-lg":"Relation qm öffentliche Grünanlagen zu EW gesamt"
+			},
+			"A5":{
+				"name":"A5",
+				"text-sm":"Spielplatzfläche",
+				"text-lg":"Relation qm öffentliche Spielplatzfläche zu EW gesamt"
+			},
+			"A6":{
+				"name":"A6",
+				"text-sm":"Kindertagesbetreuung u6",
+				"text-lg":"Anteil der betreuten Kinder (Wohnort Kind) in öffentlich geförderter Kindertagesbetreuung an Kindern unter 6 Jahren"
+			},
+			"A7":{
+				"name":"A7",
+				"text-sm":"Jugendfreizeiteinrichtungen",
+				"text-lg":"Relation Plätze in Jugendfreizeiteinrichtungen zu Kindern und Jugendlichen im Alter von 6 bis unter 25 Jahren"
+			},
+			"A8":{
+				"name":"A8",
+				"text-sm":"Straftaten",
+				"text-lg":"Häufigkeit kiezbezogener Straftaten je 100.000 E"
+			}
+		}
+	},
+	"2":{"name":"Demographie",
+		"class":"indGr2",
+		"id":"2",
+		"indikatoren":{
+			"B1":{
+				"name":"B1",
+				"text-sm":"EW > 18 J",
+				"text-lg":"Anteil der Einwohner/innen (EW) unter 18 Jahren an EW gesamt"
+			},
+			"B2":{
+				"name":"B2",
+				"text-sm":"EW <= 65 J",
+				"text-lg":"Anteil der EW von 65 Jahren und älter an EW gesamt"
+			},
+			"B3":{
+				"name":"B3",
+				"text-sm":"EW > 18 J Migr.",
+				"text-lg":"Anteil der EW unter 18 Jahren mit Migrationshintergrund an EW dieser Altersgruppe"
+			},
+			"B4":{
+				"name":"B4",
+				"text-sm":"EW <= 65 J Migr.",
+				"text-lg":"Anteil der EW von 65 Jahren und älter mit Migrationshintergrund an EW dieser Altersgruppe"
+			}
+		}
+	},
+	"3":{
+		"name":"Dynamik",
+		"class":"indGr3",
+		"id":"3",
+		"indikatoren":{
+			"C1":{
+				"name":"C1",
+				"text-sm":"Wohndauer < 5 J.",
+				"text-lg":"Anteil der Einwohner/innen mit einer Wohndauer über 5 Jahre an derselben Adresse"
+			},
+			"C2":{
+				"name":"C2",
+				"text-sm":"Wanderungssaldo je 100 EW",
+				"text-lg":"Wanderungssaldo gesamt je 100 Einwohner/innen"
+			},
+			"C3":{
+				"name":"C3",
+				"text-sm":"EW > 18 J Migr.",
+				"text-lg":"Wanderungssaldo Einwohner/innen unter 6 Jahren je 100 Einwohner/innen unter 6 Jahren"
+			}
+		}
+	},
+	"4":{"name":"Arbeitsmarkt","class":"indGr4","id":"4"},
+	"5":{"name":"Kinder & Jugend","class":"indGr5","id":"5"},
+	"6":{"name":"Soziales","class":"indGr6","id":"6"}
 }

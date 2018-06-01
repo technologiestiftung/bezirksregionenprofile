@@ -80,6 +80,7 @@ export default {
 .intro-text{
 
   display:block;
+      width: 100%;
   // padding:2em;
 
   .intro-stats{

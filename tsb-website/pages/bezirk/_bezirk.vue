@@ -1,9 +1,9 @@
 <template>
-  <section v-if='bzData'>
+  <section v-if='bzData && indData'>
     <intro-bz :bezirk="bezirk" :bzData="bzData"></intro-bz>
     <div class="content-main">
       <map-bz :bezirk="bezirk" v-on:bzRChanged="changeBzR"></map-bz>
-      <info-bz :bzrSelected="bzrSelected"></info-bz>
+      <info-bz :bzrSelected="bzrSelected" :indData="indData"></info-bz>
     </div>
 
   </section>
@@ -32,11 +32,13 @@
     data(){
       return {
         bzrSelected : this.bezirk,
-        bzData:undefined
+        bzData:undefined,
+        indData:undefined
       }
     },
     created() {
-      this.getData();
+      this.getBzData();
+      this.getIndData();
     },
     computed: {
       ...mapState([
@@ -65,10 +67,16 @@
         console.log("hiiiiiii",name)
 
       },
-      getData(){
+      getBzData(){
         const url = process.env.NODE_ENV === 'production' ? 'http://localhost:8080' : 'http://localhost:3000';
         axios.get(url + '/data/bz-data/'+this.$route.params.bezirk+'/bz-data.json').then((response)=>
           this.bzData = response.data
+        )
+      },
+      getIndData(){
+        const url = process.env.NODE_ENV === 'production' ? 'http://localhost:8080' : 'http://localhost:3000';
+        axios.get(url + '/data/bz-data/'+this.$route.params.bezirk+'/indikatoren.json').then((response)=>
+          this.indData = response.data
         )
       }
       // getObjects() {

@@ -1,12 +1,16 @@
 <template>
 
 
-<div class="viz">
+<div>
 
   <svg>
 
-      <rect x="50%" y="0%" :width="wert+ '%'" height="100%"/> 
-      <line :x1="wert+ '%'" :x2="wert+ '%'" y1="100%" y2="0%" class="data-line" transform="translate(50%,50%)"></line>
+      <rect x="50%" y="0%" :width="getWidth() + '%'" height="100%" :class="activeIndClass"/> 
+
+<!--       <path fill="orange" opacity="0.3" d="M150,0 V150 h0 V0 Z">
+        <animate attributeType="SVG" attributeName="d" from="M150,0 V150 h0 V0 Z" to="M150,0 V150 h200 V0 Z" dur="1s" repeatCount="once" />
+      </path> -->
+
 
       <text x="0%" y="0%" class="label-top">Min</text>
       <text x="100%" y="0%" class="label-top">Max</text>
@@ -14,9 +18,9 @@
       <text x="50%" y="0%" class="label-top static">Berlin</text>
       <text :x="wert+ '%'" y="100%" class="label bzr">BZR</text>
 
-      <line x1="0%" x2="0" y1="100%" y2="0%" class="tick" :stroke-dasharray="stroke"></line>
-      <line x1="50%" x2="50%" y1="100%" y2="0%" class="tick" :stroke-dasharray="stroke"></line>
-      <line x1="100%" x2="100%" y1="100%" y2="0%" class="tick" :stroke-dasharray="stroke"></line>
+      <line x1="0%" x2="0" y1="100%" y2="0%" class="tick"></line>
+      <line x1="50%" x2="50%" y1="100%" y2="0%" class="tick"></line>
+      <line x1="100%" x2="100%" y1="100%" y2="0%" class="tick"></line>
 
   </svg> 
 
@@ -32,11 +36,27 @@
 export default {
   data() {
     return {
-      stroke:"4,4",
-      wert:"10"
+      // stroke:"4,4",
+      wert:"0"
     }
   },
-  props: []
+  props: ["activeIndClass","indData","indikator"],
+  created(){
+    this.animate();
+  },
+  methods: {
+    getWidth: function () {
+      return this.indData[this.indikator].val / 2;
+    },
+    animate:function(){
+      console.log("animate")
+    }
+  },
+  watch: {
+    indikator: function (val) {
+      this.animate();
+    }
+  }
 }
 
 </script>
@@ -47,17 +67,22 @@ export default {
 
   @import "~@/assets/style/variables";
 
+  div{
+    text-allign: center;
+  }
+
   svg{
 
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     overflow:visible;
     margin:10px;
-    background-color: #ddd;
+    // background-color: #ddd;
 
     .tick{
       stroke:#333;
       stroke-width:2;
+      stroke-dasharray:4;
     }
 
     text{
@@ -87,37 +112,71 @@ export default {
 
 
     rect{
-      animation: grow 2s reverse;
-      fill: $color-indGr1;
+      
+      // fill: $color-indGr1;
+      // transform: translate(25%,0%) scale(1,1) !important;
+      // transform: translate(250%,0%) scale(-1,1) !important;
+      // display: inline-block;
+      animation: grow 2s forwards;
+      // animation-delay:2s;
 
-      &:hover{
-        cursor:pointer;
-        opacity:.7;
-      }
+
+      // &:hover{
+      //   cursor:pointer;
+      //   opacity:.7;
+      // }
+
     }
 
-    .data-line{
-      stroke-width:3px;
-      stroke:red;
-      animation: moveline 2s reverse;
-      // opacity:0;
-    }
+    // .data-line{
+    //   stroke-width:3px;
+    //   stroke:red;
+    //   animation: moveline 2s reverse;
+    //   // opacity:0;
+    // }
 
   }
 	
   @keyframes grow {
     100% {
-      width: 0%;
+      width: 35%;
+      
+
+      // transform: translate(250%,0%) scale(-1,1);
+      // transform: translate(10%,0px)
       // transform: translate(-100%,0px);
     }
   }
 
-  @keyframes moveline {
-    100% {
-      // transform: translate(0%,0%);
-      // transform: translate(-100%,0px);
-    }
-  }
+  // @keyframes moveline {
+  //   100% {
+  //     // transform: translate(0%,0%);
+  //     // transform: translate(-100%,0px);
+  //   }
+  // }
+
+
+
+
+      .indGr1{
+        fill:$color-indGr1;
+      }
+      .indGr2{
+        fill:$color-indGr2;
+      }
+      .indGr3{
+        fill:$color-indGr3;
+      }
+      .indGr4{
+        fill:$color-indGr4;
+      }
+      .indGr5{
+        fill:$color-indGr5;
+      }
+      .indGr6{
+        fill:$color-indGr6;
+      }
+
 
 
 </style>

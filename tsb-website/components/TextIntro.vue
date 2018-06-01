@@ -12,7 +12,7 @@
 
     <div class="content-intro-logo">
 
-    	here be Logo
+      <img src="/img/tsb-logo-content.svg" alt="Technologiestiftung Berlin Logo">
     	
     </div>
 
@@ -42,7 +42,7 @@ export default {
 
     // flex: 2;
     // height: 100%;
-    background-color: $color-light;
+    background-color: #F5F5F5;
     flex-basis: 66%;
 
   }
@@ -51,7 +51,13 @@ export default {
 
     flex:1;
     // height: 100%;
-    background-color: #ccc;
+    background-color: #fff;
+    text-align: center;
+
+    img{
+      width: 100px;
+      padding: 85px 0;
+    }
 
   }
 

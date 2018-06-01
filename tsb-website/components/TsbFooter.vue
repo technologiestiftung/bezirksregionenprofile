@@ -2,7 +2,9 @@
   <footer class="page-footer columns columns-gutter">
     <address>
       Technologistiftung Berlin<br />
-      Grunewaldstraße 61-62, 10825 Berlin, Deutschland<br /><br />
+      Grunewaldstraße 61-62<br>
+      10825 Berlin<br>
+      Deutschland<br /><br />
 
     </address>
     <ul>
@@ -17,7 +19,6 @@
           <li><a href="https://twitter.com/"><i class="demo-icon icon-twitter" /></a></li>
           <li><a href="https://www.facebook.com/"><i class="demo-icon icon-facebook-squared" /></a></li>
           <li><a href="https://github.com/"><i class="demo-icon icon-github-circled" /></a></li>
-          <li><i class="demo-icon icon-search" /></li>
         </ul>
       </li>
     </ul>

@@ -3,10 +3,13 @@
   <div class="content-main column">
 
     <div class="navigation">
-      <h3>Bezirk auswählen:</h3>
-      <select @change="onSelect()" v-model="selected">
+<!--       <h3>Bezirk auswählen:</h3> -->
+<!--       <select @change="onSelect()" v-model="selected">
         <option v-for="bz in bzNamen" :key="bz.name" :value="bz.name">{{bz.name}}</option>
       </select> 
+ -->
+
+      <dropdown :options="bzNamen" :selected="selected" v-on:updateOption="onSelect"></dropdown>
 
     </div>
 
@@ -20,7 +23,10 @@
 <script>
 
 import { mapState, mapGetters } from 'vuex';
-import toUrl from '~/assets/js/tourl.js'
+import toUrl from '~/assets/js/tourl.js';
+
+import Dropdown from '~/components/Dropdown.vue';
+
 
 export default {
 
@@ -32,20 +38,30 @@ export default {
       // ]),    
     },
     components: {
+      Dropdown
     },
     mounted(){
       this.createMap()
     },
     data(){
         return{
-          selected:"Charlottenburg-Wilmersdorf"
+          // selected:"Charlottenburg-Wilmersdorf",
+          selected:""
         }
     },
     // props: ["mainColor"],
     methods:{
-    onSelect(){
+    onSelect(x){
 
-      let selectedBz = this.selected;
+      console.log(x)
+
+
+
+      let selectedBz = x.name;
+
+      this.selected = x.name;
+
+
       if(selectedBz!="Tempelhof-Schöneberg"){return};
 
       selectedBz = toUrl(selectedBz);
@@ -147,7 +163,7 @@ export default {
 
                 const bezirk = e.features[0].properties.Gemeinde_name;
 
-                // if(bezirk!="Tempelhof-Schöneberg"){return};
+                if(bezirk!="Tempelhof-Schöneberg"){return};
 
                 this.$router.push({ path: 'bezirk/' + toUrl(bezirk) });
 

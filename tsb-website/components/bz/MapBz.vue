@@ -3,10 +3,13 @@
   <div class="content-main-map column">
 
     <div class="navigation">
-      <h3>Bezirksregion auswählen:</h3>
-      <select @change="onSelect()" v-model="selected">
+  <!--     <h3>Bezirksregion auswählen:</h3> -->
+
+<!--       <select @change="onSelect()" v-model="selected">
         <option v-for="bz in bzrNamen" :key="bz" :value="bz">{{bz}}</option>
       </select> 
+ -->
+      <dropdown :options="bzrNamen" :selected="selected" v-on:updateOption="onSelect"></dropdown>
 
     </div>
 
@@ -23,6 +26,8 @@ import { mapState } from 'vuex';
 import toUrl from '~/assets/js/tourl.js';
 import bbox from '@turf/bbox';
 
+import Dropdown from '~/components/Dropdown.vue';
+
 export default {
 
     computed: {
@@ -34,30 +39,35 @@ export default {
         for (var i = 0; i < this.bezirksregionen.features.length; i++) {
           var bzrName = this.bezirksregionen.features[i].properties.BEZNAME;
           if(bzrName==this.bezirk){
-            namen.push(this.bezirksregionen.features[i].properties.BZR_NAME)
+            namen.push({name:this.bezirksregionen.features[i].properties.BZR_NAME})
           }
         }
         namen.sort()
         return namen
       },
-      selected(){
-        return this.bzrNamen[0];
-      }    
+      // selected(){
+      //   return this.bzrNamen[0];
+      // }    
     },
     components: {
+      Dropdown
     },
     mounted(){
       this.createMap()
     },
     data(){
         return{
-          // selected:bzrNamen()[0],
+          selected:"",
 
         }
     },
     props: ["bezirk"],
     methods:{
-    onSelect(){
+    onSelect(x){
+
+      this.selected = x.name;
+
+      this.$emit('bzRChanged',x.name)
 
       // let selectedBz = this.selected;
       // if(selectedBz!="Tempelhof-Schöneberg"){return};
@@ -112,7 +122,7 @@ export default {
             //to load directly
             // https://github.com/mapbox/mapbox-gl-js/issues/1970
             map.fitBounds(selectedBbox, {
-                padding: 10,
+                padding: {'bottom':50, 'left':0, 'right':0, 'top':100},
                 // linear: true,
                 duration: 1500
             });
@@ -254,10 +264,11 @@ export default {
 
   position: absolute;
   z-index: 1;
-  top: 20px;
-  left: 20px;
+  // top: 20px;
+  // left: 20px;
+  padding: 1em;
   color: #000 !important;
-  pointer-events:none;
+  // pointer-events:none;
 
 
   select{
