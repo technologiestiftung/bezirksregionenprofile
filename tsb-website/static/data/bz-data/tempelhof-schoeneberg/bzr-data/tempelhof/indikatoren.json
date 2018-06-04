@@ -1,19 +1,19 @@
 {
 	"A1":{
-		"val":10,
-		"phase":1
-	},
-	"A2":{
-		"val":20,
+		"val":18,
 		"phase":2
 	},
+	"A2":{
+		"val":64,
+		"phase":1
+	},
 	"A3":{
-		"val":30,
-		"phase":3
+		"val":12,
+		"phase":0
 	},
 	"A4":{
-		"val":2,
-		"phase":1
+		"val":12,
+		"phase":2
 	},
 	"A5":{
 		"val":12,

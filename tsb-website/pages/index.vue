@@ -1,7 +1,7 @@
 <template>
   <section>
     <text-intro></text-intro>
-    <map-intro :mainColor="mainColor"></map-intro>
+    <map-intro></map-intro>
   </section>
 </template>
 
@@ -16,7 +16,6 @@ export default {
   },
   data(){
     return{
-      mainColor:"red"
     }
   },
 }

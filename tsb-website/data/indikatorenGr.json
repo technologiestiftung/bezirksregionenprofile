@@ -6,7 +6,7 @@
 		"indikatoren":{
 			"A1":{
 				"name":"A1",
-				"text-sm":"Einfacher Wohnlage",
+				"text-sm":"Einfache Wohnlage",
 				"text-lg":"Einwohner/innen in einfacher Wohnlage"
 			},
 			"A2":{
@@ -94,7 +94,125 @@
 			}
 		}
 	},
-	"4":{"name":"Arbeitsmarkt","class":"indGr4","id":"4"},
-	"5":{"name":"Kinder & Jugend","class":"indGr5","id":"5"},
-	"6":{"name":"Soziales","class":"indGr6","id":"6"}
+	"4":{
+		"name":"Arbeitsmarkt",
+		"class":"indGr4",
+		"id":"4",
+		"indikatoren":{
+			"D1":{
+				"name":"D1",
+				"text-sm":"Sozialversicherungspflichtige",
+				"text-lg":"Anteil der sozialversicherungspfl. Beschäftigten am Wohnort an Einwohnern/innen im Alter 15 bis unter 65 Jahre"
+			},
+			"D2":{
+				"name":"D2",
+				"text-sm":"Arbeitslose",
+				"text-lg":"Anteil Arbeitsloser nach SGB II und SGB III an Einwohnern/innen im Alter 15 bis unter 65 Jahre"
+			},
+			"D3":{
+				"name":"D3",
+				"text-sm":"Arbeitslose unter 25",
+				"text-lg":"Anteil Arbeitsloser nach SGB II und SGB III unter 25 Jahren an Einwohnern/innen im Alter 15 bis unter 25 Jahre"
+			},
+			"D4":{
+				"name":"D4",
+				"text-sm":"Empfänger/innen von Transferleistungen",
+				"text-lg":"Anteil Empfänger/innen von Transferleistungen nach SGB II an Einwohnern/innen im Alter unter 65 Jahre"
+			},
+			"D5":{
+				"name":"D5",
+				"text-sm":"Empfänger/innen von Transferleistungen unter 15",
+				"text-lg":"Anteil nicht erwerbsf. Empfänger/innen von Transferleistungen nach SGB II unter 15 Jahre an dieser Altersgruppe"
+			},
+			"D6":{
+				"name":"D6",
+				"text-sm":"Empfänger/innen von Grundsicherun >=65",
+				"text-lg":"Anteil Empfänger/innen von Grundsicherung (außerhalb von Einrich-tungen) nach SGB XII im Alter von 65 Jahren und älter an Einwohner/innen dieser Altersgruppe"
+			}					
+		}
+
+	},
+	"5":{
+		"name":"Kinder & Jugend",
+		"class":"indGr5",
+		"id":"5",
+		"indikatoren":{
+			"E1":{
+				"name":"E1",
+				"text-sm":"Kinder mit Sprachdefiziten",
+				"text-lg":"Anteil Kinder mit Sprachdefiziten an Einschüler/innen (Kinder, die im jeweils kommenden Jahr eingeschult werden)"
+			},
+			"E2":{
+				"name":"E2",
+				"text-sm":"Kinder mit motorischen Defiziten",
+				"text-lg":"Anteil Kinder mit motorischen Defiziten (Visuomotorik) an Einschüler/innen"
+			},
+			"E3":{
+				"name":"E3",
+				"text-sm":"Kinder mit Übergewicht",
+				"text-lg":"Anteil Kinder mit Übergewicht an Einschüler/innen"
+			},
+			"E4":{
+				"name":"E4",
+				"text-sm":"Kitabesuchsdauer über 2 Jahren",
+				"text-lg":"Anteil Kinder mit einer Kitabesuchsdauer über 2 Jahren an Einschüler/innen"
+			},
+			"E5":{
+				"name":"E5",
+				"text-sm":"Schüler/innen nicht deutscher Herkunftssprache",
+				"text-lg":"Anteil Schüler/innen nicht deutscher Herkunftssprache an den Schüler/innen der öff. Grundschulen"
+			},
+			"E6":{
+				"name":"E6",
+				"text-sm":"Schüler/innen mit Lernmittelkostenbefreiung",
+				"text-lg":"Anteil Schüler/innen mit Lernmittelkostenbefreiung an den Schüler/innen der öff. Grundschulen"
+			},
+			"E7":{
+				"name":"E7",
+				"text-sm":"Alleinerziehenden Bedarfsgemeinschaften",
+				"text-lg":"Anteil der alleinerziehenden Bedarfsgemeinschaften (BG) nach SGB II an BG mit Kindern nach SGB II"
+			},
+			"E8":{
+				"name":"E8",
+				"text-sm":"Jugendlicher mit Hilfen zur Erziehung ",
+				"text-lg":"Anteil Kinder und Jugendlicher mit Hilfen zur Erziehung an Einwohner/innen im Alter unter 21 Jahren"
+			},
+			"E9":{
+				"name":"E9",
+				"text-sm":"Kariesfreier Milchgebisse bei 6-jährigen",
+				"text-lg":"Anteil kariesfreier Milchgebisse bei 6-jährigen Kindern"
+			}						
+		}},
+	"6":{
+		"name":"Soziales",
+		"class":"indGr6",
+		"id":"6",
+		"indikatoren":{
+			"F1":{
+				"name":"F1",
+				"text-sm":"Niedriger Entwicklungsindex",
+				"text-lg":"Anteil der EW in Gebieten mit sehr niedrigem Entwicklungsindex nach Monitoring Soziale Stadtentwicklung / MSS (Grundlage: Planungs-raumebene / PLR)"
+			},
+			"F2":{
+				"name":"F2",
+				"text-sm":"EW in Gebieten mit niedrigem Entwicklungsindex",
+				"text-lg":"Anteil der EW in Gebieten mit niedrigem Entwicklungsindex nach MSS (Grundlage: PLR)"
+			},
+			"F3":{
+				"name":"F3",
+				"text-sm":"EW in Gebieten mit mittlerem Entwicklungsindex",
+				"text-lg":"Anteil der EW in Gebieten mit mittlerem Entwicklungsindex nach MSS (Grundlage: PLR)"
+			},
+			"F4":{
+				"name":"F4",
+				"text-sm":"EW in Gebieten mit hohem / sehr hohem Entwicklungsindex",
+				"text-lg":"Anteil der EW in Gebieten mit hohem / sehr hohem Entwicklungsindex nach MSS (Grundlage: PLR)"
+			},
+			"F5":{
+				"name":"F5",
+				"text-sm":"Gruppenzuordnung Entwicklungsindex",
+				"text-lg":"Gruppenzuordnung Entwicklungsindex MSS für Bezirksregionen"
+			}				
+		}
+	}
 }

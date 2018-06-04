@@ -76,8 +76,7 @@ const store = () => new Vuex.Store({
     bzrNamen: bezirksregionenNamenOrdered,
     brightstyle: bright,
     nostyle: nostyle,
-    mainColor: "rgba(46, 145, 210, 1)",
-    secondColor: "#D9C744",
+    mapColors: ["#1E3791","#E60032"],
     indikatorenGr:indikatorenGr
   },
   getters: {

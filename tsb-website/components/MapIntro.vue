@@ -32,7 +32,7 @@ export default {
 
     computed: {
       ...mapState([
-        'nostyle','bezirksgrenzen','bzNamen','mainColor'
+        'nostyle','bezirksgrenzen','bzNamen','mapColors'
       ]),
       // ...mapGetters([
       // ]),    
@@ -105,7 +105,7 @@ export default {
                 "type":"fill",
                 "source":"bezirksgrenzen",
                 "paint":{
-                  "fill-outline-color":this.mainColor,
+                  "fill-outline-color":this.mapColors[0],
                   "fill-color":"rgba(46, 145, 210, 0)"
                 },
                 "visibiltiy":"none"
@@ -116,7 +116,7 @@ export default {
                 "type": "fill",
                 "source": "bezirksgrenzen",
                 "paint": {
-                    "fill-color": this.mainColor,
+                    "fill-color": this.mapColors[1],
                     "fill-opacity": .7
                 },
                 "filter": ["==", "Gemeinde_name", ""]

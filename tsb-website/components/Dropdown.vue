@@ -1,7 +1,7 @@
 <template>
     <div class="btn-group">
         <div @click="toggleMenu()" class="dropdown-toggle" v-if="selectedOption.name !== undefined">
-          {{ selectedOption.name}}
+          {{ selected}}
           <span class="caret"></span>
         </div>
 
@@ -11,7 +11,7 @@
         </div>
 
         <ul class="dropdown-menu" v-if="showMenu">
-            <li v-for="option in options" :key="option.name" >
+            <li v-for="option in options" :key="option.value" >
                 <a href="javascript:void(0)" @click="updateOption(option)">
                     {{ option.name }}
                 </a>
@@ -28,7 +28,7 @@
                   name: '',
                 },
                 showMenu: false,
-                placeholderText: 'Bezirk auswälen .',
+                placeholderText: 'Bezirk auswälen',
             }
         },
         props: {
@@ -46,7 +46,13 @@
                 this.placeholderText = this.placeholder;
             }
         },
-
+        // watch: {
+        //   selected: function (val) {
+        //     this.selected = this.selected;
+        //     console.log("chnageddsdadasdas");
+        //     // selectedOption.name = this.selected;
+        //   }
+        // },
         methods: {
             updateOption(option) {
                 this.selectedOption = option;
@@ -115,7 +121,7 @@
       text-align: left;
       background-color: #fff;
       border: 1px solid #ccc;
-      border-radius: 4px;
+      // border-radius: 4px;
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
       background-clip: padding-box;
     }

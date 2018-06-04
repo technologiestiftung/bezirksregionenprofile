@@ -42,4 +42,8 @@ export default {
       margin-right: 2rem;
     }
   }
+
+    address{
+          color: white;
+    }
 </style>

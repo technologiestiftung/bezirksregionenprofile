@@ -2,6 +2,14 @@
   "variables"
 ;
 
+
+$small-width: 1200px;
+@mixin laptop {
+  @media (max-width: #{$small-width}) {
+    @content;
+  }
+}
+
 .page, .page-header, .page-nav , .page-footer, .columns,.content-intro,.content-main {
   display: flex;
   justify-content: space-between;
@@ -14,14 +22,17 @@
   background-color: #fff;
 }
 
-.page-header,.page-footer,.page-content {
-  // margin: 0 15vw 0;
-}
 
 .page-header, .page-content , .page-footer {
   margin: 0 15vw 0;
   width: 70vw;
   // max-width: 1200px;
+
+  @include laptop{
+    margin: 0 5vw 0;
+    width: 90vw; 
+  }
+
 }
 
 
@@ -56,7 +67,7 @@
 
 
 .page-footer{
-  background-color: $color-default;
+  background-color: $tsb-darkblue;
   a {
     color: #fff;
   }

@@ -1,14 +1,20 @@
 <template>
 
 
-<div>
+<div>  
 
   <svg>
 
       <rect x="50%" y="0%" :width="getWidth() + '%'" height="100%" :class="activeIndClass"/> 
 
-<!--       <path fill="orange" opacity="0.3" d="M150,0 V150 h0 V0 Z">
-        <animate attributeType="SVG" attributeName="d" from="M150,0 V150 h0 V0 Z" to="M150,0 V150 h200 V0 Z" dur="1s" repeatCount="once" />
+
+  <!--     <path :class="activeIndClass" fill="orange" opacity="0.5" :d="'M60,0 V120 h'+getWidth()+' V0 Z'">
+        <animate attributeType="SVG" attributeName="d" from="M60,0 V120 h0 V0 Z" :to="'M60,0 V120 h'+getWidth()+' V0 Z'" dur="2s" repeatCount="once" />    
+      </path>
+ -->
+<!-- 
+      <path fill="orange" opacity="0.3" d="M60,0 V60 h50 V0 Z">
+        <animate attributeType="SVG" attributeName="d" from="M150,0 V150 h0 V0 Z" to="M150,0 V150 h100 V0 Z" dur="1s" repeatCount="once" />
       </path> -->
 
 
@@ -33,6 +39,9 @@
 
 <script>
 
+
+// import * as d3 from "d3";
+
 export default {
   data() {
     return {
@@ -49,7 +58,13 @@ export default {
       return this.indData[this.indikator].val / 2;
     },
     animate:function(){
-      console.log("animate")
+
+      // d3.selectAll('svg')
+      //   .style("fill","red")
+      // console.log("animate",this.$el)
+
+      // document.body.getElementById(‘id’
+      // this.$el.querySelector(".animatedPath").beginElement()
     }
   },
   watch: {
@@ -73,8 +88,8 @@ export default {
 
   svg{
 
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     overflow:visible;
     margin:10px;
     // background-color: #ddd;
@@ -117,7 +132,7 @@ export default {
       // transform: translate(25%,0%) scale(1,1) !important;
       // transform: translate(250%,0%) scale(-1,1) !important;
       // display: inline-block;
-      animation: grow 2s forwards;
+      // animation: grow 2s forwards;
       // animation-delay:2s;
 
 

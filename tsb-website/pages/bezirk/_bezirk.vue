@@ -14,7 +14,8 @@
 <script>
 
   import { mapState } from 'vuex';
-  import axios from 'axios'
+  import axios from 'axios';
+  import toUrl from '~/assets/js/tourl.js';
 
   import IntroBz from '~/components/bz/IntroBz.vue';
   import MapBz from '~/components/bz/MapBz.vue';
@@ -31,7 +32,7 @@
     },
     data(){
       return {
-        bzrSelected : this.bezirk,
+        bzrSelected : undefined,
         bzData:undefined,
         indData:undefined
       }
@@ -39,6 +40,7 @@
     created() {
       this.getBzData();
       this.getIndData();
+      this.bzrSelected = this.bezirk;
     },
     computed: {
       ...mapState([
@@ -64,16 +66,16 @@
     methods:{
       changeBzR(name){
         this.bzrSelected = name;
-        console.log("hiiiiiii",name)
+        console.log("hiiiiiii",name,toUrl(name))
 
       },
-      getBzData(){
+      getBzData(){ //
         const url = process.env.NODE_ENV === 'production' ? 'http://localhost:8080' : 'http://localhost:3000';
         axios.get(url + '/data/bz-data/'+this.$route.params.bezirk+'/bz-data.json').then((response)=>
           this.bzData = response.data
         )
       },
-      getIndData(){
+      getIndData(){ //get the info about Kernidikatoren such as the description etc
         const url = process.env.NODE_ENV === 'production' ? 'http://localhost:8080' : 'http://localhost:3000';
         axios.get(url + '/data/bz-data/'+this.$route.params.bezirk+'/indikatoren.json').then((response)=>
           this.indData = response.data

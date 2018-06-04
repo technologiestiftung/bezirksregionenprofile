@@ -30,7 +30,8 @@
             :indikator="indikator.name">
 
           </viz-bz>
-          <div class="viz-text">{{indikator['text-sm']}}</div>
+
+          <div class="viz-text"><b>{{indikator['name']}}</b> - {{indikator['text-sm']}}</div>
 
           <div class="viz-ampel-container">
             <div class="viz-ampel">
@@ -157,7 +158,7 @@ export default {
 
     .viz-text{
       font-size: .7em;
-      margin-top: 0.5em;
+      margin-top: 0.7em;
     }
 
     .viz-ampel-container{
@@ -207,6 +208,10 @@ export default {
 
       h5{
         border-bottom:3px solid #000;
+      }
+
+      &:hover{
+        opacity: 0.6;
       }
     }
 

@@ -42,8 +42,13 @@ export default {
 
     // flex: 2;
     // height: 100%;
-    background-color: #F5F5F5;
+    background-color: $tsb-darkblue;
+    color: white;
     flex-basis: 66%;
+
+    h4{
+      padding-bottom: .5em;
+    }
 
   }
 

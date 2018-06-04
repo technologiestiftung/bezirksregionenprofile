@@ -23,27 +23,31 @@
 <script>
 
 import { mapState } from 'vuex';
-import toUrl from '~/assets/js/tourl.js';
 import bbox from '@turf/bbox';
 
 import Dropdown from '~/components/Dropdown.vue';
+
+
+let map;
 
 export default {
 
     computed: {
       ...mapState([
-        'nostyle','brightstyle','bezirksgrenzen','bezirksregionen','mainColor','secondColor'
+        'nostyle','brightstyle','bezirksgrenzen','bezirksregionen','mapColors'
       ]),
       bzrNamen(){
         let namen = [];
         for (var i = 0; i < this.bezirksregionen.features.length; i++) {
           var bzrName = this.bezirksregionen.features[i].properties.BEZNAME;
           if(bzrName==this.bezirk){
-            namen.push({name:this.bezirksregionen.features[i].properties.BZR_NAME})
+            namen.push({name:this.bezirksregionen.features[i].properties.BZR_NAME,type:"bzr"})
           }
         }
         namen.sort()
-        return namen
+        namen.unshift({name: this.bezirk,type:"bz"});
+        console.log(this.bezirk,namen)
+        return namen;
       },
       // selected(){
       //   return this.bzrNamen[0];
@@ -53,7 +57,7 @@ export default {
       Dropdown
     },
     mounted(){
-      this.createMap()
+      this.createMap();
     },
     data(){
         return{
@@ -62,10 +66,17 @@ export default {
         }
     },
     props: ["bezirk"],
+
     methods:{
     onSelect(x){
 
       this.selected = x.name;
+
+      if(x.name==this.bezirk){
+        map.setFilter('bzr-click', null);
+      }else{
+        map.setFilter("bzr-click", ["==", "BZR_NAME", x.name]);
+      }
 
       this.$emit('bzRChanged',x.name)
 
@@ -106,7 +117,7 @@ export default {
 
 
         mapboxgl.accessToken = "";
-        const map = new mapboxgl.Map({
+        map = new mapboxgl.Map({
             container: 'map',
             style: this.nostyle,
             center: [13.391, 52.519],
@@ -124,24 +135,25 @@ export default {
             map.fitBounds(selectedBbox, {
                 padding: {'bottom':50, 'left':0, 'right':0, 'top':100},
                 // linear: true,
-                duration: 1500
+                duration: 0
             });
 
             //bezirksgrenzen-selected
-            map.addSource('bezirksgrenzen-selected', {
-                type: 'geojson',
-                data: selectedBz
-            });
+            // map.addSource('bezirksgrenzen-selected', {
+            //     type: 'geojson',
+            //     data: selectedBz
+            // });
 
-            map.addLayer({
-                "id":"bezirksgrenzen-selected",
-                "type":"fill",
-                "source":"bezirksgrenzen-selected",
-                "paint":{
-                  "fill-outline-color":this.mainColor,
-                  "fill-color":"rgba(46, 145, 210, 0.5)"
-                }
-            });
+            // map.addLayer({
+            //     "id":"bezirksgrenzen-selected",
+            //     "type":"fill",
+            //     "source":"bezirksgrenzen-selected",
+            //     "paint":{
+            //       "fill-outline-color":this.mapColors[0],
+            //       "fill-color":"rgba(46, 145, 210, 0.5)"
+            //     }
+            // });
+
 
 
             map.addSource('bezirksregionen', {
@@ -149,27 +161,38 @@ export default {
                 data: selectedBzR
             });
 
-            map.addLayer({
-                "id":"bezirksregionen",
-                "type":"fill",
-                "source":"bezirksregionen",
-                "paint":{
-                  "fill-outline-color":this.secondColor,
-                  "fill-color":"rgba(46, 145, 210, 0)"
-                }
-            });
 
             map.addLayer({
                 "id": "bezirksregionen-hover",
                 "type": "fill",
                 "source": "bezirksregionen",
                 "paint": {
-                    "fill-color": this.secondColor,
-                    "fill-opacity": .7
+                    "fill-color": this.mapColors[0],
+                    "fill-opacity": .4
                 },
                 "filter": ["==", "BZR_NAME", ""]
             });
 
+            map.addLayer({
+                "id": "bzr-click",
+                "type": "fill",
+                "source": "bezirksregionen",
+                "paint": {
+                    "fill-color": this.mapColors[0],
+                    "fill-opacity": .5
+                }
+        
+            });
+
+            map.addLayer({
+                "id":"bezirksregionen",
+                "type":"fill",
+                "source":"bezirksregionen",
+                "paint":{
+                  "fill-outline-color":this.mapColors[0],
+                  "fill-color":"rgba(0, 0, 0, 0)"
+                }
+            });
 
             // map.addSource('bezirksgrenzen', {
             //     type: 'geojson',
@@ -181,7 +204,7 @@ export default {
             //     "type":"line",
             //     "source":"bezirksgrenzen",
             //     "paint":{
-            //       "line-color":this.mainColor
+            //       "line-color":this.mapColors[0]
             //     }
             // });
             
@@ -215,7 +238,6 @@ export default {
                 popup.remove();
             });
 
-
             map.on("mousemove", "bezirksregionen", (e)=> {
                 map.setFilter("bezirksregionen-hover", ["==", "BZR_NAME", e.features[0].properties.BZR_NAME]);
             });
@@ -226,17 +248,26 @@ export default {
             });
 
 
-            map.on('click', "bezirksregionen", (e)=> {
+            map.on('click', (e) => {
 
-              const bzr = e.features[0].properties.BZR_NAME;
-              this.$emit('bzRChanged',bzr)
+              const feature = map.queryRenderedFeatures(e.point, { layers: ['bezirksregionen'] });
 
-                // const bezirk = e.features[0].properties.BZR_NAME;
+              if(feature.length==0){
 
-                // if(bezirk!="Tempelhof-Schöneberg"){return};
-                console.log()
+                map.setFilter('bzr-click', null);
+                this.$emit('bzRChanged',this.bezirk);
+                this.selected = this.bezirk;
+                return
 
-                // this.$router.push({ path: '../bezirksregion/' + toUrl(bzr) });
+              }else{
+
+                const bzr = feature[0].properties.BZR_NAME;
+                this.$emit('bzRChanged',bzr)
+                map.setFilter("bzr-click", ["==", "BZR_NAME", bzr]);
+                this.selected = bzr;
+              }
+
+              // this.$router.push({ path: '../bezirksregion/' + toUrl(bzr) });
 
             })
 
@@ -255,7 +286,7 @@ export default {
 #map {
 
   // width:100%;
-  height: 60vh;
+  height: 80vh;
   // position: absolute;
 
 }
