@@ -34,7 +34,8 @@
       return {
         bzrSelected : undefined,
         bzData:undefined,
-        indData:undefined
+        indData:undefined,
+        indDataBz:undefined
       }
     },
     created() {
@@ -65,8 +66,23 @@
     },
     methods:{
       changeBzR(name){
+
+        if(this.bzrSelected==name){return};//if the same
+
         this.bzrSelected = name;
-        console.log("hiiiiiii",name,toUrl(name))
+
+        if(name==this.bezirk){//if bz
+
+          this.indData = this.indDataBz;
+
+        }else{//if bzr then load new data from bzr source
+
+          const url = process.env.NODE_ENV === 'production' ? 'http://localhost:8080' : 'http://localhost:3000';
+          axios.get(url + '/data/bz-data/'+this.$route.params.bezirk+'/bzr-data/'+toUrl(name)+'/indikatoren.json').then((response)=>
+            this.indData = response.data
+          )
+
+        }
 
       },
       getBzData(){ //
@@ -76,10 +92,12 @@
         )
       },
       getIndData(){ //get the info about Kernidikatoren such as the description etc
+        const me = this;
         const url = process.env.NODE_ENV === 'production' ? 'http://localhost:8080' : 'http://localhost:3000';
-        axios.get(url + '/data/bz-data/'+this.$route.params.bezirk+'/indikatoren.json').then((response)=>
-          this.indData = response.data
-        )
+        axios.get(url + '/data/bz-data/'+this.$route.params.bezirk+'/indikatoren.json').then(function(response){
+          me.indData = response.data;
+          me.indDataBz = response.data;
+        })
       }
       // getObjects() {
       //    // this.$http.get('/data/bz-data/tempelhof-schoeneberg/overview.json')

@@ -1,11 +1,11 @@
 <template>
     <div class="btn-group">
-        <div @click="toggleMenu()" class="dropdown-toggle" v-if="selectedOption.name !== undefined">
+        <div @click="toggleMenu()" class="dropdown-toggle" v-if="selected !== ''">
           {{ selected}}
           <span class="caret"></span>
         </div>
 
-        <div @click="toggleMenu()" class="dropdown-toggle" v-if="selectedOption.name === undefined">
+        <div @click="toggleMenu()" class="dropdown-toggle" v-if="selected === ''">
           {{placeholderText}}
           <span class="caret"></span>
         </div>
