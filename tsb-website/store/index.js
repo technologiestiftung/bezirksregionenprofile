@@ -44,16 +44,18 @@ const bezirksregionen = topojson.feature(bzr_lor, bzr_lor.objects["lor_bezirksre
 let bezirksregionenNamen = {};
 for (var i = 0; i < bezirksregionen.features.length; i++) {
   let name = bezirksregionen.features[i].properties.BZR_NAME;
+  let bzName = bezirksregionen.features[i].properties.BEZNAME
   bezirksregionenNamen[name] = {};
   bezirksregionenNamen[name].name = name;
   bezirksregionenNamen[name].url = toUrl(name);
+  bezirksregionenNamen[name].bzName = bzName;
 }
 const bezirksregionenNamenOrdered = {};
 Object.keys(bezirksregionenNamen).sort().forEach(function(key) {
   bezirksregionenNamenOrdered[key] = bezirksregionenNamen[key];
 });
 
-console.log(bezirksNamenOrdered)
+console.log("xxx",bezirksregionenNamenOrdered)
 
 // let bezirksRegionenNamen = {};
 // for (var i = 0; i < bezirksregionen.features.length; i++) {

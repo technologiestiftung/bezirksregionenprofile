@@ -5,7 +5,7 @@
 
   <div class="intro-text">
 
-      <h5>BEZIRK</h5>
+      <h5>{{nameClass}}</h5>
       <h4>{{name}}</h4>
 
     	<p>{{introData.introText}}</p>
@@ -52,7 +52,7 @@ export default {
 
     }
   },
-  props: ["name","introData"],
+  props: ["name","nameClass","introData"],
   // created() {
 
   //   this.getData();
@@ -76,6 +76,11 @@ export default {
 	
 	
 @import "~@/assets/style/variables";
+
+
+h5{
+  text-transform: uppercase;
+}
 
 .intro-text{
 

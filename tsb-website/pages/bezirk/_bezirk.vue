@@ -1,6 +1,6 @@
 <template>
   <section v-if='bzData && indData'>
-    <intro-bz :name="bezirk" :introData="bzData"></intro-bz>
+    <intro-bz :name="bezirk" :nameClass="nameClass" :introData="bzData"></intro-bz>
     <div class="content-main">
       <map-bz :bezirk="bezirk" v-on:bzRChanged="changeBzR"></map-bz>
       <info-bz :bzrSelected="bzrSelected" :bzData="bzData" :indData="indData"></info-bz>
@@ -35,7 +35,8 @@
         bzrSelected : undefined,
         bzData:undefined,
         indData:undefined,
-        indDataBz:undefined
+        indDataBz:undefined,
+        nameClass:"Bezirk"
       }
     },
     created() {
