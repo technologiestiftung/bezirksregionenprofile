@@ -83,7 +83,7 @@ export default {
   @import "~@/assets/style/variables";
 
   div{
-    text-allign: center;
+        text-align: center;
   }
 
   svg{
@@ -92,6 +92,7 @@ export default {
     height: 100px;
     overflow:visible;
     margin:10px;
+        display: inline-block;
     // background-color: #ddd;
 
     .tick{

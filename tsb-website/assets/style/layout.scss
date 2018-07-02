@@ -73,12 +73,17 @@ $small-width: 1200px;
   }
 }
 
-.page-header, .page-footer {
+.page-header{
   
-  padding: $padding;
+  padding: 1em;
 
 }
 
+.page-footer {
+  
+  padding: 2em;
+
+}
 
 
 .page-content {

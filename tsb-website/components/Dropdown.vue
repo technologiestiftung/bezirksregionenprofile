@@ -69,6 +69,8 @@
 
 <style lang="scss" scoped>
 
+  @import "~@/assets/style/variables";
+
     .btn-group {
         min-width: 160px;
         height: 40px;
@@ -138,7 +140,7 @@
 
         &:hover {
             background: #efefef;
-            color: #409FCB;
+            color: $tsb-darkblue;
         }
     }
 

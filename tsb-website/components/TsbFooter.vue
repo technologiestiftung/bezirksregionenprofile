@@ -36,6 +36,7 @@ export default {
 <style lang="scss" scoped>
   .social-icons {
     margin-top: 1rem;
+        font-size: 1.2em;
 
     li {
       display: inline-block;

@@ -1,10 +1,10 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-import bright from '~/static/bright-v9.json';
-import nostyle from '~/static/nostyle.json';
+import bright from '~/static/map/bright-v9.json';
+import nostyle from '~/static/map/nostyle.json';
 import bzr_lor from '~/data/bzr_lor.json';
-import indikatorenGr from '~/data/indikatorenGr.json';
+import indikatorenGr from '~/data/indikatoren/indikatorenOverview.json';
 
 import toUrl from '~/assets/js/tourl.js'
 

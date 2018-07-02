@@ -45,7 +45,7 @@ p + p {
 }
 
 p {
-  font-size: 0.8rem;
+  font-size: 0.8em;
   max-width: 800px;
 
   .dns {
@@ -150,7 +150,7 @@ table {
 }
 
 .page-footer{
-  font-size: 0.7em;
+  font-size: 0.8em;
 
 }
 
@@ -380,3 +380,11 @@ table {
 .icon-github-circled:before { content: '\f09b'; } /* '' */
 .icon-map-o:before { content: '\f278'; } /* '' */
 .icon-facebook-squared:before { content: '\f308'; } /* '' */
+.icon-right:before { content: '\e804'; } /* '' */
+.icon-right-small:before { content: '\e805'; } /* '' */
+.icon-down-dir:before { content: '\e806'; } /* '' */
+.icon-info-circled:before { content: '\e807'; } /* '' */
+
+
+
+

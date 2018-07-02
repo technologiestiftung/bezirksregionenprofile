@@ -1,9 +1,9 @@
 <template>
   <section v-if='bzData && indData'>
-    <intro-bz :bezirk="bezirk" :bzData="bzData"></intro-bz>
+    <intro-bz :name="bezirk" :introData="bzData"></intro-bz>
     <div class="content-main">
       <map-bz :bezirk="bezirk" v-on:bzRChanged="changeBzR"></map-bz>
-      <info-bz :bzrSelected="bzrSelected" :indData="indData"></info-bz>
+      <info-bz :bzrSelected="bzrSelected" :bzData="bzData" :indData="indData"></info-bz>
     </div>
 
   </section>
@@ -17,7 +17,7 @@
   import axios from 'axios';
   import toUrl from '~/assets/js/tourl.js';
 
-  import IntroBz from '~/components/bz/IntroBz.vue';
+  import IntroBz from '~/components/IntroBzBzr.vue';
   import MapBz from '~/components/bz/MapBz.vue';
   import InfoBz from '~/components/bz/InfoBz.vue';
 
@@ -87,7 +87,7 @@
       },
       getBzData(){ //
         const url = process.env.NODE_ENV === 'production' ? 'http://localhost:8080' : 'http://localhost:3000';
-        axios.get(url + '/data/bz-data/'+this.$route.params.bezirk+'/bz-data.json').then((response)=>
+        axios.get(url + '/data/bz-data/'+this.$route.params.bezirk+'/bz-overview.json').then((response)=>
           this.bzData = response.data
         )
       },

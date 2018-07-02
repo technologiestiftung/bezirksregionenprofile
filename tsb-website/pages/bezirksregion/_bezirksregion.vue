@@ -1,29 +1,27 @@
 <template>
-  <section>
-    <intro-bz :bezirk="bezirk"></intro-bz>
+  <section v-if='bzrData'>
+    <intro-bz :name="bzr" :introData="bzData"></intro-bz>
     <div class="content-main">
-      <!-- <map-bz :bezirk="bezirk" v-on:bzRChanged="changeBzR"></map-bz> -->
-
+<!--       <map-bz :bezirk="bezirk" v-on:bzRChanged="changeBzR"></map-bz>
+      <info-bz :bzrSelected="bzrSelected" :bzData="bzData" :indData="indData"></info-bz> -->
     </div>
 
   </section>
 </template>
 
 
-
 <script>
 
   import { mapState } from 'vuex';
 
-  import IntroBz from '~/components/bz/IntroBz.vue';
-  import MapBz from '~/components/bz/MapBz.vue';
-  import InfoBz from '~/components/bz/InfoBz.vue';
+  // import IntroBz from '~/components/bz/IntroBz.vue';
+  // import MapBz from '~/components/bz/MapBz.vue';
+  import IntroBzr from '~/components/IntroBzBzr.vue';
 
   export default {
     head () {
       return {
-        title: this.bezirk + " Bezirksprofil",
-        // titleTemplate: '2030 Watch - %s'
+        title: this.bzr + " Datenblatt",
       }
     },
     methods: {
@@ -31,38 +29,45 @@
     },
     data(){
       return {
-        bzrSelected : this.bezirk
+        bzr: this.$route.params.bezirksregion
       }
+    },
+    created() {
+      this.getBzrData();
+      // this.getIndData();
+      // this.bzrSelected = this.bezirk;
+      // console.log(this.$route.params.bezirksregion)
     },
     computed: {
       ...mapState([
         'bzrNamen'
       ]),
-      bezirk () {
+      // bezirk () {
 
-        const selectedBzUrl = this.$route.params.bezirksregion;
+      //   // const selectedBzUrl = this.$route.params.bezirksregion;
 
-        console.log(selectedBzUrl)
+      //   // console.log(selectedBzUrl)
 
-        function getKeyByValue(object, value) {
-          return Object.keys(object).find(key => object[key].url === value);
-        }
+      //   // function getKeyByValue(object, value) {
+      //   //   return Object.keys(object).find(key => object[key].url === value);
+      //   // }
 
-        const selectedBz = getKeyByValue(this.bzrNamen,selectedBzUrl);
+      //   // const selectedBz = getKeyByValue(this.bzrNamen,selectedBzUrl);
 
-        return selectedBz
+      //   // return selectedBz
 
-      }
+      // }
     },
     components: {
-      IntroBz,MapBz,InfoBz
+      IntroBzr
     },
     methods:{
-      changeBzR(x){
-        this.bzrSelected = x;
-        console.log("hzzzi",x)
-
-      }
+      getBzrData(){ //
+        const url = process.env.NODE_ENV === 'production' ? 'http://localhost:8080' : 'http://localhost:3000';
+        axios.get(url + '/data/bz-data/'+this.$route.params.bezirksregion+'/bzr-overview.json').then((response)=>
+          this.bzrIntroData = response.data
+        )
+      },
     }
   }
 </script>

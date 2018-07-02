@@ -2,7 +2,25 @@
 
   <div class="content-main-info column">
 
-      <h4>Themen & Daten - {{bzrSelected}}</h4>
+      <div id="title">
+        <h4><i class="icon-right-small" /> Themen & Daten</h4> 
+        <div id="compare-dropdown">
+          <div class="compare-dropdown-text">VERGLEICHEN MIT:</div>
+          <!-- <dropdown :options="compareOpt" :selected="compareSelected" class="dropdown" v-on:updateOption="onCompareChange"></dropdown> -->
+
+          <div id="dropdown-mini" @click="selectDropdown()">{{compareSelected}} <i class="icon-down-dir" />
+            <div :class="showDropdown? '':'hidden'" @click="dropdownSelected()">{{compareOpt}}</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div 
+        :class="bzrSelected==bzData.name?'btn-hidden button':'button'"
+        @click="onBzrProfile(bzrSelected)">
+        zum Datenprofil {{bzrSelected}} <i class="icon-right-small" /> 
+      </div>
+      
 
       <div id="index-opt">
 
@@ -26,7 +44,7 @@
 
           <viz-bz 
             :activeIndClass="activeIndClass" 
-            :indData="indData"
+            :indData="indDataParsed"
             :indikator="indikator.name">
 
           </viz-bz>
@@ -36,10 +54,10 @@
           <div class="viz-ampel-container">
             <div class="viz-ampel">
 
-                <div :class="indData[indikator.name].phase==1?'phase'+indData[indikator.name].phase:''"></div>
-                <div :class="indData[indikator.name].phase==2?'phase'+indData[indikator.name].phase:''"></div>
-                <div :class="indData[indikator.name].phase==3?'phase'+indData[indikator.name].phase:''"></div>
-                <div :class="indData[indikator.name].phase==4?'phase'+indData[indikator.name].phase:''"></div>
+                <div :class="indDataParsed[indikator.name].phase==1?'phase'+indDataParsed[indikator.name].phase:''"></div>
+                <div :class="indDataParsed[indikator.name].phase==2?'phase'+indDataParsed[indikator.name].phase:''"></div>
+                <div :class="indDataParsed[indikator.name].phase==3?'phase'+indDataParsed[indikator.name].phase:''"></div>
+                <div :class="indDataParsed[indikator.name].phase==4?'phase'+indDataParsed[indikator.name].phase:''"></div>
 
             </div>
           </div>
@@ -57,9 +75,14 @@
       </div> -->
 
 
-      <div class="info">info/Legende</div>
+      <div class="info" @click="showModal" ><i class="icon-info-circled" />info/Legende</div>
 
-    
+
+      <modal
+            v-show="isModalVisible"
+            @close="closeModal"
+          />
+
 
 
   </div>
@@ -69,22 +92,50 @@
 
 <script>
 
+import toUrl from '~/assets/js/tourl.js';
 import { mapState } from 'vuex';
 
 import VizBz from '~/components/bz/VizBz.vue';
+import Dropdown from '~/components/Dropdown.vue';
+import Modal from '~/components/Modal.vue'
 
 export default {
 
     computed: {
       ...mapState([
         'indikatorenGr'
-      ])
-      // ...mapGetters([
-      // ]),    
+      ]),
+      indDataParsed(){
+
+        const newIndData = {};
+        const indCopy = JSON.parse(JSON.stringify(this.indData));
+
+        for(const x in indCopy) {
+
+          newIndData[x] = indCopy[x];
+
+          if(this.compareSelected == "Berlin"){
+            newIndData[x].val = newIndData[x].val * 1.1;
+          }else{
+            newIndData[x].val = newIndData[x].val / 1.1;
+          }
+          
+          
+        }
+
+        return newIndData;
+      },
+      // compareOpt(){
+      //   if(this.showDropdown){
+      //     return this.compareSelected=="Berlin"?"Bezirk":"Berlin";
+      //   }
+        
+      // }
+       
     },
-    props: ["bzrSelected","indData"],
+    props: ["bzrSelected","indData","bzData"],
     components: {
-      VizBz
+      VizBz,Dropdown,Modal
     },
     mounted(){
 
@@ -92,17 +143,47 @@ export default {
     data(){
         return{
           activeInd :1,
-          activeIndClass:"indGr1"
+          activeIndClass:"indGr1",
+          compareOpt:"Bezirk",
+          compareSelected:"Berlin",
+          showDropdown:false,
+          isModalVisible: false,
         }
     },
     // props: ["mainColor"],
     methods:{
       onIndClick(x){
-        console.log(x)
+
         this.activeInd =x.id;
         this.activeIndClass=x.class;
-        // this.hi = "new something yeah" + this.newInput;
+
+      },
+      onBzrProfile(bzr){
+        this.$router.push({ path: '../bezirksregion/' + toUrl(bzr) });
+      },
+      selectDropdown(){
+        this.showDropdown = this.showDropdown?false:true
+      },
+      dropdownSelected(){
+        this.compareSelected = this.compareOpt=="Berlin"?"Berlin":"Bezirk";
+        this.compareOpt = this.compareOpt=="Berlin"?"Bezirk":"Berlin";
+      },
+      showModal() {
+        this.isModalVisible = true;
+      },
+      closeModal() {
+        this.isModalVisible = false;
       }
+      // onCompareChange(x){
+
+      //   this.compareSelected = x.name;
+      //   if(x.name == "Berlin"){
+      //     this.compareOpt = [{"name":"Bezirk"}];
+      //   }else{
+      //     this.compareOpt = [{"name":"Berlin"}];
+      //   }
+
+      // }
     }
 }
 
@@ -116,13 +197,98 @@ export default {
 @import "~@/assets/style/variables";
 
 
-  #map {
+  // #map {
 
-    width:100%;
-    height: 60vh;
-    position: absolute;
+  //   width:100%;
+  //   height: 60vh;
+  //   position: absolute;
+
+  // }
+
+
+
+  #title{
+
+    display: flex;
+    margin-top: 24px;
+
+    h4{
+      flex: 1;
+    }
+
+    #compare-dropdown *{
+
+      font-size: 0.7rem !important;
+
+    }
+
+    #compare-dropdown{
+
+      flex: 1;
+      display: flex;
+      // font-size: 0.7rem;
+      line-height: 1.9em;
+
+      .compare-dropdown-text{
+        color: $tsb-darkblue;
+        font-weight: bold;
+        flex: 1;
+        text-align: right;
+        padding-right: 10px;
+      }
+
+      #dropdown-mini{
+
+        cursor: pointer;
+        width: 60px;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        i{
+          float: right;
+          position: relative;
+        }
+
+        div:hover{
+          opacity: .8;
+        }
+
+        div{
+          position: absolute;
+          margin-top: -6px;
+        }
+
+        .hidden{
+          display: none;
+        }
+
+      }
+    }
+
+  }//title
+
+
+
+  .button{
+    background-color: $tsb-darkblue; //#1E3791;
+    color: white;
+    padding: 0.3em;
+    margin-top: 0.2em;
+    margin-bottom: 0.3em;  
+    cursor: pointer;
+  }
+
+  .button:hover{
+    opacity: .8;
+  }
+
+  .btn-hidden{
+    visibility: hidden;
 
   }
+
+
+
 
   .navigation{
 
@@ -141,30 +307,49 @@ export default {
   }
 
 
+
+
+
   #viz-container{
 
-    display:flex;
-    flex-flow: wrap;
-    margin: 0px -0.5em;
-    margin-top: 2em;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin-top: 2.2em;
 
     .viz{
-      flex:1;
-      flex-basis: 33%;
-      padding: 0.5em 1.5em 0em 0em;
-      padding-bottom: 1.3em;
-      cursor: pointer;
+      flex-basis: calc(33% - 10px);;
+      margin: 5px;
+      // background-color: lightgreen;
+      // height:50px;
+          padding-top: 10px;
+
     }
+
+
+    @media screen and (max-width: 900px) {
+      .viz { flex-basis: calc(50% - 10px); }
+    }
+
+    @media screen and (max-width: 300px) {
+      .viz { flex-basis: calc(100% - 10px); }
+    }
+
+
 
     .viz-text{
       font-size: .7em;
       margin-top: 0.7em;
+      // min-height: 60px;
     }
 
     .viz-ampel-container{
 
+     text-align: center;
 
       .viz-ampel{
+
+        display: inline-block;
 
         div{
           margin: 4px;
@@ -193,6 +378,13 @@ export default {
     }
 
   }
+
+
+
+
+
+
+
 
   #index-opt{
 
@@ -251,8 +443,9 @@ export default {
     position: absolute;
     bottom: 0px;
     right: 0px;
-    background-color: #ddd;
+    background-color: #858585;
     cursor:pointer;
+    color: white;
 
     &:hover{
       opacity:.8;

@@ -50,3 +50,9 @@ WHEN DONE
 
 adapt url from style json
 npm run generate
+
+
+
+RUN PROJECT 
+
+npm run dev
