@@ -1,0 +1,5 @@
+ref,type,content
+1,titel,1.1 Something
+1,text,"The parse function may be passed a configuration object. It defines settings, behavior, and callbacks used during parsing. Any properties left unspecified will resort to their default values."
+1,barchart,data
+2,titel,12.1 HuHu

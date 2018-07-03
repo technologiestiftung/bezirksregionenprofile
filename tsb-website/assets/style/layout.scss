@@ -10,7 +10,7 @@ $small-width: 1200px;
   }
 }
 
-.page, .page-header, .page-nav , .page-footer, .columns,.content-intro,.content-main {
+.page, .page-header, .page-nav , .page-footer, .columns,.content-intro,.content-main, {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -75,13 +75,13 @@ $small-width: 1200px;
 
 .page-header{
   
-  padding: 1em;
+  padding: $padding;
 
 }
 
 .page-footer {
   
-  padding: 2em;
+  padding: $padding-md;
 
 }
 
@@ -111,18 +111,48 @@ $small-width: 1200px;
 
   .content-main-map{
     flex:1;
-    flex-basis: 50%;
+    flex-basis: 40%;
   }
 
   .content-main-info{
     flex:1;
     display:block;
-    padding: 1em;
-    flex-basis: 50%;
+    padding: $padding;
+    flex-basis: 60%;
     overflow-x: hidden;
   }
 
 }
+
+
+.content-main{
+
+  .content-main-bzr-left{
+    flex:1;
+    flex-basis: 30%;
+    background-color: $tsb-lightblue;
+
+    .navigation{
+      padding:$padding;
+    }
+  }
+
+  .content-main-map{
+    // flex:1;
+    // // flex-basis: 70%;
+  }
+
+  .content-main-bzr-info{
+    flex:1;
+    display:block;
+    padding: $padding-md;
+    flex-basis: 70%;
+    overflow-x: hidden;
+    max-height: 90vh;
+  }
+
+}
+
 
 
 
@@ -139,7 +169,7 @@ $small-width: 1200px;
 
   .intro-text{
     // flex-basis: 33%;
-    padding: 3em;
+    padding: $padding-md;
     // flex-basis: 66%;
     // margin-bottom: 2em;
     background-color: #fff;
@@ -239,3 +269,8 @@ $small-width: 1200px;
 //   padding: 3rem;
 //   box-shadow: 5px 5px 20px 0px rgba(116, 116, 116, 0.25);
 // }
+
+
+.c3-chart{
+  font-family: $font-family-default;
+}

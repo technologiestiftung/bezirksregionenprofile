@@ -8,21 +8,19 @@ import indikatorenGr from '~/data/indikatoren/indikatorenOverview.json';
 
 import toUrl from '~/assets/js/tourl.js'
 
-
 //define the source of the tiles etc
 bright.sources= {
   "openmaptiles": {
     "attribution": "<a href='http://openmaptiles.org'>© OpenMapTiles</a> <a href='http://www.openstreetmap.org/copyright'>© OpenStreetMap</a>",
     "type": "vector",
-    "tiles": ["http://localhost:3000/tiles/{z}/{x}/{y}.pbf"]
+    "tiles": ["http://localhost:3000/map/tiles/{z}/{x}/{y}.pbf"]
   }
 };
-bright.sprite= "http://localhost:3000/sprites/positron";
-bright.glyphs= "http://localhost:3000/glyphs/{fontstack}/{range}.pbf";
+bright.sprite= "http://localhost:3000/map/sprites/positron";
+bright.glyphs= "http://localhost:3000/map/glyphs/{fontstack}/{range}.pbf";
 
 //no source here
 nostyle.sources = {};
-
 
 const topojson = require('topojson');
 
@@ -55,7 +53,6 @@ Object.keys(bezirksregionenNamen).sort().forEach(function(key) {
   bezirksregionenNamenOrdered[key] = bezirksregionenNamen[key];
 });
 
-console.log("xxx",bezirksregionenNamenOrdered)
 
 // let bezirksRegionenNamen = {};
 // for (var i = 0; i < bezirksregionen.features.length; i++) {
@@ -67,6 +64,22 @@ console.log("xxx",bezirksregionenNamenOrdered)
 //   bezirksRegionenNamen[name].url = toUrl(bezirksregionen.features[i].properties.BZR_NAME;);
 // }
 
+const themen = [
+  {"name": "Kurzporträt der Bezirksregion","id":1},
+  {"name": "Demografische Struktur und Entwicklung","id":2},
+  {"name": "Soziale Situation","id":3},
+  {"name": "Bildungssituation","id":4},
+  {"name": "Gesundheitliche Situation","id":5},
+  {"name": "Wirtschafts- und Gewerbestruktur","id":6},
+  {"name": "Wohnsituation","id":7},
+  {"name": "Soziale Infrastruktur","id":8},
+  {"name": "Grüne Infrastruktur und öffentlicher Raum","id":9},
+  {"name": "Mobilität","id":10},
+  {"name": "Umwelt (Lärmbelastung / Luftbelastung / Bioklima)","id":11},
+  {"name": "Förderprogramme und Projekte","id":12},
+  {"name": "Partizipation: Strukturen der Akteursvernetzung und Bürgerbeteiligung","id":13},
+  {"name": "Zusammenfassung: Potenziale und Herausforderungen","id":14},
+]
 
 Vue.use(Vuex)
 
@@ -79,7 +92,8 @@ const store = () => new Vuex.Store({
     brightstyle: bright,
     nostyle: nostyle,
     mapColors: ["#1E3791","#E60032"],
-    indikatorenGr:indikatorenGr
+    indikatorenGr:indikatorenGr,
+    themen:themen
   },
   getters: {
     // toUrl(str){

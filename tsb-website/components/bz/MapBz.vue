@@ -24,6 +24,7 @@
 
 import { mapState } from 'vuex';
 import bbox from '@turf/bbox';
+// import geoViewport from '@mapbox/geo-viewport';
 
 import Dropdown from '~/components/Dropdown.vue';
 
@@ -88,6 +89,29 @@ export default {
 
     },
     createMap(){
+
+
+        // var mapEl = document.getElementById('map').getBoundingClientRect(); 
+        // var mapDim = [mapEl.height, mapEl.width];
+
+        // let selectedBbox = bbox(selectedBz);
+        // // selectedBbox = [[selectedBbox[0],selectedBbox[1]],[selectedBbox[2],selectedBbox[3]]];
+        // const bboxBz = [selectedBbox[0],selectedBbox[1],selectedBbox[2],selectedBbox[3]];
+        // var newbounds = geoViewport.viewport(bboxBz, mapDim);
+
+        // mapboxgl.accessToken = "";
+        // map = new mapboxgl.Map({
+        //     container: 'map',
+        //     style: this.nostyle,
+        //     center: newbounds.center,
+        //     zoom:newbounds.zoom,
+        //     pitch: 0,
+        //     minZoom: 2,
+        //     maxZoom: 20,
+        //     interactive: false
+        // })
+
+
 
         console.log("xxx bezirk",this.bezirk)
 

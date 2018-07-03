@@ -1,11 +1,13 @@
 $font-family-default: "clan-book", Helvetica, sans-serif !default;
-$font-family-modern: 'clan-book', Monaco, monospace;
+$font-family-bold: 'clan-medium', Monaco, monospace;
 $font-weight: 400 !default;
 $font-weight-bold: 700 !default;
 $base-line-height: 1.7 !default;
 
 $spacing:     2rem !default;
 $padding:     1em !default;
+$padding-md:  2em !default;
+// $padding-lg:  3em !default;
 
 
 $color-text: #000 !default;
@@ -26,17 +28,17 @@ $color-okf:       #04A6F0;
 $color-okf-alt:   #3ef5c9;
 
 
-$tsb-lightblue: #2E91D2;
+$tsb-lightblue: rgb(55,90,165);
 $tsb-darkblue: #1E3791;
 $tsb-lightgray: #2E91D2;
 $tsb-red: #E60032;
 
-$color-indGr1: #9466c9;
-$color-indGr2: #5ba85f;
-$color-indGr3: #c85990;
-$color-indGr4: #ac973d;
-$color-indGr5: #6295cd;
-$color-indGr6: #cb6046;
+$color-indGr1: rgb(20,150,140);
+$color-indGr2: rgb(100,185,230);
+$color-indGr3: rgb(220,200,45);
+$color-indGr4: rgb(230,0,50);
+$color-indGr5: rgb(145,200,130);
+$color-indGr6: rgb(45,145,210);
 
 
 $color-phase: #ddd;

@@ -43,7 +43,6 @@
 // import d3 from 'd3-dsv';
   // import * as d3 from "d3";
 
-// import axios from 'axios'
 
 
 export default {
@@ -52,21 +51,7 @@ export default {
 
     }
   },
-  props: ["name","nameClass","introData"],
-  // created() {
-
-  //   this.getData();
-
-  // },
-  // methods:{
-  //   getData(){
-  //     // console.log(this)
-  //     const url = process.env.NODE_ENV === 'production' ? 'http://localhost:8080' : 'http://localhost:3000';
-  //     axios.get(url + '/data/bz-data/'+this.bezirk+'/overview.json').then((response)=>
-  //       this.introDataLoaded = response.data
-  //     )
-  //   }
-  // }
+  props: ["name","nameClass","introData"]
 }
 
 </script>

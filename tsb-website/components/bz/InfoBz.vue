@@ -49,8 +49,6 @@
 
           </viz-bz>
 
-          <div class="viz-text"><b>{{indikator['name']}}</b> - {{indikator['text-sm']}}</div>
-
           <div class="viz-ampel-container">
             <div class="viz-ampel">
 
@@ -61,6 +59,8 @@
 
             </div>
           </div>
+
+          <div class="viz-text"><b>{{indikator['name']}}</b> - {{indikator['text-sm']}}</div>
 
         </div>
 
@@ -318,11 +318,11 @@ export default {
     margin-top: 2.2em;
 
     .viz{
-      flex-basis: calc(33% - 10px);;
-      margin: 5px;
+      flex-basis: calc(33% - 20px);;
+      margin: 10px;
       // background-color: lightgreen;
       // height:50px;
-          padding-top: 10px;
+          padding-top: 20px;
 
     }
 

@@ -18,12 +18,11 @@
         aria-labelledby="modalTitle"
         aria-describedby="modalDescription"
       >
-        <header
+<!--         <header
           class="modal-header"
           id="modalTitle"
         >
           <slot name="header">
-            This is the default tile!
 
             <button
               type="button"
@@ -35,28 +34,15 @@
             </button>
           </slot>
         </header>
+ -->
         <section
           class="modal-body"
           id="modalDescription"
         >
-          <slot name="body">
-            I'm the default body!
-          </slot>
-        </section>
-        <footer class="modal-footer">
-          <slot name="footer">
-            I'm the default footer!
+          <img src="/img/graf-info.png">
 
-            <button
-              type="button"
-              class="btn-green"
-              @click="close"
-              aria-label="Close modal"
-            >
-              Close me!
-            </button>
-          </slot>
-        </footer>
+        </section>
+
       </div>
     </div>
   </transition>
@@ -121,5 +107,9 @@
     background: #4AAE9B;
     border: 1px solid #4AAE9B;
     border-radius: 2px;
+  }
+
+  img{
+        width: 40vw;
   }
 </style>

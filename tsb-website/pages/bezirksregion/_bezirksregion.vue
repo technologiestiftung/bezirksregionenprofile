@@ -1,9 +1,15 @@
 <template>
-  <section v-if='bzrIntroData'> 
-    <intro-bz :name="getBzrName" :nameClass="getBzName" :introData="bzrIntroData"></intro-bz>
+  <section v-if='bzrIntroData && datenblatt'> 
+    <intro :name="getBzrName" :nameClass="getBzName" :introData="bzrIntroData"></intro>
     <div class="content-main">
-<!--       <map-bz :bezirk="bezirk" v-on:bzRChanged="changeBzR"></map-bz>
-      <info-bz :bzrSelected="bzrSelected" :bzData="bzData" :indData="indData"></info-bz> -->
+      <div class="content-main-bzr-left">
+
+        <map-bzr :bzrName="getBzrName"></map-bzr>
+        <navigation-bzr :bzrName="getBzrName" :themen="themen"  v-on:changeThemaSelected="changeThemaSelected" :themaSelected="themaSelected"></navigation-bzr>
+
+      </div>
+      <info-bzr :themen="themen"  v-on:changeThemaSelected="changeThemaSelected" :themaSelected="themaSelected" :datenblatt="datenblatt"></info-bzr>
+
     </div>
 
   </section>
@@ -15,10 +21,16 @@
   import { mapState } from 'vuex';
   import axios from 'axios';
   import toUrl from '~/assets/js/tourl.js';
+  import Papa from 'papaparse';
 
-  // import IntroBz from '~/components/bz/IntroBz.vue';
-  // import MapBz from '~/components/bz/MapBz.vue';
-  import IntroBz from '~/components/IntroBzBzr.vue';
+
+  // import IntroBz from '~/components/bzr/IntroBz.vue';
+  import Intro from '~/components/IntroBzBzr.vue';
+  import MapBzr from '~/components/bzr/MapBzr.vue';
+  import InfoBzr from '~/components/bzr/InfoBzr.vue';
+  import NavigationBzr from '~/components/bzr/NavigationBzr.vue';
+
+  
 
   function getKeyByValue(object, value) {
     return Object.keys(object).find(key => object[key].url === value);
@@ -37,18 +49,21 @@
     data(){
       return {
         bzrUrl: this.$route.params.bezirksregion,
-        bzrIntroData:null
+        bzrIntroData:null,
+        themaSelected:1,
+        datenblatt: null
       }
     },
     created() {
       this.getBzrData();
+      this.getDatenblattData();
       // this.getIndData();
       // this.bzName = this.bzrNamen[this.getBzrName].bzName;
       // console.log(this.$route.params.bezirksregion)
     },
     computed: {
       ...mapState([
-        'bzrNamen'
+        'bzrNamen','themen'
       ]),
       getBzrName () {
         return getKeyByValue(this.bzrNamen,this.bzrUrl);
@@ -60,13 +75,22 @@
 
     },
     components: {
-      IntroBz
+      Intro,MapBzr,InfoBzr,NavigationBzr
     },
     methods:{
       getBzrData(){ //
         const url = process.env.NODE_ENV === 'production' ? 'http://localhost:8080' : 'http://localhost:3000';
         axios.get(url + '/data/bz-data/' + toUrl(this.getBzName) + '/bzr-data/' +this.$route.params.bezirksregion+'/bzr-overview.json').then((response)=>
           this.bzrIntroData = response.data
+        )
+      },
+      changeThemaSelected(themaId){
+        this.themaSelected=themaId;
+      },
+      getDatenblattData(){ //
+        const url = process.env.NODE_ENV === 'production' ? 'http://localhost:8080' : 'http://localhost:3000';
+        axios.get(url + '/data/bz-data/' + toUrl(this.getBzName) + '/bzr-data/' +this.$route.params.bezirksregion+'/datenblatt.csv').then((response)=>
+          this.datenblatt = Papa.parse(response.data,{header: true}).data
         )
       },
     }
