@@ -1,12 +1,12 @@
 <template>
     <div class="btn-group">
         <div @click="toggleMenu()" class="dropdown-toggle" v-if="selected !== ''">
-          {{ selected}}
+          <h4>{{ selected}}</h4>
           <span class="caret"></span>
         </div>
 
         <div @click="toggleMenu()" class="dropdown-toggle" v-if="selected === ''">
-          {{placeholderText}}
+          <h4>{{placeholderText}}</h4>
           <span class="caret"></span>
         </div>
 
@@ -81,12 +81,14 @@
         a {
             &:hover {
                 text-decoration: none;
+                border-bottom: 0px solid;
+
             }
         }
     }
 
     .dropdown-toggle {
-        color: #636b6f;
+        color: #000;
         min-width: 160px;
         padding: 10px;
         text-transform: none;
@@ -102,10 +104,15 @@
         float: none;
         box-shadow: none;
         border-radius: 0;
+        // font-family: $font-family-bold;
 
         &:hover {
           background: #e1e1e1;
           cursor: pointer;
+        }
+
+        h4{
+          display: inline-block;
         }
     }
 

@@ -92,7 +92,7 @@ export default {
         map.on("load",()=>{
 
             map.fitBounds([[13.08846524952736,52.326853772549924],[13.769489925280624,52.679007673490645]], {
-                padding: 20
+                padding: 25
             });
 
             map.addSource('bezirksgrenzen', {

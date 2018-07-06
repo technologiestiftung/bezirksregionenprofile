@@ -15,7 +15,9 @@
 
   import { mapState } from 'vuex';
   import axios from 'axios';
+  import Papa from 'papaparse';
   import toUrl from '~/assets/js/tourl.js';
+  import toIndikatorenJSON from '~/assets/js/toIndikatorenJSON.js';
 
   import IntroBz from '~/components/IntroBzBzr.vue';
   import MapBz from '~/components/bz/MapBz.vue';
@@ -46,7 +48,7 @@
     },
     computed: {
       ...mapState([
-        'bzNamen'
+        'bzNamen','url','urldev'
       ]),
       bezirk () {
 
@@ -78,26 +80,27 @@
 
         }else{//if bzr then load new data from bzr source
 
-          const url = process.env.NODE_ENV === 'production' ? 'http://localhost:8080' : 'http://localhost:3000';
-          axios.get(url + '/data/bz-data/'+this.$route.params.bezirk+'/bzr-data/'+toUrl(name)+'/indikatoren.json').then((response)=>
-            this.indData = response.data
+          const url = process.env.NODE_ENV === 'production' ? this.url : this.urldev;
+          axios.get(url + '/data/bz-data/'+this.$route.params.bezirk+'/bzr-data/'+toUrl(name)+'/indikatoren.csv').then((response)=>
+            this.indData = toIndikatorenJSON(Papa,response.data)
           )
 
         }
 
       },
       getBzData(){ //
-        const url = process.env.NODE_ENV === 'production' ? 'http://localhost:8080' : 'http://localhost:3000';
+        const url = process.env.NODE_ENV === 'production' ? this.url : this.urldev;
         axios.get(url + '/data/bz-data/'+this.$route.params.bezirk+'/bz-overview.json').then((response)=>
           this.bzData = response.data
         )
       },
       getIndData(){ //get the info about Kernidikatoren such as the description etc
         const me = this;
-        const url = process.env.NODE_ENV === 'production' ? 'http://localhost:8080' : 'http://localhost:3000';
-        axios.get(url + '/data/bz-data/'+this.$route.params.bezirk+'/indikatoren.json').then(function(response){
-          me.indData = response.data;
-          me.indDataBz = response.data;
+        const url = process.env.NODE_ENV === 'production' ? this.url : this.urldev;
+        axios.get(url + '/data/bz-data/'+this.$route.params.bezirk+'/indikatoren.csv').then(function(response){
+          const responseData = toIndikatorenJSON(Papa,response.data);
+          me.indData = responseData;
+          me.indDataBz = responseData;
         })
       }
       // getObjects() {

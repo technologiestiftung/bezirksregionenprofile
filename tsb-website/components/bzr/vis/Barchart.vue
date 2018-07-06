@@ -1,6 +1,6 @@
 <template>
 
-  <div :id="chartId" class="c3-chart c3-chart-barchart">
+  <div :id="chartId" class="c3-chart-barchart">
 
     
   </div>
@@ -11,30 +11,34 @@
 <script>
 
 
-const guidGenerator = function() {
-    const S4 = function() {
-       return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
-    };
-    return ("id"+S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4());
-}
-
-
 export default {
 
+  mounted: function () {
 
- mounted: function () {
     const c3 = require('c3/c3.min.js');
     require('c3/c3.min.css');
 
-    // document.getElementById(this.chartId).style.height = "250px";
+    const cols = [];
+    for(const x in this.visData[0]){
+      cols.push(x);
+    }
 
+    var newData = [];
+    for (var i = 0; i < cols.length; i++) {
+      var newArray = [cols[i]];
+      
+      for (var ii = 0; ii < this.visData.length; ii++) {
+        newArray.push(Number(this.visData[ii][cols[i]]));
+      }
+      newData.push(newArray);
+    };
+
+    // document.getElementById(this.chartId).style.height = "250px";
     c3.generate({
-          bindto: '#' + this.chartId,
-          data: {
-          columns: [
-              ['data1', 30, 200, 100, 400, 150, 250]
-          ],
-          type: 'bar'
+      bindto: '#' + this.chartId,
+      data: {
+        columns: newData,
+        type: 'bar'
       },
       bar: {
           width: {
@@ -42,33 +46,34 @@ export default {
           }
           // or
           //width: 100 // this makes bar width 100px
+      },
+      color: {
+        pattern: ['#1E3791','#E60032']
+      },
+      legend: {
+          show: false
       }
-      });
+    });
+
   },
+  props: ["chartId","visData"],
   data(){
       return{
-        chartId: guidGenerator(),
       }
   }
-
 }
 
 </script>
-
 
 
 <style lang="scss" scoped>
 
   @import "~@/assets/style/variables";
 
-  // #chart{
-  //   height: 00px;
-  //   width:100%;
-  // }
-
   .c3-chart-barchart{
     height: 250px;
     // padding: 1em;
+    margin: $vis-margin;
   }
 
 </style>

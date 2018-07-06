@@ -1,0 +1,36 @@
+
+2. Die Karte auf der Startseite sieht ein bisschen nackt und leer aus. Drei Vorschläge meinerseits wäre entweder die größeren Gewässer & Grünanlagen aus OSM extrahieren und in den Hintergrund packen. Oder vllt. die Labels für die Bezirke direkt auf der Karte statisch positionieren. Oder mit einem leichten Alpha die Bezirksregionen im Hintergrund andeuten, vllt. macht es dann visuell etwas mehr her.
+
+3. Könnte man beim Hovern über die Dropdown-Liste bei den Bezirken auch die Bezirke auf der Karte highlighten.
+
+4. Auf der Detailseite würde ich vorschlagen, dass die Erklärung zu den Visualisierungen beim ersten Aufruf die Visualisierungen überlagert und das es danach dann wie von euch angedacht unten über die Info aufgerufen werden kann. Die Vis ist dann doch so komplex das viele die nicht auf Anhieb verstehen werden.
+
+5. Die Legende ist sehr klein. Das müsste irgendwie größer werden (Also wenn man es aufgerufen hat).
+
+6. Das Regionen-Drop-Down überlagert die Legende (Siehe Screenshot)
+
+7. Auf der Startseite habt ihr für die Karte so eine kleine Intro-Animation gebaut. Könnte man etwas ähnliches auch für die zweite Seite machen? Falls es nicht zu unruhig ist könnten z.B. die Bars in den kleinen Vis aufgehen.
+
+8. Bei den vier Punkten unter den Balken sind wir uns unsicher. Weil man hier ein doppeltes Encoding hat. Würde nicht in Theorie ein Punkt reichen, welcher dann die Farbe ändert? Was bedeutet es, wenn links der Punkt weiß ist?
+
+9. Von der Leserichtung her würde ich eigentlich die Titel der kleinen VIS über die VIS stellen, was meint ihr?
+
+10. Warum steht unten links immer BZR unter den Grafiken?
+
+11. Wenn ich oben rechts von Berlin auf Bezirk wechsle müsste dann nicht oben in der Mitte der Grafik Bezirk und nicht Berlin stehen?
+
+12. Wenn man über eine Grafik Hovert, könnte man dann die entsprechenden Werte in der Karte abbilden? Also das man sieht wie die anderen Regionen bei diesem Wert abschneiden?
+
+13. Der Link "zum Datenprofil" könnte noch etwas auffälliger, vllt. noch ein Icon davor oder so. Haben ein bisschen Sorge, dass Leute das übersehen.
+
+14. Manchmal passiert es das man für das Datenprofil eine 404 bekommt. Ich glaube das passiert wenn man direkt einen Deeplink nutzt oder die Seite einen Hard-Reload versehentlich macht. Deeplinks sollten auf jeden Fall funktionieren.
+
+15. Beim Kurzprofil gab es ja die Idee, dass hinter dem Shape noch ein Satellittenbild auftaucht
+
+16. Wir würden vorschlagen kein Iframe innerhalb der Seite zu nutzen, sondern einfach eine Lange Seite daraus machen, das fühlt sich irgendwie komisch an. Vor allem wenn das Menü länger ist, als das iFrame. Vllt. gibt es ne library mit der das Menü dann mitscrollt oder so.
+
+17. Auf der Inhaltsspalte sollte es noch LineCharts und Karten geben, Choroplethen und POI Karten.
+
+18. Eine Idee die wir heute noch hatten war ob man noch irgendwo einen statischen Downloadlink einbetten kann, damit Leute auch die Rohdaten runterladen können (sehr geringe Prio).
+
+19. Das editieren mit CSV und JSONs ist super. Finde es ne schöne Lösung mit den references und types. Ich würde hier lokal vllt. nen kleinen Editor bauen mit dem man das dann schnell editieren und produzieren kann.​

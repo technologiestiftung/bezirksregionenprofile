@@ -8,8 +8,8 @@
       <nav class="page-nav">
         <ul>
 <!--           <li><nuxt-link to="/">Home</nuxt-link></li> -->
-          <li><nuxt-link to="/about">About</nuxt-link></li>
-          <li><nuxt-link to="/kontakt">Kontakt</nuxt-link></li>
+          <li><nuxt-link to="/about">Über den Monitor</nuxt-link></li>
+          <li><a target="_blank" href="https://www.technologiestiftung-berlin.de/de/stiftung/kontakt-anfahrt/">Kontakt</a></li>
         </ul>
       </nav>
     </header>

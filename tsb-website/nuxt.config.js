@@ -7,7 +7,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'bezirksregionen explorer' }
+      { hid: 'description', name: 'description', content: 'Bezirksregionen Monitor' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -51,6 +51,9 @@ module.exports = {
       }
       config.module.noParse = /(mapbox-gl)\.js$/
     }
+  },
+  router: {
+    base: '/tsb/'
   }
 }
 

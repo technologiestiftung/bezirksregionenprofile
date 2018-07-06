@@ -61,7 +61,7 @@ export default {
         mapboxgl.accessToken = "";
         map = new mapboxgl.Map({
             container: 'map',
-            style: this.brightstyle,
+            style: this.nostyle,
             // center: [13.391, 52.519],
             zoom:5,
             pitch: 0,

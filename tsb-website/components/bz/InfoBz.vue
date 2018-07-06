@@ -4,7 +4,7 @@
 
       <div id="title">
         <h4><i class="icon-right-small" /> Themen & Daten</h4> 
-        <div id="compare-dropdown">
+        <div id="compare-dropdown" :class="this.bzData.name==this.bzrSelected ? 'compare-inactive' : ''">
           <div class="compare-dropdown-text">VERGLEICHEN MIT:</div>
           <!-- <dropdown :options="compareOpt" :selected="compareSelected" class="dropdown" v-on:updateOption="onCompareChange"></dropdown> -->
 
@@ -44,8 +44,12 @@
 
           <viz-bz 
             :activeIndClass="activeIndClass" 
-            :indData="indDataParsed"
-            :indikator="indikator.name">
+            :indikatorValue="indDataParsed[indikator.name].val"
+            :activeInd="activeInd"
+            :compareSelected="compareSelected"
+            :bzrSelected="bzrSelected"
+            :bzName="bzData.name"
+            >
 
           </viz-bz>
 
@@ -97,7 +101,7 @@ import { mapState } from 'vuex';
 
 import VizBz from '~/components/bz/VizBz.vue';
 import Dropdown from '~/components/Dropdown.vue';
-import Modal from '~/components/Modal.vue'
+import Modal from '~/components/bz/Modal.vue'
 
 export default {
 
@@ -110,15 +114,21 @@ export default {
         const newIndData = {};
         const indCopy = JSON.parse(JSON.stringify(this.indData));
 
+        console.log(indCopy)
+
         for(const x in indCopy) {
 
           newIndData[x] = indCopy[x];
 
           if(this.compareSelected == "Berlin"){
             newIndData[x].val = newIndData[x].val * 1.1;
+            newIndData[x].phase = newIndData[x].phaseB;
+
           }else{
             newIndData[x].val = newIndData[x].val / 1.1;
+            newIndData[x].phase = newIndData[x].phaseBz;
           }
+
           
           
         }
@@ -138,7 +148,6 @@ export default {
       VizBz,Dropdown,Modal
     },
     mounted(){
-
     },
     data(){
         return{
@@ -147,7 +156,7 @@ export default {
           compareOpt:"Bezirk",
           compareSelected:"Berlin",
           showDropdown:false,
-          isModalVisible: false,
+          isModalVisible: true,
         }
     },
     // props: ["mainColor"],
@@ -184,6 +193,14 @@ export default {
       //   }
 
       // }
+    },
+    watch:{
+      bzrSelected: function (val) {
+        if(this.bzData.name==this.bzrSelected){
+          this.compareSelected = "Berlin";
+          this.compareOpt = "Bezirk";
+        }
+      }
     }
 }
 
@@ -216,6 +233,11 @@ export default {
       flex: 1;
     }
 
+    .compare-inactive{
+      opacity: .3;
+      pointer-events: none;
+    }
+
     #compare-dropdown *{
 
       font-size: 0.7rem !important;
@@ -240,7 +262,7 @@ export default {
       #dropdown-mini{
 
         cursor: pointer;
-        width: 60px;
+        width: 68px;
         text-transform: uppercase;
         font-weight: bold;
 
@@ -255,7 +277,8 @@ export default {
 
         div{
           position: absolute;
-          margin-top: -6px;
+          margin-top: -4px;
+          // color:#ccc;
         }
 
         .hidden{

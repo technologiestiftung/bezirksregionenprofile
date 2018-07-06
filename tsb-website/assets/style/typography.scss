@@ -24,7 +24,7 @@ h1 {
 h2 {
   font-size: 1.4rem;
   line-height: 1.4;
-  letter-spacing: 0.02em;
+  // letter-spacing: 0.02em;
   font-weight: bold;
   color: $color-accent;
   margin-bottom: $spacing;
@@ -33,7 +33,7 @@ h2 {
 
 h3 {
   font-size: 1.2rem;
-  letter-spacing: 0.02em;
+  // letter-spacing: 0.02em;
   color: $color-accent;
   font-family: $font-family-bold;
 }
@@ -145,14 +145,28 @@ table {
       font-size: 0.7em;
       padding: 0 0.2rem 0.2rem;
 
-      &:hover {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-      }
+      // &:hover {
+      //   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+      //   // opacity: .8;
+      // }
 
-      &.nuxt-link-exact-active {
-        border-bottom: 1px solid #fff;
-      }
+      // &.nuxt-link-exact-active {
+      //   border-bottom: 1px solid #fff;
+      // }
     }
+  }
+}
+
+
+a {
+
+  &:hover {
+    border-bottom: 1px solid;
+    opacity: .9;
+  }
+
+  &.nuxt-link-exact-active {
+    border-bottom: 1px solid #fff;
   }
 }
 
@@ -314,14 +328,14 @@ table {
 
 @font-face {
   font-family: 'clan-book';
-  src: url("/font/clan-book.woff") format("woff");
+  src: url("/tsb/font/clan-book.woff") format("woff");
   font-weight: normal;
   font-style: normal; 
 }
 
 @font-face {
   font-family: 'clan-medium';
-  src: url("/font/clan-medium.woff") format("woff");
+  src: url("/tsb/font/clan-medium.woff") format("woff");
   font-weight: normal;
   font-style: normal; 
 }
@@ -332,12 +346,12 @@ table {
 
 @font-face {
   font-family: 'tsb';
-  src: url('/font/tsb.eot?70193786');
-  src: url('/font/tsb.eot?70193786#iefix') format('embedded-opentype'),
-       url('/font/tsb.woff2?70193786') format('woff2'),
-       url('/font/tsb.woff?70193786') format('woff'),
-       url('/font/tsb.ttf?70193786') format('truetype'),
-       url('/font/tsb.svg?70193786#tsb') format('svg');
+  src: url('/tsb/font/tsb.eot?70193786');
+  src: url('/tsb/font/tsb.eot?70193786#iefix') format('embedded-opentype'),
+       url('/tsb/font/tsb.woff2?70193786') format('woff2'),
+       url('/tsb/font/tsb.woff?70193786') format('woff'),
+       url('/tsb/font/tsb.ttf?70193786') format('truetype'),
+       url('/tsb/font/tsb.svg?70193786#tsb') format('svg');
   font-weight: normal;
   font-style: normal;
 }

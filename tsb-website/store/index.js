@@ -3,7 +3,7 @@ import Vuex from 'vuex';
 
 import bright from '~/static/map/bright-v9.json';
 import nostyle from '~/static/map/nostyle.json';
-import bzr_lor from '~/data/bzr_lor.json';
+import bzr_lor from '~/data/map-borders.json'; //all map data
 import indikatorenGr from '~/data/indikatoren/indikatorenOverview.json';
 
 import toUrl from '~/assets/js/tourl.js'
@@ -54,6 +54,8 @@ Object.keys(bezirksregionenNamen).sort().forEach(function(key) {
 });
 
 
+const planungsraeume = topojson.feature(bzr_lor, bzr_lor.objects["lor_planungsraeume"]);
+
 // let bezirksRegionenNamen = {};
 // for (var i = 0; i < bezirksregionen.features.length; i++) {
 //   let nameBz = bezirksregionen.features[i].properties.BEZNAME;
@@ -87,13 +89,17 @@ const store = () => new Vuex.Store({
   state: {
     bezirksgrenzen: bezirksgrenzen,
     bezirksregionen: bezirksregionen,
+    planungsraeume:planungsraeume,
     bzNamen:bezirksNamenOrdered,
     bzrNamen: bezirksregionenNamenOrdered,
     brightstyle: bright,
     nostyle: nostyle,
     mapColors: ["#1E3791","#E60032"],
     indikatorenGr:indikatorenGr,
-    themen:themen
+    themen:themen,
+    url:'http://hanshack.com/tsb',
+    urldev:'http://localhost:3000/tsb'
+    // url:  'http://localhost:3000'
   },
   getters: {
     // toUrl(str){

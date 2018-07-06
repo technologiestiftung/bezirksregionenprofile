@@ -8,7 +8,14 @@
         <navigation-bzr :bzrName="getBzrName" :themen="themen"  v-on:changeThemaSelected="changeThemaSelected" :themaSelected="themaSelected"></navigation-bzr>
 
       </div>
-      <info-bzr :themen="themen"  v-on:changeThemaSelected="changeThemaSelected" :themaSelected="themaSelected" :datenblatt="datenblatt"></info-bzr>
+      <info-bzr 
+        :themen="themen"  
+        v-on:changeThemaSelected="changeThemaSelected" 
+        :themaSelected="themaSelected" 
+        :datenblatt="datenblatt"
+        :sourceUrl="getSourceUrl"
+        :bzrName="getBzrName">
+      </info-bzr>
 
     </div>
 
@@ -63,14 +70,18 @@
     },
     computed: {
       ...mapState([
-        'bzrNamen','themen'
+        'bzrNamen','themen','url','urldev'
       ]),
       getBzrName () {
         return getKeyByValue(this.bzrNamen,this.bzrUrl);
       },
       getBzName(){
         return this.bzrNamen[this.getBzrName].bzName
-
+      },
+      getSourceUrl(){
+        //get the url where the vis data is
+        const url = process.env.NODE_ENV === 'production' ? this.url : this.urldev;
+        return url + '/data/bz-data/' + toUrl(this.getBzName) + '/bzr-data/' +this.$route.params.bezirksregion+'/data/';
       }
 
     },
@@ -79,7 +90,7 @@
     },
     methods:{
       getBzrData(){ //
-        const url = process.env.NODE_ENV === 'production' ? 'http://localhost:8080' : 'http://localhost:3000';
+        const url = process.env.NODE_ENV === 'production' ? this.url : this.urldev;
         axios.get(url + '/data/bz-data/' + toUrl(this.getBzName) + '/bzr-data/' +this.$route.params.bezirksregion+'/bzr-overview.json').then((response)=>
           this.bzrIntroData = response.data
         )
@@ -88,7 +99,7 @@
         this.themaSelected=themaId;
       },
       getDatenblattData(){ //
-        const url = process.env.NODE_ENV === 'production' ? 'http://localhost:8080' : 'http://localhost:3000';
+        const url = process.env.NODE_ENV === 'production' ? this.url : this.urldev;
         axios.get(url + '/data/bz-data/' + toUrl(this.getBzName) + '/bzr-data/' +this.$route.params.bezirksregion+'/datenblatt.csv').then((response)=>
           this.datenblatt = Papa.parse(response.data,{header: true}).data
         )

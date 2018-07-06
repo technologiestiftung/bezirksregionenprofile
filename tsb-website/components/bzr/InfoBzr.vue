@@ -8,18 +8,13 @@
         class="opt" 
         :key="thema.name" 
         >
-
+        <!-- Title Thema -->
         <h4 :id="'thema-id' + thema.id">{{thema.id}} {{thema.name}}</h4>
         <div class="line"></div>
 
         <div class="datenblatt-element" v-for="(blattEl,index) in datenblatt" :key="index" v-if="blattEl.ref==thema.id">
 
-          <!-- Title -->
-          <div class="blatt-el-titel" v-if="blattEl.type=='titel'">{{blattEl.content}}</div>
-          <!-- Text -->
-          <div class="blatt-el-text" v-if="blattEl.type=='text'">{{blattEl.content}}</div>
-          <!-- Barchart -->
-          <barchart v-if="blattEl.type=='barchart'"></barchart> 
+          <vis-setup :visInfo="blattEl" :sourceUrl="sourceUrl" :bzrName="bzrName"></vis-setup>
 
         </div>
 
@@ -37,8 +32,11 @@
 import toUrl from '~/assets/js/tourl.js';
 import { mapState } from 'vuex';
 
-import Barchart from '~/components/bzr/vis/Barchart.vue';
+// import BarchartLoader from '~/components/bzr/vis/BarchartLoader.vue';
+// import Tabelchart from '~/components/bzr/vis/Tabelchart.vue';
+// import MapPr from '~/components/bzr/vis/MapPr.vue';
 
+import VisSetup from '~/components/bzr/VisSetup.vue';
 
 
 export default {
@@ -56,13 +54,24 @@ export default {
           }
       }
     },
-    props: ["themen","datenblatt"],
+    props: ["themen","datenblatt","sourceUrl","bzrName"],
     components: {
-      Barchart
+      VisSetup
+    },
+    computed: {
+      // getData: function (dataSource) {
+      //   return new Promise((resolve, reject) => {
+      //     axios.get(this.sourceUrl+'/'+dataSource+'.csv').then((response)=>
+      //       resolve(Papa.parse(response.data,{header: true}).data)
+      //     )
+      //   })
+      // }
     },
     mounted(){
 
-      console.log("datenblatt",this.datenblatt)
+      // console.log("namen",this.bzrName)
+
+      // console.log("datenblatt",this.datenblatt,this.sourceUrl)
 
     },
     data(){
@@ -96,14 +105,26 @@ export default {
             break
             
           }
-
         }
-
-
-
-      }
+      },
+      // getData: function (dataSource) {
+      //   return new Promise((resolve, reject) => {
+      //     axios.get(this.sourceUrl+'/'+dataSource+'.csv').then((response)=>
+      //       resolve(Papa.parse(response.data,{header: true}).data)
+      //     )
+      //   })
+      // }
      
-    }
+    },
+    // actions: {
+    //   getData: function (dataSource) {
+    //     return new Promise((resolve, reject) => {
+    //       axios.get(this.sourceUrl+'/'+dataSource+'.csv').then((response)=>
+    //         resolve(Papa.parse(response.data,{header: true}).data)
+    //       )
+    //     })
+    //   }
+    // }
 }
 
 
@@ -115,6 +136,15 @@ export default {
 
   @import "~@/assets/style/variables";
 
+  li{
+    margin-top: 3em;
+  }
+
+  li:first-child {
+    margin-top: 1em;
+  }
+
+
   h4{
     color: $tsb-darkblue; //#1E3791;
   }
@@ -123,24 +153,7 @@ export default {
     width: 50px;
     height:10px;
     border-bottom: 3px solid $tsb-darkblue;
-    margin-bottom: 15px;
+    margin-bottom: 2em;
   }
-
-  // .placeholder{
-  //   height: 500px;
-  // }
-
-  .datenblatt-element{
-    // background-color:#ccc;
-    .blatt-el-titel{
-      color: $tsb-darkblue;
-    }
-
-    .blatt-el-text{
-      color: #ccc;
-    }
-
-  }
-
 
 </style>

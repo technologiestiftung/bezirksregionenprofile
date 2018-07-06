@@ -2,6 +2,11 @@
   "variables"
 ;
 
+
+.mapboxgl-map{
+  overflow: visible !important;
+}
+
 .mapboxgl-popup-tip{
   // display:none;
   opacity:0;
@@ -11,7 +16,7 @@
 .mapboxgl-popup-content{
   border-radius: 0px !important;
   border-left: 2px solid $color-default;
-  z-index: 100;
+  z-index: 1000;
 }
 
 

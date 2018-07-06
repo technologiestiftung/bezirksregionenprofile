@@ -1,5 +1,15 @@
-ref,type,content
-1,titel,1.1 Something
-1,text,"The parse function may be passed a configuration object. It defines settings, behavior, and callbacks used during parsing. Any properties left unspecified will resort to their default values."
-1,barchart,data
-2,titel,12.1 HuHu
+ref,type,datasource,content
+1,titel,,
+1,text,," <b>Lorem ipsum dolor sit amet, consetetur</b> sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+1,titel-sm,,Daten Überblick
+1,barchart,bartest,
+2,titel,,2.1 Einwohnerentwicklung
+2,text,," <b>Lorem ipsum dolor sit amet, consetetur</b> sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+2,titel-sm,,Daten Überblick
+2,table,table1,
+2,text,," <b>Lorem ipsum dolor sit amet, consetetur</b> sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+2,titel-sm,,Kartenbeispiel
+2,map-pr,maptest,
+2,titel,,2.2 Altersstruktur
+2,titel-sm,,Kartenbeispiel
+2,map-pr,maptest2,

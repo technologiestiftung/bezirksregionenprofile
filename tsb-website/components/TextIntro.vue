@@ -7,12 +7,13 @@
     	<h4>Wie Geht es den Berliner Bezirken?</h4>
 
     	<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+      <p class="more-link"><nuxt-link to="/about">Mehr erfahren...</nuxt-link></p>
     	
     </div>
 
     <div class="content-intro-logo">
 
-      <img src="/img/tsb-logo-content.svg" alt="Technologiestiftung Berlin Logo">
+      <img src="img/tsb-logo-content.svg" alt="Technologiestiftung Berlin Logo">
     	
     </div>
 
@@ -50,6 +51,16 @@ export default {
       padding-bottom: .5em;
     }
 
+    .more-link{
+      
+      float: right;
+      font-family: $font-family-bold;
+
+      a{
+        color: white !important;
+      }
+    }
+
   }
 
   .content-intro-logo{
@@ -60,7 +71,7 @@ export default {
     text-align: center;
 
     img{
-      width: 100px;
+      width: 150px;
       padding: 85px 0;
     }
 

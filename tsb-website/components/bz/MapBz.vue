@@ -47,7 +47,7 @@ export default {
         }
         namen.sort()
         namen.unshift({name: this.bezirk,type:"bz"});
-        console.log(this.bezirk,namen)
+        // console.log(this.bezirk,namen)
         return namen;
       },
       // selected(){
@@ -203,7 +203,7 @@ export default {
                 "source": "bezirksregionen",
                 "paint": {
                     "fill-color": this.mapColors[0],
-                    "fill-opacity": .5
+                    "fill-opacity": .6
                 }
         
             });

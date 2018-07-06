@@ -60,7 +60,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 200;
+    z-index: 3;
   }
 
   .modal {
@@ -69,7 +69,6 @@
     overflow-x: auto;
     display: flex;
     flex-direction: column;
-    z-index: 2;
   }
 
   .modal-header,
@@ -104,6 +103,12 @@
     background: transparent;
   }
 
+  .btn-green {
+    color: white;
+    background: #4AAE9B;
+    border: 1px solid #4AAE9B;
+    border-radius: 2px;
+  }
 
   img{
         width: 55vw;

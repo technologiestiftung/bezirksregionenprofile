@@ -20,3 +20,16 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+
+
+
+
+For the map data: 
+download all data from here as json: https://data.technologiestiftung-berlin.de/dataset/
+upload all the files to mapshaper and save the files as a topjson
+save it as map-borders.json in the data folder
+
+
+Adapt for server
+adapt typpgraphy css
+adapt router in nuxt.config.js
