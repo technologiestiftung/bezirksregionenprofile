@@ -8,7 +8,9 @@ import indikatorenGr from '~/data/indikatoren/indikatorenOverview.json';
 
 import toUrl from '~/assets/js/tourl.js'
 
-const productionUrl = "http://hanshack.com/tsb";
+//this works!
+// const productionUrl = "http://hanshack.com/tsb";
+const productionUrl = "http://localhost:3000/tsb";
 
 //define the source of the tiles etc
 bright.sources= {

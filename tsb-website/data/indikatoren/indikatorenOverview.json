@@ -139,22 +139,22 @@
 		"indikatoren":{
 			"E1":{
 				"name":"E1",
-				"text-sm":"Kinder mit Sprachdefiziten",
+				"text-sm":"Sprachdefizite",
 				"text-lg":"Anteil Kinder mit Sprachdefiziten an Einschüler/innen (Kinder, die im jeweils kommenden Jahr eingeschult werden)"
 			},
 			"E2":{
 				"name":"E2",
-				"text-sm":"Kinder mit motorischen Defiziten",
+				"text-sm":"Motorische Defizite",
 				"text-lg":"Anteil Kinder mit motorischen Defiziten (Visuomotorik) an Einschüler/innen"
 			},
 			"E3":{
 				"name":"E3",
-				"text-sm":"Kinder mit Übergewicht",
+				"text-sm":"Übergewicht",
 				"text-lg":"Anteil Kinder mit Übergewicht an Einschüler/innen"
 			},
 			"E4":{
 				"name":"E4",
-				"text-sm":"Kitabesuchsdauer über 2 Jahren",
+				"text-sm":"Kitabesuchsdauer Ü 2 Jahren",
 				"text-lg":"Anteil Kinder mit einer Kitabesuchsdauer über 2 Jahren an Einschüler/innen"
 			},
 			"E5":{
@@ -169,17 +169,17 @@
 			},
 			"E7":{
 				"name":"E7",
-				"text-sm":"Alleinerziehenden Bedarfsgemeinschaften",
+				"text-sm":"Alleinerziehende",
 				"text-lg":"Anteil der alleinerziehenden Bedarfsgemeinschaften (BG) nach SGB II an BG mit Kindern nach SGB II"
 			},
 			"E8":{
 				"name":"E8",
-				"text-sm":"Jugendlicher mit Hilfen zur Erziehung ",
+				"text-sm":"Hilfen zur Erziehung ",
 				"text-lg":"Anteil Kinder und Jugendlicher mit Hilfen zur Erziehung an Einwohner/innen im Alter unter 21 Jahren"
 			},
 			"E9":{
 				"name":"E9",
-				"text-sm":"Kariesfreier Milchgebisse bei 6-jährigen",
+				"text-sm":"Kariesfreier Milchgebisse",
 				"text-lg":"Anteil kariesfreier Milchgebisse bei 6-jährigen Kindern"
 			}						
 		}},

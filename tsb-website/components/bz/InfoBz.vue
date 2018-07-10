@@ -42,6 +42,19 @@
           :key="indikator[activeInd]" 
           >
 
+
+          <div class="viz-text top">
+            
+            <b>{{indikator['name']}}</b><div :class="['ampel','phase' + indDataParsed[indikator.name].phase]"></div><br>
+            <!-- <b>{{indikator['name']}}</b><br> -->
+            <div class="info-text">{{indikator['text-sm']}}</div>
+
+            <i class="icon-info-circled ind-info" @mouseover="showTooltip" @mouseout="hideTooltip"/>
+            <div class="tooltip">{{indikator['text-lg']}} </div>
+            
+          </div>
+
+
           <viz-bz 
             :activeIndClass="activeIndClass" 
             :indikatorValue="indDataParsed[indikator.name].val"
@@ -55,33 +68,31 @@
 
           </viz-bz>
 
-          <div class="viz-ampel-container">
-<!--             <div class="viz-ampel">
+<!--           <div class="viz-ampel-container">
+            <div class="viz-ampel">
 
                 <div :class="indDataParsed[indikator.name].phase==1?'phase'+indDataParsed[indikator.name].phase:''"></div>
                 <div :class="indDataParsed[indikator.name].phase==2?'phase'+indDataParsed[indikator.name].phase:''"></div>
                 <div :class="indDataParsed[indikator.name].phase==3?'phase'+indDataParsed[indikator.name].phase:''"></div>
                 <div :class="indDataParsed[indikator.name].phase==4?'phase'+indDataParsed[indikator.name].phase:''"></div>
 
-            </div> -->
-<!--             <div class="viz-ampel">
+            </div>
+            <div class="viz-ampel">
 
                 <div :class="['phase1', indDataParsed[indikator.name].phase==1?'highlight':'']"></div>
                 <div :class="['phase2', indDataParsed[indikator.name].phase==2?'highlight':'']"></div>
                 <div :class="['phase3', indDataParsed[indikator.name].phase==3?'highlight':'']"></div>
                 <div :class="['phase4', indDataParsed[indikator.name].phase==4?'highlight':'']"></div>
 
-            </div> -->
-          </div>
+            </div>
+          </div> -->
 
-          <div class="viz-text">
-            <div :class="'phase' + indDataParsed[indikator.name].phase"></div> 
-            <b>{{indikator['name']}}</b> 
+<!--           <div class="viz-text">
             
-            - {{indikator['text-sm']}}
+            {{indikator['text-sm']}}
             
           </div>
-
+ -->
 
 
         </div>
@@ -220,6 +231,12 @@ export default {
       showModalDelayed(){
         window.sessionStorage.setItem("modalShown", "true");
         setTimeout(function(){ this.isModalVisible = true; }.bind(this), 1500);
+      },
+      showTooltip(){
+        console.log("Hi there info")
+      },
+      hideTooltip(){
+        console.log("Hideinfo")
       }
       // onCompareChange(x){
 
@@ -259,6 +276,7 @@ export default {
   //   position: absolute;
 
   // }
+
 
 
 
@@ -385,7 +403,9 @@ export default {
       margin: 10px;
       // background-color: lightgreen;
       // height:50px;
-          padding-top: 20px;
+      padding-bottom: 15px;
+
+              background-color: white;
 
     }
 
@@ -402,8 +422,58 @@ export default {
 
     .viz-text{
 
+      min-height: 65px;
+      position: relative;
+
+      .tooltip{
+        background-color: #fff;
+        width: 150px;
+        position: absolute;
+        right: 0px;
+        top: 20px;
+        padding: 6px;
+        overflow: hidden;
+        z-index: 1;
+        height: auto;
+        border-radius: 0;
+        border: 1px solid #ccc;
+      }
+
+      .ind-info{
+        position: absolute;
+        top: -4px;
+        font-size: 1.4em;
+        right: 0;
+        color: #858585;
+        // cursor: pointer;
+
+        &:hover{
+          opacity: .8;
+        }
+      }
+
+      &.top{
+        margin: 0.7em;
+        margin-bottom: 0.8em;
+      }
+
+      .ampel{
+        margin-left:.7em;
+        margin-top: 1px;
+        position: absolute;
+      }
+
+      .info-text{
+        padding-top: 3px;
+        width: 100%;
+      }
+
+      // .info-text{
+      //   margin-top: 0.2em;
+      // }
+
       font-size: .7em;
-      margin-top: 0.7em;
+      // margin-top: 0.7em;
       // min-height: 60px;
 
       .phase1{
