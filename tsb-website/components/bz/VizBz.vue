@@ -1,11 +1,12 @@
 <template>
 
 
-<div>  
+<div @mouseover="showValue">  
 
   <svg :id="id">
 
-      <rect x="50%" y="0%" width="0%" height="100%" :class="activeIndClass"/> 
+      <rect x="0%" y="0%" width="100%" height="100%" class="background-rect"/> 
+      <rect x="50%" y="0%" width="0%" height="100%" :class="[activeIndClass, 'ani-rect']"/> 
 
       <text x="0%" y="0%" class="label-top">Min</text>
       <text x="100%" y="0%" class="label-top">Max</text>
@@ -13,7 +14,7 @@
       <text x="50%" y="0%" class="label-top static" :id="getCompareName">{{getCompareName}}</text>
       <text x="50%" y="100%" :class="[activeIndClass, 'label', 'bzr']">{{compareWidth}}</text>
 
-      <line x1="50%" x2="50%" y1="105%" y2="0%" :class="[activeIndClass, 'compare-line']"></line>
+      <line x1="50%" x2="50%" y1="100%" y2="0%" :class="[activeIndClass, 'compare-line']"></line>
 
       <line x1="0%" x2="0" y1="100%" y2="0%" class="tick"></line>
       <line x1="50%" x2="50%" y1="100%" y2="0%" class="tick"></line>
@@ -39,9 +40,8 @@ export default {
       id:idGenerator()
     }
   },
-  props: ["activeIndClass","indikatorValue","activeInd","compareSelected","bzrSelected","bzName"],
+  props: ["activeIndClass","indikatorValue","indikatorValuePercent","activeInd","compareSelected","bzrSelected","bzName"],
   created(){
-    // this.animate();
   },
   computed:{
     getCompareName(){
@@ -56,44 +56,48 @@ export default {
       if(this.bzName == this.bzrSelected){
         bzrBZ = "BZ";
       }
-      return this.compareSelected == "Berlin" ? bzrBZ : "Berlin";
+      const percentValue = " (" + Math.round(this.indikatorValuePercent*10)/10 + "%)";
+      return this.compareSelected == "Berlin" ? bzrBZ + percentValue : "BZR" + percentValue;
     }
   },
   methods: {
     getWidth: function () {
-      return this.indikatorValue / 2;
+      return this.indikatorValuePercent / 2;
     },
     animate:function(){
 
       const animationDuration = 1000;
 
+      d3.select('#'+this.id + " .ani-rect").interrupt().transition();
+      d3.select('#'+this.id + " .bzr").interrupt().transition()
+      d3.select('#'+this.id + " .compare-line").interrupt().transition();
+
+      d3.select('#'+this.id + " .ani-rect")
+          .attr("width","0%")
+          .attr("x","50%")
+
+      d3.select('#'+this.id + " .compare-line")
+          .attr("x1","50%")
+          .attr("x2","50%")
+
+      d3.select('#'+this.id + " .bzr")
+          .attr("x","50%")
+
+
       //if the indikator val is negative
-      if(this.indikatorValue < 0 ){
+      if(this.indikatorValuePercent < 0 ){
 
-        const invertedData = (this.indikatorValue / 2) * -1;
+        const invertedData = (this.indikatorValuePercent / 2) * -1;
 
-        d3.select('#'+this.id + " rect")
-            .attr("width", 0)
-            .attr("x","50%")
-
-
-        d3.select('#'+this.id + " rect").transition()
+        d3.select('#'+this.id + " .ani-rect").transition()
             .duration(animationDuration)
             .attr("x", (50 - invertedData) + "%")
-            .attr("width", invertedData);
-
-
-        d3.select('#'+this.id + " .bzr")
-            .attr("x","50%")
+            .attr("width", invertedData + "%");
 
         d3.select('#'+this.id + " .bzr").transition()
             .duration(animationDuration)
             .attr("x", (50 - invertedData) + "%")
 
-
-        d3.select('#'+this.id + " .compare-line")
-            .attr("x1","50%")
-            .attr("x2","50%")
 
         d3.select('#'+this.id + " .compare-line").transition()
             .duration(animationDuration)
@@ -104,35 +108,27 @@ export default {
 
       }else{//if positive value
 
-        d3.select('#'+this.id + " rect")
-            .attr("width", 0)
-            .attr("x","50%")
 
-        d3.select('#'+this.id + " rect").transition()
+        d3.select('#'+this.id + " .ani-rect").transition()
             .duration(animationDuration)
-            .attr("width", this.indikatorValue / 2);
-
-
-        d3.select('#'+this.id + " .bzr")
-            .attr("x","50%")
+            .attr("width", this.indikatorValuePercent / 2 + "%")
+            .attr("x","50%");
 
         d3.select('#'+this.id + " .bzr").transition()
             .duration(animationDuration)
-            .attr("x", (this.indikatorValue / 2) + 50);
+            .attr("x", (this.indikatorValuePercent / 2) + 50 + "%");
 
-
-        d3.select('#'+this.id + " .compare-line")
-            .attr("x1","50%")
-            .attr("x2","50%")
 
         d3.select('#'+this.id + " .compare-line").transition()
             .duration(animationDuration)
-            .attr("x1", (this.indikatorValue / 2) + 50 + "%")
-            .attr("x2", (this.indikatorValue / 2) + 50 + "%")
+            .attr("x1", (this.indikatorValuePercent / 2) + 50 + "%")
+            .attr("x2", (this.indikatorValuePercent / 2) + 50 + "%")
 
       }
 
-
+    },
+    showValue(){
+      console.log("hi")
     }
   },
   watch: {
@@ -142,7 +138,7 @@ export default {
     // bzrSelected: function (val) { //if the inidkator changes
     //   this.animate();
     // },
-    indikatorValue: function (val) { //if the inidkator changes
+    indikatorValuePercent: function (val) { //if the inidkator changes
       this.animate();
     }
   },
@@ -165,12 +161,16 @@ export default {
 
   svg{
 
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     overflow:visible;
     margin:10px;
-        display: inline-block;
+    display: inline-block;
     // background-color: #ddd;
+
+    .background-rect{
+      fill: white;
+    }
 
     .tick{
       stroke:#333;
@@ -185,13 +185,13 @@ export default {
 
     text{
       text-anchor:middle;
-      font-size: 10px;
+      font-size: .6em;
       // font-family:
     }
 
     text.label-top{
       color:#333;
-      transform: translate(0px,-5px);
+      transform: translate(0px,-7px);
     }
 
     text.label{
@@ -210,7 +210,11 @@ export default {
 
 
     rect{
-      opacity:.7;
+      // opacity:.85;
+    }
+
+    .ani-rect{
+      fill-opacity: .8;
     }
 
   }

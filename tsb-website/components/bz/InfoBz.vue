@@ -18,7 +18,7 @@
       <div 
         :class="bzrSelected==bzData.name?'btn-hidden button':'button'"
         @click="onBzrProfile(bzrSelected)">
-        zum Datenprofil {{bzrSelected}} <i class="icon-right-small" /> 
+        <i class="icon-right-small" /> zum Datenprofil {{bzrSelected}}
       </div>
       
 
@@ -45,6 +45,8 @@
           <viz-bz 
             :activeIndClass="activeIndClass" 
             :indikatorValue="indDataParsed[indikator.name].val"
+            :indikatorValuePercent="indDataParsed[indikator.name].valPercent"
+            :averageValue="indDataParsed[indikator.name].average"
             :activeInd="activeInd"
             :compareSelected="compareSelected"
             :bzrSelected="bzrSelected"
@@ -54,17 +56,33 @@
           </viz-bz>
 
           <div class="viz-ampel-container">
-            <div class="viz-ampel">
+<!--             <div class="viz-ampel">
 
                 <div :class="indDataParsed[indikator.name].phase==1?'phase'+indDataParsed[indikator.name].phase:''"></div>
                 <div :class="indDataParsed[indikator.name].phase==2?'phase'+indDataParsed[indikator.name].phase:''"></div>
                 <div :class="indDataParsed[indikator.name].phase==3?'phase'+indDataParsed[indikator.name].phase:''"></div>
                 <div :class="indDataParsed[indikator.name].phase==4?'phase'+indDataParsed[indikator.name].phase:''"></div>
 
-            </div>
+            </div> -->
+<!--             <div class="viz-ampel">
+
+                <div :class="['phase1', indDataParsed[indikator.name].phase==1?'highlight':'']"></div>
+                <div :class="['phase2', indDataParsed[indikator.name].phase==2?'highlight':'']"></div>
+                <div :class="['phase3', indDataParsed[indikator.name].phase==3?'highlight':'']"></div>
+                <div :class="['phase4', indDataParsed[indikator.name].phase==4?'highlight':'']"></div>
+
+            </div> -->
           </div>
 
-          <div class="viz-text"><b>{{indikator['name']}}</b> - {{indikator['text-sm']}}</div>
+          <div class="viz-text">
+            <div :class="'phase' + indDataParsed[indikator.name].phase"></div> 
+            <b>{{indikator['name']}}</b> 
+            
+            - {{indikator['text-sm']}}
+            
+          </div>
+
+
 
         </div>
 
@@ -114,33 +132,43 @@ export default {
         const newIndData = {};
         const indCopy = JSON.parse(JSON.stringify(this.indData));
 
-        console.log(indCopy)
-
         for(const x in indCopy) {
 
           newIndData[x] = indCopy[x];
 
           if(this.compareSelected == "Berlin"){
-            newIndData[x].val = newIndData[x].val * 1.1;
+
+             // const averageVal = (minVal + maxVal) /2 ;
+            const averageVal = newIndData[x].average;
+            const currentVal = newIndData[x].val;
+            const deviationVal = ((currentVal-averageVal)/averageVal) * 100; //Abweichung vom Durchschnittswert
+
+            newIndData[x].val = currentVal;
+            newIndData[x].valPercent = deviationVal;
+            newIndData[x].average = averageVal;
             newIndData[x].phase = newIndData[x].phaseB;
 
-          }else{
-            newIndData[x].val = newIndData[x].val / 1.1;
+
+
+          }else{ //if compared with BZ
+
+
+            const averageVal = newIndData[x].average;
+            const currentVal = newIndData[x].val;
+            const deviationVal = ((currentVal-averageVal)/averageVal) * 100; //Abweichung vom Durchschnittswert
+
+            newIndData[x].val = currentVal;
+            newIndData[x].valPercent = deviationVal / 1.1;
+            newIndData[x].average = averageVal / 1.1;
             newIndData[x].phase = newIndData[x].phaseBz;
+
           }
 
-          
-          
+        
         }
 
         return newIndData;
-      },
-      // compareOpt(){
-      //   if(this.showDropdown){
-      //     return this.compareSelected=="Berlin"?"Bezirk":"Berlin";
-      //   }
-        
-      // }
+      }
        
     },
     props: ["bzrSelected","indData","bzData"],
@@ -148,6 +176,12 @@ export default {
       VizBz,Dropdown,Modal
     },
     mounted(){
+      //Show modal only once on firt load
+      const modalHasBeenShown = window.sessionStorage.getItem("modalShown");
+      if(!modalHasBeenShown){
+        this.showModalDelayed();
+      }
+
     },
     data(){
         return{
@@ -156,7 +190,7 @@ export default {
           compareOpt:"Bezirk",
           compareSelected:"Berlin",
           showDropdown:false,
-          isModalVisible: true,
+          isModalVisible: false,
         }
     },
     // props: ["mainColor"],
@@ -182,6 +216,10 @@ export default {
       },
       closeModal() {
         this.isModalVisible = false;
+      },
+      showModalDelayed(){
+        window.sessionStorage.setItem("modalShown", "true");
+        setTimeout(function(){ this.isModalVisible = true; }.bind(this), 1500);
       }
       // onCompareChange(x){
 
@@ -278,6 +316,8 @@ export default {
         div{
           position: absolute;
           margin-top: -4px;
+                  background-color: $tsb-lightgray;
+        opacity: .8;
           // color:#ccc;
         }
 
@@ -361,44 +401,78 @@ export default {
 
 
     .viz-text{
+
       font-size: .7em;
       margin-top: 0.7em;
       // min-height: 60px;
-    }
 
-    .viz-ampel-container{
+      .phase1{
+        background-color:$color-phase1;
+        border: 2px solid #ddd; 
+      }
+      .phase2{
+        background-color:$color-phase2;
+      }
+      .phase3{
+        background-color:$color-phase3;
+      }
+      .phase4{
+        background-color:$color-phase4;
+      }
 
-     text-align: center;
-
-      .viz-ampel{
-
+      div{
+        width: 13px;
+        height: 13px;
+        border-radius: 20px; 
         display: inline-block;
-
-        div{
-          margin: 4px;
-          width: 13px;
-          height: 13px;
-          border-radius: 20px;      
-          float: left; 
-          background-color:#ddd;
-        }
-        .phase1{
-          background-color:$color-phase1;
-          border: 2px solid #ddd; 
-        }
-        .phase2{
-          background-color:$color-phase2;
-        }
-        .phase3{
-          background-color:$color-phase3;
-        }
-        .phase4{
-          background-color:$color-phase4;
-        }
-
+        margin-right: 5px;
       }
 
     }
+
+    // .viz-ampel-container{
+
+    //  text-align: center;
+
+    //   .viz-ampel{
+
+    //     display: inline-block;
+
+    //     div{
+    //       margin: 4px;
+    //       width: 7px;
+    //       height: 7px;
+    //       border-radius: 20px;      
+    //       float: left; 
+    //       background-color:#ddd;
+    //       opacity: .4;
+    //       margin-top: 4px;
+    //     }
+
+    //     .highlight{
+    //       opacity: 1;
+    //       width: 15px;
+    //       height: 15px;
+    //       margin-top: 0px;
+    //     }
+
+    //     .phase1{
+    //       background-color:$color-phase1;
+    //       border: 2px solid #ddd; 
+    //     }
+    //     .phase2{
+    //       background-color:$color-phase2;
+    //     }
+    //     .phase3{
+    //       background-color:$color-phase3;
+    //     }
+    //     .phase4{
+    //       background-color:$color-phase4;
+    //     }
+
+    //   }
+
+    // }
 
   }
 

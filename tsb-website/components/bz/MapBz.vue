@@ -9,7 +9,7 @@
         <option v-for="bz in bzrNamen" :key="bz" :value="bz">{{bz}}</option>
       </select> 
  -->
-      <dropdown :options="bzrNamen" :selected="selected" v-on:updateOption="onSelect"></dropdown>
+      <dropdown :options="bzrNamen" :selected="selected" v-on:updateOption="onSelect" v-on:updateHoverValue="highlightMap"></dropdown>
 
     </div>
 
@@ -88,6 +88,9 @@ export default {
       // this.$router.push({ path: 'bezirk/' + selectedBz});
 
     },
+    highlightMap(x){
+      map.setFilter("bezirksregionen-hover", ["==", "BZR_NAME", x]);
+    },
     createMap(){
 
 
@@ -111,9 +114,6 @@ export default {
         //     interactive: false
         // })
 
-
-
-        console.log("xxx bezirk",this.bezirk)
 
         const bezirk = this.bezirk;
 
@@ -145,7 +145,7 @@ export default {
             container: 'map',
             style: this.nostyle,
             center: [13.391, 52.519],
-            zoom:5,
+            zoom:9,
             pitch: 0,
             minZoom: 2,
             maxZoom: 20,
@@ -159,7 +159,7 @@ export default {
             map.fitBounds(selectedBbox, {
                 padding: {'bottom':50, 'left':0, 'right':0, 'top':100},
                 // linear: true,
-                duration: 0
+                duration: 700
             });
 
             //bezirksgrenzen-selected

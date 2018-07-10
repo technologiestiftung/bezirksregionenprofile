@@ -46,11 +46,11 @@ export default {
         // directive definition
         inserted: function (el, binding) {
             let f = function (evt) {
-              if (binding.value(evt, el)) {
-                el.removeEventListener('scroll', f)
+              if (binding.value(evt, el) ) {
+                window.removeEventListener('scroll', f) //window was el
               }
             }
-            el.addEventListener('scroll', f)
+            window.addEventListener('scroll', f) //window was el brz-page
           }
       }
     },
@@ -84,6 +84,10 @@ export default {
       handleScroll(x,y){
         // console.log("scrolling",x,y)
 
+        if(!document.getElementsByClassName("content-main-bzr-info")[0]){
+          return
+        }
+
         var isInViewport = function (elem) {
             var bounding = elem.getBoundingClientRect();
             return (
@@ -106,6 +110,8 @@ export default {
             
           }
         }
+
+
       },
       // getData: function (dataSource) {
       //   return new Promise((resolve, reject) => {

@@ -58,7 +58,7 @@ export default {
     		this.$emit('changeThemaSelected',thema.id);
 
 			var options = {
-			    container: '.content-main-bzr-info',
+			    container: 'html', //.content-main-bzr-info
 			    easing: 'ease-in',
 			    offset: -60,
 			    cancelable: true,

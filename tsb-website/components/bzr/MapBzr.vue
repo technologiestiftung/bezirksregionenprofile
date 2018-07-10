@@ -21,7 +21,7 @@ export default {
 
     computed: {
       ...mapState([
-        'nostyle','brightstyle','bezirksgrenzen','bezirksregionen','mapColors'
+        'nostyle','brightstyle','bezirksgrenzen','bezirksregionen','planungsraeume','mapColors'
       ])
     },
     components: {
@@ -54,6 +54,17 @@ export default {
           "features": selectedBzR
         }
 
+        let selectedPlr = this.planungsraeume.features.filter(function( obj ) {
+          return obj.properties.BZRNAME == bzrName;
+        });
+
+        selectedPlr ={
+          "type": "FeatureCollection",
+          "features": selectedPlr
+        }
+
+        console.log(selectedPlr)
+
         let selectedBbox = bbox(selectedBzR);
         selectedBbox = [[selectedBbox[0],selectedBbox[1]],[selectedBbox[2],selectedBbox[3]]]
 
@@ -61,7 +72,7 @@ export default {
         mapboxgl.accessToken = "";
         map = new mapboxgl.Map({
             container: 'map',
-            style: this.nostyle,
+            style: this.brightstyle,
             // center: [13.391, 52.519],
             zoom:5,
             pitch: 0,
@@ -79,21 +90,92 @@ export default {
                 duration: 0
             });
 
-            map.addSource('bezirksregion', {
+            // map.addSource('bezirksregion', {
+            //     type: 'geojson',
+            //     data: selectedBzR
+            // });
+
+            // map.addLayer({
+            //     "id":"bezirksregion-selected",
+            //     "type":"fill",
+            //     "source":"bezirksregion",
+            //     "paint":{
+            //       "fill-outline-color":this.mapColors[0],
+            //       "fill-color":this.mapColors[0],
+            //       "fill-opacity":.6
+            //     }
+            // });
+
+            map.addSource('planungsraeume', {
                 type: 'geojson',
-                data: selectedBzR
+                data: selectedPlr
+            });
+
+
+            map.addLayer({
+                "id": "planungsraeume-hover",
+                "type": "line",
+                "source": "planungsraeume",
+                "paint": {
+                    "line-color": this.mapColors[0],
+                    "line-opacity": .8,
+                    "line-width": 2
+                },
+                "filter": ["==", "PLRNAME", ""]
             });
 
             map.addLayer({
-                "id":"bezirksregion-selected",
+                "id":"planungsraeume",
                 "type":"fill",
-                "source":"bezirksregion",
+                "source":"planungsraeume",
                 "paint":{
                   "fill-outline-color":this.mapColors[0],
                   "fill-color":this.mapColors[0],
                   "fill-opacity":.6
                 }
             });
+
+
+
+        // // Create a popup, but don't add it to the map yet.
+        const popup = new mapboxgl.Popup({
+            closeButton: false,
+            closeOnClick: false,
+            anchor:"bottom-left"
+        });
+
+
+        map.on('mousemove', 'planungsraeume', (e)=> {
+
+            // Change the cursor style as a UI indicator.
+            // map.getCanvas().style.cursor = 'pointer';
+
+            const coordinates = e.lngLat;
+
+            popup.setLngLat(coordinates)
+                .setHTML(e.features[0].properties.PLRNAME)
+                .addTo(map);
+
+            // document.getElementsByClassName("mapboxgl-popup-content")[0].style.borderLeft = "2px solid " + mapColor;
+
+        });
+
+        map.on('mouseleave', 'planungsraeume', ()=> {
+            map.getCanvas().style.cursor = '';
+            popup.remove();
+        });
+
+        map.on("mousemove", "planungsraeume", (e)=> {
+            map.setFilter("planungsraeume-hover", ["==", "PLRNAME", e.features[0].properties.PLRNAME]);
+        });
+
+        // Reset the state-fills-hover layer's filter when the mouse leaves the layer.
+        map.on("mouseleave", "planungsraeume", ()=> {
+            map.setFilter("planungsraeume-hover", ["==", "PLRNAME", ""]);
+        });
+
+
+
 
             
           })

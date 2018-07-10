@@ -8,16 +8,18 @@ import indikatorenGr from '~/data/indikatoren/indikatorenOverview.json';
 
 import toUrl from '~/assets/js/tourl.js'
 
+const productionUrl = "http://hanshack.com/tsb";
+
 //define the source of the tiles etc
 bright.sources= {
   "openmaptiles": {
     "attribution": "<a href='http://openmaptiles.org'>© OpenMapTiles</a> <a href='http://www.openstreetmap.org/copyright'>© OpenStreetMap</a>",
     "type": "vector",
-    "tiles": ["http://localhost:3000/map/tiles/{z}/{x}/{y}.pbf"]
+    "tiles": [productionUrl + "/map/tiles/{z}/{x}/{y}.pbf"]
   }
 };
-bright.sprite= "http://localhost:3000/map/sprites/positron";
-bright.glyphs= "http://localhost:3000/map/glyphs/{fontstack}/{range}.pbf";
+bright.sprite= productionUrl + "/map/sprites/positron";
+bright.glyphs= productionUrl + "/map/glyphs/{fontstack}/{range}.pbf";
 
 //no source here
 nostyle.sources = {};
@@ -97,9 +99,8 @@ const store = () => new Vuex.Store({
     mapColors: ["#1E3791","#E60032"],
     indikatorenGr:indikatorenGr,
     themen:themen,
-    url:'http://hanshack.com/tsb',
-    urldev:'http://localhost:3000/tsb'
-    // url:  'http://localhost:3000'
+    urldev:'http://localhost:3000/tsb',
+    url:  productionUrl
   },
   getters: {
     // toUrl(str){

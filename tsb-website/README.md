@@ -33,3 +33,6 @@ save it as map-borders.json in the data folder
 Adapt for server
 adapt typpgraphy css
 adapt router in nuxt.config.js
+in store/index.js adapt productionUrl car 
+
+

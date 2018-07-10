@@ -111,6 +111,6 @@
   }
 
   img{
-        width: 55vw;
+    width: 50vw;
   }
 </style>

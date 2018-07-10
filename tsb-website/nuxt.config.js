@@ -22,10 +22,13 @@ module.exports = {
   //generate the site links
   generate: {
     routes: function () {
-      const bezirke = Object.keys(JSON.parse(require('fs').readFileSync('data/bz.json', 'utf8'))).map((data) => {
-        return '/bezirk/' + data.toLowerCase().replace(/\u00fc/g, "ue").replace(/\u00e4/g, "ae").replace(/\u00f6/g, "oe").replace(/\u00df/g, "ss");
-      })
-      return [...bezirke]
+      const bezirke = Object.keys(JSON.parse(require('fs').readFileSync('data/bz-routes.json', 'utf8'))).map((data) => {
+        return '/bezirk/' + data;
+      });
+      const bezirksregionen = Object.keys(JSON.parse(require('fs').readFileSync('data/bzr-routes.json', 'utf8'))).map((data) => {
+        return '/bezirksregion/' + data;
+      });
+      return [...bezirke,...bezirksregionen]
     }
   },
   /*

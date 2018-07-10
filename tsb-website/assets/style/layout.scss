@@ -37,7 +37,7 @@ $small-width: 1200px;
 
 
 .page-content {
-  background-color: #F5F5F5;
+  background-color: $tsb-lightgray;
   flex: 1;
   // padding-bottom: $spacing * 2;
   // height: 100vh;
@@ -110,6 +110,8 @@ $small-width: 1200px;
 
 .content-main{
 
+  background-color: $tsb-lightgray;
+
   .content-main-map{
     flex:1;
     flex-basis: 40%;
@@ -132,6 +134,9 @@ $small-width: 1200px;
     flex:1;
     flex-basis: 30%;
     background-color: $tsb-lightblue;
+    align-self: flex-start;
+    position: sticky;
+    top: 0px;
 
     .navigation{
       padding:$padding;
@@ -148,10 +153,17 @@ $small-width: 1200px;
     display:block;
     padding: $padding-md;
     flex-basis: 70%;
-    overflow-x: hidden;
-    max-height: 90vh;
+    background-color: $tsb-lightgray;
+    // overflow-x: hidden;
+    // max-height: 90vh;
+
+
   }
 
+}
+
+.content-main.bzr{
+  background-color: $tsb-lightblue;
 }
 
 
@@ -275,3 +287,15 @@ $small-width: 1200px;
 .c3-chart{
   font-family: $font-family-default;
 }
+
+
+    canvas {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        outline: none;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* mobile webkit */
+    }   

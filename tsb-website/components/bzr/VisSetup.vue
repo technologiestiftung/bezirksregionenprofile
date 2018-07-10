@@ -8,12 +8,14 @@
     <h5 class="blatt-el-titel-sm" v-if="visInfo.type=='titel-sm'">{{visInfo.content}}</h5>
     <!-- Text -->
     <p class="blatt-el-text" v-if="visInfo.type=='text'" v-html="visInfo.content">{{visInfo.content}}</p>
-    <!-- Barchart -->
-    <barchart v-if="visInfo.type=='barchart'" :visData="visData" :chartId="chartId"></barchart>
+    <!-- Chart -->
+    <chart v-if="visInfo.type=='barchart' || visInfo.type=='linechart' || visInfo.type=='piechart'" :visData="visData" :chartId="chartId" :visType="visInfo.type"></chart>
     <!-- Table -->
     <tabelchart v-if="visInfo.type=='table'" :visData="visData"></tabelchart> 
     <!-- Map -->
     <map-pr v-if="visInfo.type=='map-pr'" :bzrName="bzrName" :visData="visData" :chartId="chartId"></map-pr> 
+    <!-- Map POI -->
+    <map-poi v-if="visInfo.type=='map-poi'" :bzrName="bzrName" :visData="visData" :chartId="chartId"></map-poi> 
 
   </div>
 
@@ -29,9 +31,10 @@ import Papa from 'papaparse';
 import idGenerator from '~/assets/js/idGenerator.js';
 // import BarchartLoader from '~/components/bzr/vis/BarchartLoader.vue';
 
-import Barchart from '~/components/bzr/vis/Barchart.vue';
+import Chart from '~/components/bzr/vis/Chart.vue';
 import Tabelchart from '~/components/bzr/vis/Tabelchart.vue';
 import MapPr from '~/components/bzr/vis/MapPr.vue';
+import MapPoi from '~/components/bzr/vis/MapPoi.vue';
 
 const setData = function(data,me){
 
@@ -42,7 +45,7 @@ const setData = function(data,me){
 export default {
 
   components: {
-    Barchart,Tabelchart,MapPr
+    Chart,Tabelchart,MapPr,MapPoi
   },
   props: ["visInfo","sourceUrl","bzrName"],
   data(){

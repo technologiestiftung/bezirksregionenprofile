@@ -1,5 +1,5 @@
 <template>
-    <div class="btn-group">
+    <div class="btn-group" v-click-outside="outside">
         <div @click="toggleMenu()" class="dropdown-toggle" v-if="selected !== ''">
           <h4>{{ selected}}</h4>
           <span class="caret"></span>
@@ -12,7 +12,7 @@
 
         <ul class="dropdown-menu" v-if="showMenu">
             <li v-for="option in options" :key="option.value" >
-                <a href="javascript:void(0)" @click="updateOption(option)">
+                <a href="javascript:void(0)" @click="updateOption(option)" @mouseover="updateHoverValue(option.name)">
                     {{ option.name }}
                 </a>
             </li>
@@ -62,7 +62,49 @@
 
             toggleMenu() {
               this.showMenu = !this.showMenu;
+            },
+            outside: function(e) {
+              if(this.showMenu){
+                this.showMenu = false;
+              }
+              this.$emit('updateHoverValue', '');
+            },
+            updateHoverValue(val){
+              this.$emit('updateHoverValue', val);
             }
+        },
+        directives: {
+          'click-outside': {
+            bind: function(el, binding, vNode) {
+
+              // Provided expression must evaluate to a function.
+              if (typeof binding.value !== 'function') {
+                const compName = vNode.context.name
+                let warn = `[Vue-click-outside:] provided expression '${binding.expression}' is not a function, but has to be`
+                if (compName) { warn += `Found in component '${compName}'` }
+                
+                console.warn(warn)
+              }
+              // Define Handler and cache it on the element
+              const bubble = binding.modifiers.bubble
+              const handler = (e) => {
+                if (bubble || (!el.contains(e.target) && el !== e.target)) {
+                  binding.value(e)
+                }
+              }
+              el.__vueClickOutside__ = handler
+
+              // add Event Listeners
+              document.addEventListener('click', handler)
+            },
+            
+            unbind: function(el, binding) {
+              // Remove Event Listeners
+              document.removeEventListener('click', el.__vueClickOutside__)
+              el.__vueClickOutside__ = null
+
+            }
+          }
         }
     }
 </script>

@@ -13,3 +13,5 @@ ref,type,datasource,content
 2,titel,,2.2 Altersstruktur
 2,titel-sm,,Kartenbeispiel
 2,map-pr,maptest2,
+3,linechart,bartest,
+4,map-poi,poi-test,

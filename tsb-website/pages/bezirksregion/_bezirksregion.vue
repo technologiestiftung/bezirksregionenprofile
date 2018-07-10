@@ -1,7 +1,7 @@
 <template>
-  <section v-if='bzrIntroData && datenblatt'> 
+  <section v-if='bzrIntroData && datenblatt' id="brz-page"> 
     <intro :name="getBzrName" :nameClass="getBzName" :introData="bzrIntroData"></intro>
-    <div class="content-main">
+    <div class="content-main bzr">
       <div class="content-main-bzr-left">
 
         <map-bzr :bzrName="getBzrName"></map-bzr>

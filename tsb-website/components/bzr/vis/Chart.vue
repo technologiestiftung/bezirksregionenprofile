@@ -38,7 +38,7 @@ export default {
       bindto: '#' + this.chartId,
       data: {
         columns: newData,
-        type: 'bar'
+        type: this.chartType
       },
       bar: {
           width: {
@@ -56,10 +56,23 @@ export default {
     });
 
   },
-  props: ["chartId","visData"],
+  props: ["chartId","visData","visType"],
   data(){
       return{
       }
+  },
+  computed:{
+    chartType(){
+      let chartType = "";
+      if(this.visType == "linechart"){
+        chartType = "line"
+      }else if(this.visType =="barchart"){
+        chartType = "bar"
+      }else{
+        console.warn("chart type does not exist. Check spelling")
+      }
+      return chartType;
+    }
   }
 }
 

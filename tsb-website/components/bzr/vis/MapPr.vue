@@ -34,8 +34,6 @@ export default {
     methods:{
     createMap(){
 
-    	console.log("WWW",this.visData)
-
         // //get mapbox library
         const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
         require('mapbox-gl/dist/mapbox-gl.css');
@@ -137,7 +135,7 @@ export default {
         map.on('mousemove', 'planungsraeume', (e)=> {
 
             // Change the cursor style as a UI indicator.
-            map.getCanvas().style.cursor = 'pointer';
+            // map.getCanvas().style.cursor = 'pointer';
 
             const coordinates = e.lngLat;
             const plrName = e.features[0].properties.PLRNAME;

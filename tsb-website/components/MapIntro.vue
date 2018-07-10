@@ -9,7 +9,7 @@
       </select> 
  -->
 
-      <dropdown :options="bzNamen" :selected="selected" v-on:updateOption="onSelect"></dropdown>
+      <dropdown :options="bzNamen" :selected="selected" v-on:updateOption="onSelect" v-on:updateHoverValue="highlightMap"></dropdown>
 
     </div>
 
@@ -27,12 +27,14 @@ import toUrl from '~/assets/js/tourl.js';
 
 import Dropdown from '~/components/Dropdown.vue';
 
+let map;
+
 
 export default {
 
     computed: {
       ...mapState([
-        'nostyle','bezirksgrenzen','bzNamen','mapColors'
+        'nostyle','bezirksgrenzen','bezirksregionen', 'bzNamen','mapColors'
       ]),
       // ...mapGetters([
       // ]),    
@@ -68,6 +70,9 @@ export default {
       this.$router.push({ path: 'bezirk/' + selectedBz});
 
     },
+    highlightMap(x){
+      map.setFilter("bezirksgrenzen-hover", ["==", "Gemeinde_name", x]);
+    },
     createMap(){
 
         //https://gist.github.com/martinrisseeuw/96a52024f1f6d9300d1ce3c807badca5
@@ -78,7 +83,7 @@ export default {
 
         mapboxgl.accessToken = "";
 
-        const map = new mapboxgl.Map({
+        map = new mapboxgl.Map({
             container: 'map',
             style: this.nostyle,
             center: [13.391, 52.519],
@@ -107,8 +112,7 @@ export default {
                 "paint":{
                   "fill-outline-color":this.mapColors[0],
                   "fill-color":"rgba(46, 145, 210, 0)"
-                },
-                "visibiltiy":"none"
+                }
             });
 
             map.addLayer({
@@ -121,6 +125,27 @@ export default {
                 },
                 "filter": ["==", "Gemeinde_name", ""]
             });
+
+
+            map.addSource('bezirksregionen', {
+                type: 'geojson',
+                data: this.bezirksregionen
+            });
+
+            map.addLayer({
+                "id":"bezirksregionen",
+                "type":"line",
+                "source":"bezirksregionen",
+                "paint":{
+                  "line-color":this.mapColors[1],
+                  "line-width":1,
+                  "line-opacity":0.1,
+                  "line-dasharray":[1,1]
+                },
+            });
+
+
+
           })
 
             // Create a popup, but don't add it to the map yet.
