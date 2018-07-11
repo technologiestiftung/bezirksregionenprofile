@@ -1,7 +1,7 @@
 <template>
 
 
-<div @mouseover="showValue">  
+<div>  
 
   <svg :id="id">
 
@@ -126,9 +126,6 @@ export default {
 
       }
 
-    },
-    showValue(){
-      console.log("hi")
     }
   },
   watch: {

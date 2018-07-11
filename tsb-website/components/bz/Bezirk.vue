@@ -3,7 +3,7 @@
     <intro-bz :name="bezirkName" :nameClass="nameClass" :introData="bzData"></intro-bz>
     <div class="content-main">
       <map-bz :bezirk="bezirkName" v-on:bzRChanged="changeBzR"></map-bz>
-      <info-bz :bzrSelected="bzrSelected" :bzData="bzData" :indData="indData"></info-bz>
+      <info-bz :bzrSelected="bzrSelected" :bzName="bzData.name" :indData="indData" :indDataBz="indDataBz"></info-bz>
     </div>
 
   </section>

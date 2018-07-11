@@ -71,7 +71,7 @@ export default {
                 },
                 "properties": {
                     "text": this.visData[i].text,
-                    "color": this.visData[i].color
+                    "color": this.visData[i].color || "#1E3791"
                 }
             }
 

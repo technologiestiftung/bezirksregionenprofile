@@ -20,18 +20,29 @@ export default {
 
     const cols = [];
     for(const x in this.visData[0]){
-      cols.push(x);
+      if(x != "label" && x != "ylabel"  && x != "xlabel" ){
+        cols.push(x);
+      }
     }
 
-    var newData = [];
-    for (var i = 0; i < cols.length; i++) {
-      var newArray = [cols[i]];
+    // label
+    let label = [];
+    for (let i = 0; i < this.visData.length; i++) {
+      label.push(this.visData[i]['label'])
+    }
+
+    let newData = [];
+    for (let i = 0; i < cols.length; i++) {
+
+      let newArray = [cols[i]];
       
-      for (var ii = 0; ii < this.visData.length; ii++) {
+      for (let ii = 0; ii < this.visData.length; ii++) {
         newArray.push(Number(this.visData[ii][cols[i]]));
       }
       newData.push(newArray);
     };
+
+    console.log("newData",newData,label)
 
     // document.getElementById(this.chartId).style.height = "250px";
     c3.generate({
@@ -39,6 +50,22 @@ export default {
       data: {
         columns: newData,
         type: this.chartType
+      },
+      axis: {
+        x: {
+          type: 'category',
+          categories: label,
+          label: {
+            text: this.visData[0]['xlabel'],
+            position: 'outer-center'
+          }
+        },
+        y:{
+          label: {
+            text: this.visData[0]['ylabel'],
+            position: 'inner-middle'
+          }
+        }
       },
       bar: {
           width: {
@@ -88,5 +115,6 @@ export default {
     // padding: 1em;
     margin: $vis-margin;
   }
+
 
 </style>

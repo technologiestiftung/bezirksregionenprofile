@@ -4,11 +4,12 @@ import Vuex from 'vuex';
 import bright from '~/static/map/bright-v9.json';
 import nostyle from '~/static/map/nostyle.json';
 import bzr_lor from '~/data/map-borders.json'; //all map data
-import indikatorenGr from '~/data/indikatoren/indikatorenOverview.json';
+import indikatorenOverview from '~/data/indikatoren/indikatorenOverview.json';
 
 import toUrl from '~/assets/js/tourl.js'
 
-//this works!
+
+//adapt this before you generate the site
 // const productionUrl = "http://hanshack.com/tsb";
 const productionUrl = "http://localhost:3000/tsb";
 
@@ -99,7 +100,7 @@ const store = () => new Vuex.Store({
     brightstyle: bright,
     nostyle: nostyle,
     mapColors: ["#1E3791","#E60032"],
-    indikatorenGr:indikatorenGr,
+    indikatorenOverview:indikatorenOverview,
     themen:themen,
     urldev:'http://localhost:3000/tsb',
     url:  productionUrl

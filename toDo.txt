@@ -1,7 +1,0 @@
-to do
-
-- move away from pages
-- mapbox bap -
-- datanblatt widget map
-- hooks: pages for bzr
-- Datenblatt container height

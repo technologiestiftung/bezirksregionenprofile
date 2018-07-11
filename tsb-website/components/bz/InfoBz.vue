@@ -3,20 +3,21 @@
   <div class="content-main-info column">
 
       <div id="title">
-        <h4><i class="icon-right-small" /> Themen & Daten</h4> 
-        <div id="compare-dropdown" :class="this.bzData.name==this.bzrSelected ? 'compare-inactive' : ''">
-          <div class="compare-dropdown-text">VERGLEICHEN MIT:</div>
-          <!-- <dropdown :options="compareOpt" :selected="compareSelected" class="dropdown" v-on:updateOption="onCompareChange"></dropdown> -->
 
+        <h4><i class="icon-right-small" /> Themen & Daten</h4> 
+        <div id="compare-dropdown" :class="this.bzName==this.bzrSelected ? 'compare-inactive' : ''">
+
+          <div class="compare-dropdown-text">VERGLEICHEN MIT:</div>
           <div id="dropdown-mini" @click="selectDropdown()">{{compareSelected}} <i class="icon-down-dir" />
             <div :class="showDropdown? '':'hidden'" @click="dropdownSelected()">{{compareOpt}}</div>
           </div>
 
         </div>
+
       </div>
 
       <div 
-        :class="bzrSelected==bzData.name?'btn-hidden button':'button'"
+        :class="bzrSelected!=bzName?'btn-show button':'button'"
         @click="onBzrProfile(bzrSelected)">
         <i class="icon-right-small" /> zum Datenprofil {{bzrSelected}}
       </div>
@@ -24,7 +25,7 @@
 
       <div id="index-opt">
 
-        <div v-for="indikator in indikatorenGr" 
+        <div v-for="indikator in indikatorenOverview" 
           class="opt" 
           :key="indikator.name" 
           @click="onIndClick(indikator)"
@@ -37,23 +38,23 @@
 
       <div id="viz-container">
 
-        <div v-for="indikator in indikatorenGr[activeInd].indikatoren"
+        <div v-for="(indikator,index) in indikatorenOverview[activeInd].indikatoren"
           class="viz"
           :key="indikator[activeInd]" 
           >
 
 
-          <div class="viz-text top">
+          <div class="viz-text">
             
             <b>{{indikator['name']}}</b><div :class="['ampel','phase' + indDataParsed[indikator.name].phase]"></div><br>
-            <!-- <b>{{indikator['name']}}</b><br> -->
             <div class="info-text">{{indikator['text-sm']}}</div>
+            <i class="icon-info-circled ind-info" @mouseover="showTooltip(index)" @mouseout="hideTooltip"/>
+            <div :class="['tooltip', infoVisible==index?'visible':'']">
+              {{indikator['text-lg'] + ': '}} <b>{{indDataParsed[indikator.name].val}}</b> {{indikator['unit']}} 
 
-            <i class="icon-info-circled ind-info" @mouseover="showTooltip" @mouseout="hideTooltip"/>
-            <div class="tooltip">{{indikator['text-lg']}} </div>
+            </div>
             
           </div>
-
 
           <viz-bz 
             :activeIndClass="activeIndClass" 
@@ -63,36 +64,10 @@
             :activeInd="activeInd"
             :compareSelected="compareSelected"
             :bzrSelected="bzrSelected"
-            :bzName="bzData.name"
+            :bzName="bzName"
             >
 
           </viz-bz>
-
-<!--           <div class="viz-ampel-container">
-            <div class="viz-ampel">
-
-                <div :class="indDataParsed[indikator.name].phase==1?'phase'+indDataParsed[indikator.name].phase:''"></div>
-                <div :class="indDataParsed[indikator.name].phase==2?'phase'+indDataParsed[indikator.name].phase:''"></div>
-                <div :class="indDataParsed[indikator.name].phase==3?'phase'+indDataParsed[indikator.name].phase:''"></div>
-                <div :class="indDataParsed[indikator.name].phase==4?'phase'+indDataParsed[indikator.name].phase:''"></div>
-
-            </div>
-            <div class="viz-ampel">
-
-                <div :class="['phase1', indDataParsed[indikator.name].phase==1?'highlight':'']"></div>
-                <div :class="['phase2', indDataParsed[indikator.name].phase==2?'highlight':'']"></div>
-                <div :class="['phase3', indDataParsed[indikator.name].phase==3?'highlight':'']"></div>
-                <div :class="['phase4', indDataParsed[indikator.name].phase==4?'highlight':'']"></div>
-
-            </div>
-          </div> -->
-
-<!--           <div class="viz-text">
-            
-            {{indikator['text-sm']}}
-            
-          </div>
- -->
 
 
         </div>
@@ -100,22 +75,9 @@
       </div>
 
 
-<!--       {{"active id: " + activeInd}} -->
+      <div class="info" @click="showModal" ><i class="icon-info-circled" /> Legende</div>
 
-
-<!--       <div class="viz-container">
-        <viz-bz></viz-bz>
-      </div> -->
-
-
-      <div class="info" @click="showModal" ><i class="icon-info-circled" />info/Legende</div>
-
-
-      <modal
-            v-show="isModalVisible"
-            @close="closeModal"
-          />
-
+      <modal v-show="isModalVisible" @close="closeModal" />
 
 
   </div>
@@ -136,12 +98,14 @@ export default {
 
     computed: {
       ...mapState([
-        'indikatorenGr'
+        'indikatorenOverview'
       ]),
       indDataParsed(){
 
         const newIndData = {};
         const indCopy = JSON.parse(JSON.stringify(this.indData));
+
+        
 
         for(const x in indCopy) {
 
@@ -149,8 +113,15 @@ export default {
 
           if(this.compareSelected == "Berlin"){
 
-             // const averageVal = (minVal + maxVal) /2 ;
-            const averageVal = newIndData[x].average;
+
+            let average;
+            for(const indClass in this.indikatorenOverview) {
+              if(this.indikatorenOverview[indClass].indikatoren[x]){
+                average = this.indikatorenOverview[indClass].indikatoren[x].average;
+              }
+            }
+ 
+            const averageVal = average;
             const currentVal = newIndData[x].val;
             const deviationVal = ((currentVal-averageVal)/averageVal) * 100; //Abweichung vom Durchschnittswert
 
@@ -164,13 +135,13 @@ export default {
           }else{ //if compared with BZ
 
 
-            const averageVal = newIndData[x].average;
+            const averageVal = this.indDataBz[x].average; //compare with the data from the BZ not BZR
             const currentVal = newIndData[x].val;
             const deviationVal = ((currentVal-averageVal)/averageVal) * 100; //Abweichung vom Durchschnittswert
 
             newIndData[x].val = currentVal;
-            newIndData[x].valPercent = deviationVal / 1.1;
-            newIndData[x].average = averageVal / 1.1;
+            newIndData[x].valPercent = deviationVal;
+            newIndData[x].average = averageVal;
             newIndData[x].phase = newIndData[x].phaseBz;
 
           }
@@ -182,7 +153,7 @@ export default {
       }
        
     },
-    props: ["bzrSelected","indData","bzData"],
+    props: ["bzrSelected","indData","indDataBz","bzName"],
     components: {
       VizBz,Dropdown,Modal
     },
@@ -202,6 +173,7 @@ export default {
           compareSelected:"Berlin",
           showDropdown:false,
           isModalVisible: false,
+          infoVisible:""
         }
     },
     // props: ["mainColor"],
@@ -232,26 +204,17 @@ export default {
         window.sessionStorage.setItem("modalShown", "true");
         setTimeout(function(){ this.isModalVisible = true; }.bind(this), 1500);
       },
-      showTooltip(){
-        console.log("Hi there info")
+      showTooltip(id){
+        this.infoVisible = id;
       },
       hideTooltip(){
-        console.log("Hideinfo")
+        this.infoVisible = "";
       }
-      // onCompareChange(x){
 
-      //   this.compareSelected = x.name;
-      //   if(x.name == "Berlin"){
-      //     this.compareOpt = [{"name":"Bezirk"}];
-      //   }else{
-      //     this.compareOpt = [{"name":"Berlin"}];
-      //   }
-
-      // }
     },
     watch:{
       bzrSelected: function (val) {
-        if(this.bzData.name==this.bzrSelected){
+        if(this.bzName==this.bzrSelected){
           this.compareSelected = "Berlin";
           this.compareOpt = "Bezirk";
         }
@@ -267,17 +230,6 @@ export default {
 <style lang="scss" scoped>
 
 @import "~@/assets/style/variables";
-
-
-  // #map {
-
-  //   width:100%;
-  //   height: 60vh;
-  //   position: absolute;
-
-  // }
-
-
 
 
   #title{
@@ -304,7 +256,6 @@ export default {
 
       flex: 1;
       display: flex;
-      // font-size: 0.7rem;
       line-height: 1.9em;
 
       .compare-dropdown-text{
@@ -334,9 +285,8 @@ export default {
         div{
           position: absolute;
           margin-top: -4px;
-                  background-color: $tsb-lightgray;
-        opacity: .8;
-          // color:#ccc;
+          background-color: $tsb-lightgray;
+          opacity: .8;
         }
 
         .hidden{
@@ -349,7 +299,7 @@ export default {
   }//title
 
 
-
+  //Datenprofil button
   .button{
     background-color: $tsb-darkblue; //#1E3791;
     color: white;
@@ -357,36 +307,19 @@ export default {
     margin-top: 0.2em;
     margin-bottom: 0.3em;  
     cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
   }
 
-  .button:hover{
+  .button.btn-show:hover{
     opacity: .8;
   }
 
-  .btn-hidden{
-    visibility: hidden;
-
+  .btn-show{
+    opacity: 1;
+    transition: 1s;
+    pointer-events: auto;
   }
-
-
-
-
-  .navigation{
-
-    position: relative;
-    z-index: 1;
-    top: 20px;
-    left: 20px;
-    color: #000 !important;
-
-    select{
-      width: 100px;
-      height: 30px;
-
-    }
-
-  }
-
 
 
 
@@ -401,11 +334,8 @@ export default {
     .viz{
       flex-basis: calc(33% - 20px);;
       margin: 10px;
-      // background-color: lightgreen;
-      // height:50px;
       padding-bottom: 15px;
-
-              background-color: white;
+      background-color: white;
 
     }
 
@@ -419,11 +349,12 @@ export default {
     }
 
 
-
     .viz-text{
 
       min-height: 65px;
       position: relative;
+      margin: 0.7em;
+      margin-bottom: 0.8em;
 
       .tooltip{
         background-color: #fff;
@@ -437,7 +368,15 @@ export default {
         height: auto;
         border-radius: 0;
         border: 1px solid #ccc;
+        display:none;
+
+        &.visible{
+          display:block;
+        }
+
       }
+
+
 
       .ind-info{
         position: absolute;
@@ -452,15 +391,12 @@ export default {
         }
       }
 
-      &.top{
-        margin: 0.7em;
-        margin-bottom: 0.8em;
-      }
 
       .ampel{
         margin-left:.7em;
         margin-top: 1px;
         position: absolute;
+        // transition:.3s;
       }
 
       .info-text{
@@ -468,13 +404,7 @@ export default {
         width: 100%;
       }
 
-      // .info-text{
-      //   margin-top: 0.2em;
-      // }
-
       font-size: .7em;
-      // margin-top: 0.7em;
-      // min-height: 60px;
 
       .phase1{
         background-color:$color-phase1;
@@ -499,50 +429,6 @@ export default {
       }
 
     }
-
-    // .viz-ampel-container{
-
-    //  text-align: center;
-
-    //   .viz-ampel{
-
-    //     display: inline-block;
-
-    //     div{
-    //       margin: 4px;
-    //       width: 7px;
-    //       height: 7px;
-    //       border-radius: 20px;      
-    //       float: left; 
-    //       background-color:#ddd;
-    //       opacity: .4;
-    //       margin-top: 4px;
-    //     }
-
-    //     .highlight{
-    //       opacity: 1;
-    //       width: 15px;
-    //       height: 15px;
-    //       margin-top: 0px;
-    //     }
-
-    //     .phase1{
-    //       background-color:$color-phase1;
-    //       border: 2px solid #ddd; 
-    //     }
-    //     .phase2{
-    //       background-color:$color-phase2;
-    //     }
-    //     .phase3{
-    //       background-color:$color-phase3;
-    //     }
-    //     .phase4{
-    //       background-color:$color-phase4;
-    //     }
-
-    //   }
-
-    // }
 
   }
 
@@ -573,7 +459,6 @@ export default {
         opacity: 0.6;
       }
     }
-
 
     .active{
       .indGr1{

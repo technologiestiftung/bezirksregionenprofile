@@ -139,8 +139,8 @@ export default {
                 "paint":{
                   "line-color":this.mapColors[1],
                   "line-width":1,
-                  "line-opacity":0.1,
-                  "line-dasharray":[1,1]
+                  "line-opacity":0.3,
+                  "line-dasharray":[2,2]
                 },
             });
 
