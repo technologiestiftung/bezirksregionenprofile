@@ -24,12 +24,11 @@ For detailed explanation on how things work, checkout the [Nuxt.js docs](https:/
 
 ## Before you generate the site
 
-The project currently runs in the base folder 'tsb'. To change this do the follwing:
+The project currently runs in the base folder 'tsb'. To change this, do the follwing:
 
 ```
 
 # Change the base folder in the nuxt.config.js -> base: '/tsb/'
-
 # adapt @font-face urls in style/typography.css accordingly
 
 ```
@@ -45,7 +44,7 @@ Adjust the url:
 Add the routes:
 
 ```
-# go to data and add new routes in bz-routs and bzr-routes
+# go to the data folder and add new routes in bz-routes and bzr-routes
 
 ```
 
@@ -58,7 +57,7 @@ $ npm run generate
 ```
 
 
-## Map Data Infos
+## Map Data
 
 ```
 # download all data from here as json: https://data.technologiestiftung-berlin.de/dataset/
@@ -74,6 +73,6 @@ There are two source of data:
 1. The data folder contains the map data, the main data about Indikatoren and the routes. 
 
 2. The static folder contains 
-	
-	a) the tile data
-	b) the data to do with the Beziken and Bezirksregionen
+
+	2.1 the tile data
+	2.2 the data to do with the Beziken and Bezirksregionen
