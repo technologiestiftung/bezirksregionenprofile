@@ -24,11 +24,11 @@ For detailed explanation on how things work, checkout the [Nuxt.js docs](https:/
 
 ## Before you generate the site
 
-The project currently runs in the base folder 'tsb'. To change this, do the follwing:
+The project currently runs in the base folder 'tsb'. To change this, do the following:
 
 ```
 
-# Change the base folder in the nuxt.config.js -> base: '/tsb/'
+# Change the base in the nuxt.config.js -> base: '/tsb/'
 # adapt @font-face urls in style/typography.css accordingly
 
 ```
@@ -37,7 +37,7 @@ Adjust the url:
 
 ```
 
-# in store/index.js adapt variable productionUrl 
+# in store/index.js adapt the variable productionUrl 
 
 ```
 
@@ -75,4 +75,4 @@ There are two source of data:
 2. The static folder contains 
 
 	2.1 the tile data
-	2.2 the data to do with the Beziken and Bezirksregionen
+	2.2 the data to do with the Bezirken and Bezirksregionen
