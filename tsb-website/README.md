@@ -85,14 +85,16 @@ There are two source of data:
 Copy the datenblatt.csv example from Friedenau and save it in a 'Bezirksregion' folder of your choice e.g. 'lichtenrade'.
 About the csv structure:
 
+```
 "ref" defines the datenblatt chapter e.g. "1 Kurzporträt der Bezirksregion" to which the content should be added to. 
 "type" defines what should added (see "Types of content")
 "datasource" defines the name of the datasource which is saved in the 'data' folder of the 'Bezirksregion'
 "content" html content for text, title, small title
-
+```
 
 ## Types of content
 
+```
 titel -> title
 titel-sm -> titel small
 text -> text
@@ -100,3 +102,4 @@ barchart -> barchart
 map-pr -> map planungsräume / choropleth map
 linechart -> linechart 
 map-poi -> POI map
+```
