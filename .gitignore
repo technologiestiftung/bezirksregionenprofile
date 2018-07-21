@@ -1,0 +1,19 @@
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+
+# tiles etc
+static/tiles
+static/glyphs
+static/sprites
+
+
+.DS_Store
