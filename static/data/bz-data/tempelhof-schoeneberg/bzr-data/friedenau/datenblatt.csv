@@ -1,6 +1,6 @@
 ref,type,datasource,content
 1,titel,, "Kurzporträt der Bezirksregion – stadträumliche Struktur
-1,text,,"<img src="">Bild?</img>
+1,text,,"<img src="data/BerlinRoughTSB.png">Bild?</img>
 1,text,,"Die Bezirksregion (BZR) Friedenau umfasst den Ortsteil Friedenau und den südlichen Teil des Ortsteils Schöneberg. Sie liegt unterhalb der Bahntrasse der Ringbahn und reicht bis zur Bezirksgrenze zu Steglitz-Zehlendorf an der Gutsmuthstraße. Westlich beginnt die BZR an der Bezirksgrenze zu Charlottenburg-Wilmersdorf an der Laubacher Straße und reicht östlich bis an die Bahntrasse der Dresdner Bahn am Naturpark Schöneberger Südgelände. Die Siedlungsstruktur der BZR ist homogen durch verdichtete Blockrandbebauung geprägt. Die BZR umfasst eine Fläche von rund 454 Hektar."
 1,text,,"Die BZR Friedenau (LOR-Nummer: 070303) gliedert sich in die drei Planungsräume (PLR): <li><ul>Friedenau (07030301)</ul><ul>Ceciliengärten (07030302) und </ul> <ul> Grazer Platz (07030303)</ul></li>"
 1,text,,"Zum Ende 2015 waren in der BZR Friedenau rund 46.000 Personen melderechtlich registriert. In den vergangenen fünf Jahren ist die Zahl der Einwohnenden in der BZR um 1,6% gestiegen. Der Anteil der Ausländer_innen liegt mit rund 16% unter dem bezirklichen Vergleichswert. Die Altersstruktur zeigt einen überdurchschnittlichen Anteil an unter 18-Jährigen in der BZR auf, der Anteil der über 65-Jährigen ist hingegen unter dem bezirklichen Vergleichswert.<br /> Die Bezirksregion umfasst den westlichen Teil von Friedenau mit seinen hufeisenförmig angelegten Straßen und kleinen Stadtplätzen, der bis heute als gehobene Wohngegend gilt, die großzügig im Stil englischer Gartenstädte angelegte Siedlung an den „Ceciliengärten“ und das Gebiet Grazer Platz, das sich östlich der S-Bahnlinie befindet und die denkmalgeschützte Siedlung entlang des Grazer Dammes aus den 30er Jahren umfasst. Ebenso liegen ausgedehnte Kleingartenflächen am Schöneberger Südgelände am östlichen Rand des Planungsraumes, die in den Naturpark am Insulaner übergehen."
@@ -35,6 +35,12 @@ Jahren an Einwohner_innen unter 15 Jahren</li><li>einen vergleichsweise hohen An
 2,titel,,2. Demografische Struktur und Entwicklung
 2,titel-sm,,Einwohner_innenentwicklung
 2,table,table3,
+2,text,,"<img>aus FIS-Broker?</img>
+2,text,,"<b>Wachstum prozentual geringer als Bezirk</b><ul><li>Die BZR Friedenau verzeichnet einen leichten Zuwachs der Einwohner_innenzahl. Allerdings ist der Zuwachs sowohl im Rückblick auf das Vorjahr als auch auf fünf Jahre zuvor geringer als im Bezirk.</li><li>Die Planungsräume weisen unterschiedliche Wachstumsraten auf, im PLR Grazer
+Platz ist das Wachstum stärker als in den anderen PLR der Bezirksregion.</li><li>Friedenau ist dicht besiedelt. Allerdings ist ein großer Teil des PLR Grazer Platz nicht
+bewohnt, sondern wird durch Kleingärten genutzt.</li></ul>"
+2,titel,,2.2 Altersstruktur
+
 
 
 2,text,," <b>Lorem ipsum dolor sit amet, consetetur</b> sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
