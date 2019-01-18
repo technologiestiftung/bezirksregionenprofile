@@ -21,7 +21,7 @@
     "mapbox-gl": "^0.45.0",
     "normalize-scss": "^7.0.1",
     "nuxt": "^1.4.0",
-    "papaparse": "^4.5.0",
+    "papaparse": "^4.6.3",
     "topojson": "^3.0.2",
     "vue-c3": "^1.2.8",
     "vue-scrollto": "^2.11.0"
