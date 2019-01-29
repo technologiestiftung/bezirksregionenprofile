@@ -1,5 +1,7 @@
 # Bezirksregionen Explorer
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/technologiestiftung/bezirksregionenprofile.svg)](https://greenkeeper.io/)
+
 > ...
 
 ## Build Setup
