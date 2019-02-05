@@ -16,25 +16,28 @@
     "@mapbox/geo-viewport": "^0.3.0",
     "@turf/bbox": "^6.0.1",
     "axios": "^0.18.0",
-    "c3": "^0.6.2",
+    "c3": "^0.6.12",
     "d3": "^5.5.0",
     "mapbox-gl": "^0.45.0",
     "normalize-scss": "^7.0.1",
-    "nuxt": "^1.4.5",
+    "nuxt": "^2.4.2",
     "papaparse": "^4.5.0",
     "topojson": "^3.0.2",
-    "vue-c3": "^1.2.8",
-    "vue-scrollto": "^2.11.0"
+    "vue-c3": "^1.2.11",
+    "vue-scrollto": "^2.13.0"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.1",
+    "acorn": "^6.0.7",
+    "acorn-dynamic-import": "^4.0.0",
+    "babel-eslint": "^10.0.1",
     "cz-conventional-changelog": "^2.1.0",
-    "eslint": "^4.15.0",
-    "eslint-friendly-formatter": "^3.0.0",
-    "eslint-loader": "^1.7.1",
-    "eslint-plugin-vue": "^4.0.0",
+    "eslint": "^5.13.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-vue": "^5.1.0",
     "node-sass": "^4.11.0",
-    "sass-loader": "^7.0.1"
+    "sass-loader": "^7.0.1",
+    "webpack": "4.28.4"
   },
   "config": {
     "commitizen": {

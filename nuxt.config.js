@@ -42,9 +42,9 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    vendor: ['mapbox-gl'],
-    extend (config, { isDev, isClient }) {
-      if (isDev && isClient) {
+    // vendor: ['mapbox-gl'],
+    extend (config, { isDev }) {
+      if (isDev && process.client) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,

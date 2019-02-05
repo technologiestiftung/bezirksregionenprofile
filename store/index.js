@@ -114,4 +114,27 @@ const store = () => new Vuex.Store({
   }
 })
 
-export default store
+export default store;
+
+// Update to new version of store
+// https://github.com/nuxt/nuxt.js/tree/dev/examples/vuex-store
+// export const state = () =>({
+//   bezirksgrenzen: bezirksgrenzen,
+//   bezirksregionen: bezirksregionen,
+//   planungsraeume:planungsraeume,
+//   bzNamen:bezirksNamenOrdered,
+//   bzrNamen: bezirksregionenNamenOrdered,
+//   brightstyle: bright,
+//   nostyle: nostyle,
+//   mapColors: ["#1E3791","#E60032"],
+//   indikatorenOverview:indikatorenOverview,
+//   themen:themen,
+//   urldev:'http://localhost:3000/tsb',
+//   url:  productionUrl
+// });
+
+// export const mutations = {
+//   foo(state) {
+//     console.log(state);
+//   }
+// }
