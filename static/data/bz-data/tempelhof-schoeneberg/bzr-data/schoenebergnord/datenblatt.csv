@@ -1,0 +1,28 @@
+ref,type,datasource,content
+1,titel,,Kurzporträt der Bezirksregion – stadträumliche Struktur
+1,text,,"Die Bezirksregion (BZR) Schöneberg Nord umfasst den nördlichen Teil des Ortsteils Schö- neberg. Sie beginnt an der Bezirksgrenze zu Mitte (Tiergarten) und wird durch die Hohen- staufenstraße - Eisenacher Straße - Monumentenstraße südlich begrenzt. Westlich und öst- lich bilden die Bezirksgrenzen auch die Grenzen der BZR. Die Siedlungsstruktur der BZR ist homogen durch verdichtete Blockrandbebauung geprägt. Die BZR umfasst eine Fläche von 283 Hektar und ist die kleinste BZR in Tempelhof-Schöneberg.
+Die BZR Schöneberg Nord (LOR-Nummer: 070101) gliedert sich in die vier Planungsräume (PLR): Wittenbergplatz/Viktoria-Luise-Platz (07010101),
+Nollendorfplatz (07010102),
+Barbarossaplatz (07010103) und
+Dennewitzplatz (07010104).
+Zum Ende 2015 waren in Schöneberg Nord rund 49.000 Personen melderechtlich registriert. In den vergangenen fünf Jahren ist die Zahl der Einwohnenden in der BZR um 1,6% gestie- gen, nachdem sie über mehrere Jahre gesunken war. Der Anteil der Ausländer_innen ist in Schöneberg-Nord mit rund 30% deutlich höher als in allen anderen BZR des Bezirks. Die Altersstruktur weist vergleichsweise geringe Anteile an unter 18-Jährigen und über 65- Jährigen auf. Der Altersdurchschnitt lag in der BZR bei 42,3 Jahren.
+Große Spuren haben die verschiedenen Phasen städtebaulicher Sanierung bis Ende der 1990er Jahre im Gebiet hinterlassen, die sich überwiegend auf den nordöstlichen Bereich des Quartiers bezogen. Einerseits hinterließen die Kahlschlagsanierungen monofunktionale Wohnkomplexe im Bereich des Bülowbogens als städtebauliche "Fremdkörper" moderner Architektur, andererseits verbesserten Sanierungsbemühungen durch Entkernung klassi- scher Blöcke die Wohnsituation erheblich. Ein Teil der Bevölkerung folgte dem Ruf nach qualitativ höherwertigem Wohnraum ins Märkische Viertel und andere Wohnquartiere der 60er und 70er Jahre. Als Innenstadtbezirk ist Schöneberg arm an Grünflächen, historische Friedhöfe und der ehemalige botanische Garten (heute Kleistpark) bilden aber grüne Ruhe- punkte im Stadtbild.
+Im nordöstlichsten Teil des Schöneberger Nordens wurde Anfang 1999 ein Gebiet mit be- sonderem Entwicklungsbedarf festgelegt und ein Quartiersmanagement eingerichtet. We- sentlich geprägt wird das Quartier von der Potsdamer Straße und dem Bülowbogen, dem Pallasseum, dem Steinmetzkiez. Im Zuge des Quartiersmanagements wurde und wird wei- terhin versucht, die städtebauliche Sanierung durch bauliche, soziale, ökologische und ar- beitsmarktbezogene Maßnahmen zu ergänzen, um so das Quartier für die Menschen aufzu- werten und attraktiver zu machen."
+1,titel-sm,,1.1 Wittenbergplatz / Viktoria-Luise-Platz
+1,table,bsp_tabelle,
+1,text,,
+2,map-poi,Spielplätze,
+2,map-pr,kinder,
+2,linechart,kinder_verlauf,
+3,titel,,2.1 Einwohner_innenentwicklung
+3,titel-sm,,Zahl der Einwohnenden steigt wieder
+3,text,,"- In den vergangenen funf Jahren zeigt sich in Schöneberg Nord ein geringerer Zu-
+wachs als im Vergleich zum Vorjahr, dies ist durch das Absinken der Einwohnerzahl
+bedingt, dass sich erst vor wenigen Jahren umgekehrt hat.
+- Die Planungsraume weisen jedoch unterschiedliche Wachstumsraten auf, im PLR
+Wittenbergplatz ist das Wachstum deutlich stärker als in den anderen PLR.
+- Schoneberg Nord ist sehr dicht besiedelt. Lediglich im PLR Dennewitzplatz gibt es
+ein etwas großeres zusammenhängendes Gebiet ohne Einwohner_innen.
+"
+3,barchart,zuzuege,
+3,table,prognose,
