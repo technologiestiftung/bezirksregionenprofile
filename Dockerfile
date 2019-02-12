@@ -1,6 +1,6 @@
 FROM node:10.15.0-alpine as builder
 WORKDIR /usr/app
-COPY package.json ./
+COPY package*.json ./
 # RUN npm install -g yarn
 RUN npm ci
 COPY ./ ./
