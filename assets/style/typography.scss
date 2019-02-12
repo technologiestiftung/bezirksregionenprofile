@@ -281,42 +281,42 @@ a {
 //   }
 // }
 // */
- 
+
 //  [class^="icon-"]:before, [class*=" icon-"]:before {
 //   font-family: "tsb";
 //   font-style: normal;
 //   font-weight: normal;
 //   speak: none;
- 
+
 //   display: inline-block;
 //   text-decoration: inherit;
 //   width: 1em;
 //   margin-right: .2em;
 //   text-align: center;
 //   /* opacity: .8; */
- 
+
 //   /* For safety - reset parent styles, that can break glyph codes*/
 //   font-variant: normal;
 //   text-transform: none;
- 
+
 //   /* fix buttons height, for twitter bootstrap */
 //   line-height: 1em;
- 
+
 //   /* Animation center compensation - margins should be symmetric */
 //   /* remove if not needed */
 //   margin-left: .2em;
- 
+
 //   /* you can be more comfortable with increased icons size */
 //   /* font-size: 120%; */
- 
+
 //   /* Font smoothing. That was taken from TWBS */
 //   -webkit-font-smoothing: antialiased;
 //   -moz-osx-font-smoothing: grayscale;
- 
+
 //   /* Uncomment for 3D effect */
 //   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 // }
- 
+
 // .icon-search:before { content: '\e800'; } /* '' */
 // .icon-mail:before { content: '\e801'; } /* '' */
 // .icon-twitter:before { content: '\f099'; } /* '' */
@@ -328,16 +328,16 @@ a {
 
 @font-face {
   font-family: 'clan-book';
-  src: url("/tsb/font/clan-book.woff") format("woff");
+  src: url("/font/clan-book.woff") format("woff");
   font-weight: normal;
-  font-style: normal; 
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'clan-medium';
-  src: url("/tsb/font/clan-medium.woff") format("woff");
+  src: url("/font/clan-medium.woff") format("woff");
   font-weight: normal;
-  font-style: normal; 
+  font-style: normal;
 }
 
 
@@ -346,12 +346,12 @@ a {
 
 @font-face {
   font-family: 'tsb';
-  src: url('/tsb/font/tsb.eot?70193786');
-  src: url('/tsb/font/tsb.eot?70193786#iefix') format('embedded-opentype'),
-       url('/tsb/font/tsb.woff2?70193786') format('woff2'),
-       url('/tsb/font/tsb.woff?70193786') format('woff'),
-       url('/tsb/font/tsb.ttf?70193786') format('truetype'),
-       url('/tsb/font/tsb.svg?70193786#tsb') format('svg');
+  src: url('/font/tsb.eot?70193786');
+  src: url('/font/tsb.eot?70193786#iefix') format('embedded-opentype'),
+       url('/font/tsb.woff2?70193786') format('woff2'),
+       url('/font/tsb.woff?70193786') format('woff'),
+       url('/font/tsb.ttf?70193786') format('truetype'),
+       url('/font/tsb.svg?70193786#tsb') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -365,42 +365,42 @@ a {
   }
 }
 */
- 
+
  [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "tsb";
   font-style: normal;
   font-weight: normal;
   speak: none;
- 
+
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
   margin-right: .2em;
   text-align: center;
   /* opacity: .8; */
- 
+
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
- 
+
   /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
- 
+
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
   margin-left: .2em;
- 
+
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
- 
+
   /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- 
+
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
- 
+
 .icon-search:before { content: '\e800'; } /* '' */
 .icon-mail:before { content: '\e801'; } /* '' */
 .icon-users:before { content: '\e802'; } /* '' */

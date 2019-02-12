@@ -1,5 +1,5 @@
 {
-  "name": "tsb-website",
+  "name": "bezirks-regionen-profile",
   "version": "1.0.0",
   "description": "bezirksregionen explorer",
   "author": "hhack <hans.f.hack@googlemail.com>",
@@ -34,7 +34,7 @@
     "eslint-loader": "^1.7.1",
     "eslint-plugin-vue": "^4.0.0",
     "node-sass": "^4.9.0",
-    "sass-loader": "^7.0.1"
+    "sass-loader": "^7.1.0"
   },
   "config": {
     "commitizen": {
