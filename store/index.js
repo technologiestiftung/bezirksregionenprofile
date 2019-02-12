@@ -10,7 +10,7 @@ import toUrl from '~/assets/js/tourl.js'
 
 //adapt this before you generate the site
 // const productionUrl = "http://hanshack.com/tsb";
-const productionUrl = "http://localhost:3000";
+const productionUrl = "http://bezirksregionenprofile-env.w42dwkkrhe.eu-central-1.elasticbeanstalk.com";
 
 //define the source of the tiles etc
 bright.sources= {
