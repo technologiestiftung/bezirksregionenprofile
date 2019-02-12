@@ -1,0 +1,6 @@
+docker-compose.yml
+Dockerfile
+node_modules
+# static
+static/map/tiles
+dist

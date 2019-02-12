@@ -25,7 +25,7 @@ export default {
       ])
     },
     components: {
-      
+
     },
     mounted(){
       this.createMap();
@@ -82,6 +82,7 @@ export default {
         })
 
         map.on("load",()=>{
+        map.resize();
 
             //to load directly
             // https://github.com/mapbox/mapbox-gl-js/issues/1970
@@ -89,7 +90,6 @@ export default {
                 padding: {'bottom':50, 'left':20, 'right':20, 'top':50},
                 duration: 0
             });
-
             // map.addSource('bezirksregion', {
             //     type: 'geojson',
             //     data: selectedBzR
@@ -177,7 +177,7 @@ export default {
 
 
 
-            
+
           })
 
 

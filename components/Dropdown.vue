@@ -28,7 +28,7 @@
                   name: '',
                 },
                 showMenu: false,
-                placeholderText: 'Bezirk auswälen',
+                placeholderText: 'Bezirk auswählen',
             }
         },
         props: {
@@ -82,7 +82,7 @@
                 const compName = vNode.context.name
                 let warn = `[Vue-click-outside:] provided expression '${binding.expression}' is not a function, but has to be`
                 if (compName) { warn += `Found in component '${compName}'` }
-                
+
                 console.warn(warn)
               }
               // Define Handler and cache it on the element
@@ -97,7 +97,7 @@
               // add Event Listeners
               document.addEventListener('click', handler)
             },
-            
+
             unbind: function(el, binding) {
               // Remove Event Listeners
               document.removeEventListener('click', el.__vueClickOutside__)
