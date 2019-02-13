@@ -103,3 +103,11 @@ map-pr -> map planungsräume / choropleth map
 linechart -> linechart 
 map-poi -> POI map
 ```
+
+**!Hint:** To add images into the profile you need to use the absolute path but omit the `static` folder. E.g.:
+
+See [/static/data/bz-data/tempelhof-schoeneberg/bzr-data/friedenau/datenblatt.csv](/static/data/bz-data/tempelhof-schoeneberg/bzr-data/friedenau/datenblatt.csv)
+
+```csv
+1,text,,"<img src='/data/bz-data/tempelhof-schoeneberg/bzr-data/friedenau/data/BerlinRoughTSB.png' />"
+```
