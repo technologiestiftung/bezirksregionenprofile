@@ -1,5 +1,6 @@
 # Bezirksregionen Explorer
 
+[![Build Status](https://travis-ci.com/technologiestiftung/bezirksregionenprofile-deploy.svg?branch=master)](https://travis-ci.com/technologiestiftung/bezirksregionenprofile-deploy)
 > ...
 
 ## Build Setup
