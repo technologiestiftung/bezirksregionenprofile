@@ -1,5 +1,5 @@
 <template>
-  <section v-if='bzrIntroData && datenblatt' id="brz-page"> 
+  <section v-if='bzrIntroData && datenblatt' id="brz-page">
     <intro :name="getBzrName" :nameClass="getBzName" :introData="bzrIntroData"></intro>
     <div class="content-main bzr">
       <div class="content-main-bzr-left">
@@ -8,10 +8,10 @@
         <navigation-bzr :bzrName="getBzrName" :themen="themen"  v-on:changeThemaSelected="changeThemaSelected" :themaSelected="themaSelected"></navigation-bzr>
 
       </div>
-      <info-bzr 
-        :themen="themen"  
-        v-on:changeThemaSelected="changeThemaSelected" 
-        :themaSelected="themaSelected" 
+      <info-bzr
+        :themen="themen"
+        v-on:changeThemaSelected="changeThemaSelected"
+        :themaSelected="themaSelected"
         :datenblatt="datenblatt"
         :sourceUrl="getSourceUrl"
         :bzrName="getBzrName">
@@ -37,7 +37,7 @@
   import InfoBzr from '~/components/bzr/InfoBzr.vue';
   import NavigationBzr from '~/components/bzr/NavigationBzr.vue';
 
-  
+
 
   function getKeyByValue(object, value) {
     return Object.keys(object).find(key => object[key].url === value);
