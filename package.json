@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "bezirksregionen explorer",
   "author": "hhack <hans.f.hack@googlemail.com>",
-  "contributors": ["Fabian Morón Zirfas <moron-zirfas@technologiestiftung-berlin.de> (https://lab.technologiestiftung-berlin.de)"],
+  "contributors": [
+    "Fabian Morón Zirfas <moron-zirfas@technologiestiftung-berlin.de> (https://lab.technologiestiftung-berlin.de)"
+  ],
   "private": true,
   "scripts": {
     "dev": "NODE_ENV=development nuxt",
