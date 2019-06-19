@@ -188,7 +188,7 @@ export default {
 
                 const bezirk = e.features[0].properties.Gemeinde_name;
 
-                if(bezirk!="Tempelhof-Schöneberg"){return};
+                //if(bezirk!="Tempelhof-Schöneberg"){return};
 
                 this.$router.push({ path: 'bezirk/' + toUrl(bezirk) });
 
