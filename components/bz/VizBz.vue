@@ -8,8 +8,10 @@
       <rect x="0%" y="0%" width="100%" height="100%" class="background-rect"/> 
       <rect x="50%" y="0%" width="0%" height="100%" :class="[activeIndClass, 'ani-rect']"/> 
 
-      <text x="0%" y="0%" class="label-top">Min</text>
-      <text x="100%" y="0%" class="label-top">Max</text>
+      <!-- delete label min and max as long as it is not correct with data -->
+      <text x="0%" y="0%" class="label-top"></text> <!-- former min label -->
+      <text x="100%" y="0%" class="label-top"></text> <!-- former min label -->
+      <text x="100%" y="0%" class="label-top"></text>
 
       <text x="50%" y="0%" class="label-top static" :id="getCompareName">{{getCompareName}}</text>
       <text x="50%" y="100%" :class="[activeIndClass, 'label', 'bzr']">{{compareWidth}}</text>
@@ -41,6 +43,7 @@ export default {
     }
   },
   props: ["activeIndClass","indikatorValue","indikatorValuePercent","activeInd","compareSelected","bzrSelected","bzName"],
+
   created(){
   },
   computed:{
@@ -56,7 +59,10 @@ export default {
       if(this.bzName == this.bzrSelected){
         bzrBZ = "BZ";
       }
-      const percentValue = " (" + Math.round(this.indikatorValuePercent*10)/10 + "%)";
+
+      // make plus in front of positive numbers to indicate that its x % MORE
+      var addPlus = this.indikatorValuePercent > 0? "+" : ""
+      const percentValue = " (" + addPlus + Math.round(this.indikatorValuePercent*10)/10 + "%)";
       return this.compareSelected == "Berlin" ? bzrBZ + percentValue : "BZR" + percentValue;
     }
   },
@@ -88,41 +94,47 @@ export default {
       if(this.indikatorValuePercent < 0 ){
 
         const invertedData = (this.indikatorValuePercent / 2) * -1;
+        
+        // if the value is smaller than -100% then only draw the line until -5%
+        const linePosition = this.indikatorValuePercent >= -100?  (50 - invertedData) + "%" : -5 + "%"
 
         d3.select('#'+this.id + " .ani-rect").transition()
             .duration(animationDuration)
-            .attr("x", (50 - invertedData) + "%")
-            .attr("width", invertedData + "%");
+            .attr("x", linePosition)
+            .attr("width", this.indikatorValuePercent >= -100 ?  invertedData + "%" : 55 + "%");
 
         d3.select('#'+this.id + " .bzr").transition()
             .duration(animationDuration)
-            .attr("x", (50 - invertedData) + "%")
+            .attr("x", linePosition)
 
 
         d3.select('#'+this.id + " .compare-line").transition()
             .duration(animationDuration)
-            .attr("x1", (50 - invertedData) + "%")
-            .attr("x2", (50 - invertedData) + "%")
+            .attr("x1", linePosition)
+            .attr("x2", linePosition)
 
 
 
       }else{//if positive value
 
-
+        // if the value is larger than +100% then only draw the line until +105%
+        const linePosition = this.indikatorValuePercent <= 100?  (this.indikatorValuePercent / 2) + 50 + "%" : 105 + "%"
+        
         d3.select('#'+this.id + " .ani-rect").transition()
             .duration(animationDuration)
-            .attr("width", this.indikatorValuePercent / 2 + "%")
+            .attr("width",  this.indikatorValuePercent <= 100 ?  this.indikatorValuePercent / 2 + "%" : 55 + "%")
             .attr("x","50%");
 
         d3.select('#'+this.id + " .bzr").transition()
             .duration(animationDuration)
-            .attr("x", (this.indikatorValuePercent / 2) + 50 + "%");
+            .attr("x", linePosition);
+
 
 
         d3.select('#'+this.id + " .compare-line").transition()
             .duration(animationDuration)
-            .attr("x1", (this.indikatorValuePercent / 2) + 50 + "%")
-            .attr("x2", (this.indikatorValuePercent / 2) + 50 + "%")
+            .attr("x1", linePosition)
+            .attr("x2", linePosition)
 
       }
 
@@ -143,7 +155,6 @@ export default {
     this.animate();
   }
 }
-
 </script>
 
 
