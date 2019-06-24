@@ -4,27 +4,7 @@
 		"class":"indGr1",
 		"id":"1",
 		"indikatoren":{
-			"A1":{
-				"name":"A1",
-				"text-sm":"Einfache Wohnlage",
-				"text-lg":"Einwohner/innen in einfacher Wohnlage",
-				"unit":"%",
-				"average":40.4
-			},
-			"A2":{
-				"name":"A2",
-				"text-sm":"Mittlere Wohnlage",
-				"text-lg":"Einwohner/innen in mittlerer Wohnlage",
-				"unit":"%",
-				"average":43.2
-			},
-			"A3":{
-				"name":"A3",
-				"text-sm":"Gute Wohnlage",
-				"text-lg":"Anteil der Einwohner/innen in guter Wohnlage nach Mietspiegel an EW gesamt",
-				"unit":"%",
-				"average":16.3
-			},
+			
 			"A4":{
 				"name":"A4",
 				"text-sm":"Grünanlagen",
@@ -79,21 +59,8 @@
 				"text-lg":"Anteil der EW von 65 Jahren und älter an EW gesamt",
 				"unit":"%",
 				"average":19.1
-			},
-			"B3":{
-				"name":"B3",
-				"text-sm":"EW > 18 J Migr.",
-				"text-lg":"Anteil der EW unter 18 Jahren mit Migrationshintergrund an EW dieser Altersgruppe",
-				"unit":"%",
-				"average":47.1
-			},
-			"B4":{
-				"name":"B4",
-				"text-sm":"EW <= 65 J Migr.",
-				"text-lg":"Anteil der EW von 65 Jahren und älter mit Migrationshintergrund an EW dieser Altersgruppe",
-				"unit":"%",
-				"average":10.4
 			}
+			
 		}
 	},
 	"3":{
@@ -200,13 +167,6 @@
 				"unit":"%",
 				"average":9.9
 			},
-			"E4":{
-				"name":"E4",
-				"text-sm":"Kitabesuchsdauer Ü 2 Jahren",
-				"text-lg":"Anteil Kinder mit einer Kitabesuchsdauer über 2 Jahren an Einschüler/innen",
-				"unit":"%",
-				"average":88.6
-			},
 			"E5":{
 				"name":"E5",
 				"text-sm":"Schüler/innen nicht deutscher Herkunftssprache",
@@ -221,13 +181,6 @@
 				"unit":"%",
 				"average":38.7
 			},
-			"E7":{
-				"name":"E7",
-				"text-sm":"Alleinerziehende",
-				"text-lg":"Anteil der alleinerziehenden Bedarfsgemeinschaften (BG) nach SGB II an BG mit Kindern nach SGB II",
-				"unit":"%",
-				"average":51.6
-			},
 			"E8":{
 				"name":"E8",
 				"text-sm":"Hilfen zur Erziehung ",
@@ -235,42 +188,7 @@
 				"unit":"%",
 				"average":51.6
 			}
-		}},
-	"6":{
-		"name":"Soziales",
-		"class":"indGr6",
-		"id":"6",
-		"indikatoren":{
-			"F1":{
-				"name":"F1",
-				"text-sm":"Niedriger Entwicklungsindex",
-				"text-lg":"Anteil der EW in Gebieten mit sehr niedrigem Entwicklungsindex nach Monitoring Soziale Stadtentwicklung / MSS (Grundlage: Planungs-raumebene / PLR)",
-				"unit":"%",
-				"average":10.4
-			},
-			"F2":{
-				"name":"F2",
-				"text-sm":"EW in Gebieten mit niedrigem Entwicklungsindex",
-				"text-lg":"Anteil der EW in Gebieten mit niedrigem Entwicklungsindex nach MSS (Grundlage: PLR)",
-				"unit":"%",
-				"average":12.3
-			},
-			"F3":{
-				"name":"F3",
-				"text-sm":"EW in Gebieten mit mittlerem Entwicklungsindex",
-				"text-lg":"Anteil der EW in Gebieten mit mittlerem Entwicklungsindex nach MSS (Grundlage: PLR)",
-				"unit":"%",
-				"average":64.9
-			},
-			"F4":{
-				"name":"F4",
-				"text-sm":"EW in Gebieten mit hohem / sehr hohem Entwicklungsindex",
-				"text-lg":"Anteil der EW in Gebieten mit hohem / sehr hohem Entwicklungsindex nach MSS (Grundlage: PLR)",
-				"unit":"%",
-				"average":12.4
-			}
-			
-			
 		}
 	}
+	
 }
