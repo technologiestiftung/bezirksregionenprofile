@@ -1,0 +1,470 @@
+bezirk_id,bezirk_name,prg_id,prg_name,bzr_id,bzr_name,pnr_id,pnr_name,full_id_bzr,full_id_pnr
+01,Mitte,01,Zentrum,11,Tiergarten Süd,01,Stülerstr.,010111,01011101
+01,Mitte,01,Zentrum,11,Tiergarten Süd,02,Großer Tiergarten,010111,01011102
+01,Mitte,01,Zentrum,11,Tiergarten Süd,03,Lützowstr.,010111,01011103
+01,Mitte,01,Zentrum,11,Tiergarten Süd,04,Körnerstr.,010111,01011104
+01,Mitte,01,Zentrum,11,Tiergarten Süd,05,Nördl. Landwehrkanal,010111,01011105
+01,Mitte,01,Zentrum,12,Regierungsviertel,01,Wilhelmstr.,010112,01011201
+01,Mitte,01,Zentrum,12,Regierungsviertel,02,Unter den Linden Nord,010112,01011202
+01,Mitte,01,Zentrum,12,Regierungsviertel,03,Unter den Linden Süd,010112,01011203
+01,Mitte,01,Zentrum,12,Regierungsviertel,04,Leipziger Str.,010112,01011204
+01,Mitte,01,Zentrum,13,Alexanderplatz,01,Charitéviertel,010113,01011301
+01,Mitte,01,Zentrum,13,Alexanderplatz,02,Oranienburger Str.,010113,01011302
+01,Mitte,01,Zentrum,13,Alexanderplatz,03,Alexanderplatzviertel,010113,01011303
+01,Mitte,01,Zentrum,13,Alexanderplatz,04,Karl-Marx-Allee,010113,01011304
+01,Mitte,01,Zentrum,13,Alexanderplatz,05,Heine-Viertel West,010113,01011305
+01,Mitte,01,Zentrum,13,Alexanderplatz,06,Heine-Viertel Ost,010113,01011306
+01,Mitte,01,Zentrum,14,Brunnenstr. Süd,01,Invalidenstr.,010114,01011401
+01,Mitte,01,Zentrum,14,Brunnenstr. Süd,02,Arkonaplatz,010114,01011402
+01,Mitte,02,Moabit,21,Moabit West,01,Huttenkiez,010221,01022101
+01,Mitte,02,Moabit,21,Moabit West,02,Beusselkiez,010221,01022102
+01,Mitte,02,Moabit,21,Moabit West,03,Westhafen,010221,01022103
+01,Mitte,02,Moabit,21,Moabit West,04,Emdener Str.,010221,01022104
+01,Mitte,02,Moabit,21,Moabit West,05,Zwinglistr.,010221,01022105
+01,Mitte,02,Moabit,21,Moabit West,06,Elberfelder Str.,010221,01022106
+01,Mitte,02,Moabit,22,Moabit Ost,01,Stephankiez,010222,01022201
+01,Mitte,02,Moabit,22,Moabit Ost,02,Heidestr.,010222,01022202
+01,Mitte,02,Moabit,22,Moabit Ost,03,Lübecker Str.,010222,01022203
+01,Mitte,02,Moabit,22,Moabit Ost,04,Thomasiusstr.,010222,01022204
+01,Mitte,02,Moabit,22,Moabit Ost,05,Zillesiedlung,010222,01022205
+01,Mitte,02,Moabit,22,Moabit Ost,06,Lüneburger Str.,010222,01022206
+01,Mitte,02,Moabit,22,Moabit Ost,07,Hansaviertel,010222,01022207
+01,Mitte,03,Gesund-        brunnen,31,Osloer Straße,01,Soldiner Str.,010331,01033101
+01,Mitte,03,Gesund-        brunnen,31,Osloer Straße,02,Gesundbrunnen,010331,01033102
+01,Mitte,03,Gesund-        brunnen,32,Brunnenstr. Nord,01,Brunnenstr.,010332,01033201
+01,Mitte,03,Gesund-        brunnen,32,Brunnenstr. Nord,02,Humboldthain Süd,010332,01033202
+01,Mitte,03,Gesund-        brunnen,32,Brunnenstr. Nord,03,Humboldthain NW,010332,01033203
+01,Mitte,04,Wedding,41,Parkviertel,01,Rehberge,010441,01044101
+01,Mitte,04,Wedding,41,Parkviertel,02,Schillerpark,010441,01044102
+01,Mitte,04,Wedding,41,Parkviertel,03,Westl. Müllerstr.,010441,01044103
+01,Mitte,04,Wedding,42,Wedding Zentrum,01,Reinickendorfer Str.,010442,01044201
+01,Mitte,04,Wedding,42,Wedding Zentrum,02,Sparrplatz,010442,01044202
+01,Mitte,04,Wedding,42,Wedding Zentrum,03,Leopoldplatz,010442,01044203
+02,Friedrichshain-Kreuzberg,01,"Kreuzberg
+   Nord",01,Südliche Friedrichstadt,01,Askanischer Platz,020101,02010101
+02,Friedrichshain-Kreuzberg,01,"Kreuzberg
+   Nord",01,Südliche Friedrichstadt,02,Mehringplatz,020101,02010102
+02,Friedrichshain-Kreuzberg,01,"Kreuzberg
+   Nord",01,Südliche Friedrichstadt,03,Moritzplatz,020101,02010103
+02,Friedrichshain-Kreuzberg,01,"Kreuzberg
+   Nord",01,Südliche Friedrichstadt,04,Wassertorplatz,020101,02010104
+02,Friedrichshain-Kreuzberg,02,Kreuzberg  Süd,02,Tempelhofer Vorstadt,01,Gleisdreieck/           Entwicklungsgebiet,020202,02020201
+02,Friedrichshain-Kreuzberg,02,Kreuzberg  Süd,02,Tempelhofer Vorstadt,02,Rathaus Yorckstraße,020202,02020202
+02,Friedrichshain-Kreuzberg,02,Kreuzberg  Süd,02,Tempelhofer Vorstadt,03,Viktoriapark,020202,02020203
+02,Friedrichshain-Kreuzberg,02,Kreuzberg  Süd,02,Tempelhofer Vorstadt,04,Urbanstraße,020202,02020204
+02,Friedrichshain-Kreuzberg,02,Kreuzberg  Süd,02,Tempelhofer Vorstadt,05,Chamissokiez,020202,02020205
+02,Friedrichshain-Kreuzberg,02,Kreuzberg  Süd,02,Tempelhofer Vorstadt,06,Graefekiez,020202,02020206
+02,Friedrichshain-Kreuzberg,03,Kreuzberg Ost,03,nördliche Luisenstadt,01,Oranienplatz,020303,02030301
+02,Friedrichshain-Kreuzberg,03,Kreuzberg Ost,03,nördliche Luisenstadt,02,Lausitzer Platz,020303,02030302
+02,Friedrichshain-Kreuzberg,03,Kreuzberg Ost,04,südliche Luisenstadt,01,Reichenberger Straße,020304,02030401
+02,Friedrichshain-Kreuzberg,03,Kreuzberg Ost,04,südliche Luisenstadt,02,Wrangelkiez,020304,02030402
+02,Friedrichshain-Kreuzberg,04,Friedrichs-           hain West,05,Karl-Marx-Allee-Nord,01,Barnimkiez,020405,02040501
+02,Friedrichshain-Kreuzberg,04,Friedrichs-           hain West,05,Karl-Marx-Allee-Nord,02,Friedenstraße,020405,02040502
+02,Friedrichshain-Kreuzberg,04,Friedrichs-           hain West,05,Karl-Marx-Allee-Nord,03,Richard-Sorge-Viertel,020405,02040503
+02,Friedrichshain-Kreuzberg,04,Friedrichs-           hain West,07,Karl-Marx-Allee-Süd,01,Andreasviertel,020407,02040701
+02,Friedrichshain-Kreuzberg,04,Friedrichs-           hain West,07,Karl-Marx-Allee-Süd,02,Weberwiese,020407,02040702
+02,Friedrichshain-Kreuzberg,04,Friedrichs-           hain West,07,Karl-Marx-Allee-Süd,03,Wriezener Bahnhof/          Entwicklungsgebiet,020407,02040703
+02,Friedrichshain-Kreuzberg,04,Friedrichs-           hain West,07,Karl-Marx-Allee-Süd,03,Wriezener Bahnhof/          Entwicklungsgebiet,020407,02040703
+02,Friedrichshain-Kreuzberg,05,Friedrichs-      hain Ost,06,Frankfurter Allee Nord,01,Hausburgviertel,020506,02050601
+02,Friedrichshain-Kreuzberg,05,Friedrichs-      hain Ost,06,Frankfurter Allee Nord,02,Samariterviertel,020506,02050602
+02,Friedrichshain-Kreuzberg,05,Friedrichs-      hain Ost,08,Frankfurter Allee Süd FK,01,Traveplatz,020508,02050801
+02,Friedrichshain-Kreuzberg,05,Friedrichs-      hain Ost,08,Frankfurter Allee Süd FK,02,Boxhagener Platz,020508,02050802
+02,Friedrichshain-Kreuzberg,05,Friedrichs-      hain Ost,08,Frankfurter Allee Süd FK,03,Stralauer Kiez,020508,02050803
+02,Friedrichshain-Kreuzberg,05,Friedrichs-      hain Ost,08,Frankfurter Allee Süd FK,04,Stralauer Halbinsel,020508,02050804
+03,Pankow,01,Buch,01,Buch,1,Bucher Forst,030101,0301011
+03,Pankow,01,Buch,01,Buch,2,Buch,030101,0301012
+03,Pankow,01,Buch,01,Buch,4,Lietzengraben,030101,0301014
+03,Pankow,02,Nördliches      Pankow,02,Blankenfelde/       Niederschönhausen,03,Blankenfelde,030202,03020203
+03,Pankow,02,Nördliches      Pankow,02,Blankenfelde/       Niederschönhausen,9,Niederschönhausen,030202,0302029
+03,Pankow,02,Nördliches      Pankow,02,Blankenfelde/       Niederschönhausen,10,Herthaplatz,030202,03020210
+03,Pankow,02,Nördliches      Pankow,03,Buchholz,7,Buchholz,030203,0302037
+03,Pankow,03,Nördliches Weißensee,04,Karow,05,Karow-Nord,030304,03030405
+03,Pankow,03,Nördliches Weißensee,04,Karow,6,Alt-Karow,030304,0303046
+03,Pankow,03,Nördliches Weißensee,07,Blankenburg/Heinersdorf/       Märchenland,11,Blankenburg,030307,03030711
+03,Pankow,03,Nördliches Weißensee,07,Blankenburg/Heinersdorf/       Märchenland,15,Heinersdorf,030307,03030715
+03,Pankow,03,Nördliches Weißensee,07,Blankenburg/Heinersdorf/       Märchenland,16,Märchenland,030307,03030716
+03,Pankow,04,Südliches Pankow,08,Pankow Süd,18,Pankow-Süd,030408,03040818
+03,Pankow,04,Südliches Pankow,05,Schönholz/Wilhelmsruh/      Rosenthal,08,Rosenthal,030405,03040508
+03,Pankow,04,Südliches Pankow,05,Schönholz/Wilhelmsruh/      Rosenthal,12,Wilhelmsruh,030405,03040512
+03,Pankow,04,Südliches Pankow,05,Schönholz/Wilhelmsruh/      Rosenthal,13,Schönholz,030405,03040513
+03,Pankow,04,Südliches Pankow,06,Pankow Zentrum,14,Pankow-Zentrum,030406,03040614
+03,Pankow,05,Südliches Weißensee,09,Weißensee,19,Gustav-Adolf-Straße,030509,03050919
+03,Pankow,05,Südliches Weißensee,09,Weißensee,20,Weißer See,030509,03050920
+03,Pankow,05,Südliches Weißensee,09,Weißensee,23,Weißenseer Spitze,030509,03050923
+03,Pankow,05,Südliches Weißensee,09,Weißensee,24,Behaimstraße,030509,03050924
+03,Pankow,05,Südliches Weißensee,09,Weißensee,25,Komponistenviertel Weißensee,030509,03050925
+03,Pankow,05,Südliches Weißensee,10,Weißensee Ost,17,Rennbahnstraße,030510,03051017
+03,Pankow,05,Südliches Weißensee,10,Weißensee Ost,21,Buschallee,030510,03051021
+03,Pankow,05,Südliches Weißensee,10,Weißensee Ost,22,Hansastraße,030510,03051022
+03,Pankow,06,Nördlicher Prenzl. Berg,11,Prenzlauer Berg Nordwest,26,Arnimplatz,030611,03061126
+03,Pankow,06,Nördlicher Prenzl. Berg,11,Prenzlauer Berg Nordwest,31,Falkplatz,030611,03061131
+03,Pankow,06,Nördlicher Prenzl. Berg,12,Prenzlauer Berg Nord,27,Humannplatz,030612,03061227
+03,Pankow,06,Nördlicher Prenzl. Berg,12,Prenzlauer Berg Nord,28,Erich-Weinert-Straße,030612,03061228
+03,Pankow,06,Nördlicher Prenzl. Berg,13,Helmholtzplatz,32,Helmholtzplatz,030613,03061332
+03,Pankow,06,Nördlicher Prenzl. Berg,14,Prenzlauer Berg Ost,29,Greifswalder Straße,030614,03061429
+03,Pankow,06,Nördlicher Prenzl. Berg,14,Prenzlauer Berg Ost,30,Volkspark Prenzlauer Berg,030614,03061430
+03,Pankow,06,Nördlicher Prenzl. Berg,14,Prenzlauer Berg Ost,34,Anton-Saefkow-Park,030614,03061434
+03,Pankow,06,Nördlicher Prenzl. Berg,14,Prenzlauer Berg Ost,35,Conrad-Blenkle-Straße,030614,03061435
+03,Pankow,06,Nördlicher Prenzl. Berg,14,Prenzlauer Berg Ost,41,Eldenaer Straße,030614,03061441
+03,Pankow,07,Südlicher Prenzl. Berg,15,Prenzlauer Berg Südwest,36,Teutoburger Platz,030715,03071536
+03,Pankow,07,Südlicher Prenzl. Berg,15,Prenzlauer Berg Südwest,37,Kollwitzplatz,030715,03071537
+03,Pankow,07,Südlicher Prenzl. Berg,16,Prenzlauer Berg Süd,33,Thälmannpark,030716,03071633
+03,Pankow,07,Südlicher Prenzl. Berg,16,Prenzlauer Berg Süd,38,Winsstraße,030716,03071638
+03,Pankow,07,Südlicher Prenzl. Berg,16,Prenzlauer Berg Süd,39,Bötzowstraße,030716,03071639
+04,Charlottenburg-Wilm.,01,CW1,01,Charlottenburg-Nord,01,Jungfernheide,040101,04010101
+04,Charlottenburg-Wilm.,01,CW1,01,Charlottenburg-Nord,02,Plötzensee,040101,04010102
+04,Charlottenburg-Wilm.,01,CW1,01,Charlottenburg-Nord,03,Paul-Hertz-Siedlung,040101,04010103
+04,Charlottenburg-Wilm.,02,CW2,02,Heerstrasse,04,Olympiagelände,040202,04020204
+04,Charlottenburg-Wilm.,02,CW2,02,Heerstrasse,05,Siedlung Ruhleben,040202,04020205
+04,Charlottenburg-Wilm.,02,CW2,02,Heerstrasse,06,Angerburger Allee,040202,04020206
+04,Charlottenburg-Wilm.,02,CW2,02,Heerstrasse,07,Flatowallee,040202,04020207
+04,Charlottenburg-Wilm.,02,CW2,02,Heerstrasse,08,Kranzallee,040202,04020208
+04,Charlottenburg-Wilm.,02,CW2,02,Heerstrasse,09,Eichkamp,040202,04020209
+04,Charlottenburg-Wilm.,02,CW2,03,Westend,10,Park Ruhwald,040203,04020310
+04,Charlottenburg-Wilm.,02,CW2,03,Westend,11,Reichsstraße,040203,04020311
+04,Charlottenburg-Wilm.,02,CW2,03,Westend,12,Branitzer Platz,040203,04020312
+04,Charlottenburg-Wilm.,02,CW2,03,Westend,13,Königin-Elisabeth-Straße,040203,04020313
+04,Charlottenburg-Wilm.,02,CW2,03,Westend,14,Messegelände,040203,04020314
+04,Charlottenburg-Wilm.,03,CW3,04,Schloß Charlottenburg,15,Schloßgarten,040304,04030415
+04,Charlottenburg-Wilm.,03,CW3,04,Schloß Charlottenburg,16,Klausenerplatz,040304,04030416
+04,Charlottenburg-Wilm.,03,CW3,04,Schloß Charlottenburg,17,Schloßstraße,040304,04030417
+04,Charlottenburg-Wilm.,03,CW3,05,Mierendorffplatz,18,Tegeler Weg,040305,04030518
+04,Charlottenburg-Wilm.,03,CW3,05,Mierendorffplatz,19,Kaiserin-Augusta-Allee,040305,04030519
+04,Charlottenburg-Wilm.,03,CW3,06,Otto-Suhr-Allee,20,Alt-Lietzow,040306,04030620
+04,Charlottenburg-Wilm.,03,CW3,06,Otto-Suhr-Allee,21,Spreestadt,040306,04030621
+04,Charlottenburg-Wilm.,03,CW3,06,Otto-Suhr-Allee,22,Richard-Wagner-Straße,040306,04030622
+04,Charlottenburg-Wilm.,03,CW3,06,Otto-Suhr-Allee,23,Ernst-Reuter-Platz,040306,04030623
+04,Charlottenburg-Wilm.,03,CW3,07,Neue Kantstraße,24,Lietzensee,040307,04030724
+04,Charlottenburg-Wilm.,03,CW3,07,Neue Kantstraße,25,Amtsgerichtsplatz,040307,04030725
+04,Charlottenburg-Wilm.,03,CW3,07,Neue Kantstraße,26,Droysenstraße,040307,04030726
+04,Charlottenburg-Wilm.,03,CW3,08,Kantstraße,27,Karl-August-Platz,040308,04030827
+04,Charlottenburg-Wilm.,03,CW3,08,Kantstraße,28,Savignyplatz,040308,04030828
+04,Charlottenburg-Wilm.,03,CW3,09,Kurfürstendamm,29,Hindemithplatz,040309,04030929
+04,Charlottenburg-Wilm.,03,CW3,09,Kurfürstendamm,30,George-Grosz-Platz,040309,04030930
+04,Charlottenburg-Wilm.,03,CW3,09,Kurfürstendamm,31,Breitscheidplatz,040309,04030931
+04,Charlottenburg-Wilm.,03,CW3,10,Halensee,32,Halensee,040310,04031032
+04,Charlottenburg-Wilm.,04,CW4,11,Grunewald,33,Güterbahnhof Grunewald,040411,04041133
+04,Charlottenburg-Wilm.,04,CW4,11,Grunewald,34,Bismarckallee,040411,04041134
+04,Charlottenburg-Wilm.,04,CW4,11,Grunewald,35,Hundekehle,040411,04041135
+04,Charlottenburg-Wilm.,04,CW4,11,Grunewald,36,Hagenplatz,040411,04041136
+04,Charlottenburg-Wilm.,04,CW4,11,Grunewald,37,Flinsberger Platz,040411,04041137
+04,Charlottenburg-Wilm.,04,CW4,12,Schmargendorf,38,Kissinger Straße,040412,04041238
+04,Charlottenburg-Wilm.,04,CW4,12,Schmargendorf,39,Stadion Wilmersdorf,040412,04041239
+04,Charlottenburg-Wilm.,04,CW4,12,Schmargendorf,40,Messelpark,040412,04041240
+04,Charlottenburg-Wilm.,04,CW4,12,Schmargendorf,41,Breite Straße,040412,04041241
+04,Charlottenburg-Wilm.,04,CW4,13,Wiesbadener Straße,42,Schlangenbader Straße,040413,04041342
+04,Charlottenburg-Wilm.,04,CW4,13,Wiesbadener Straße,43,Binger Straße,040413,04041343
+04,Charlottenburg-Wilm.,04,CW4,13,Wiesbadener Straße,44,Rüdesheimer Platz,040413,04041344
+04,Charlottenburg-Wilm.,05,CW5,14,Düsseldorfer Straße,45,Eisenzahnstraße,040514,04051445
+04,Charlottenburg-Wilm.,05,CW5,14,Düsseldorfer Straße,46,Preußenpark,040514,04051446
+04,Charlottenburg-Wilm.,05,CW5,14,Düsseldorfer Straße,47,Ludwigkirchplatz,040514,04051447
+04,Charlottenburg-Wilm.,05,CW5,14,Düsseldorfer Straße,48,Schaperstraße,040514,04051448
+04,Charlottenburg-Wilm.,05,CW5,15,Barstraße,49,Rathaus Wilmersdorf,040515,04051549
+04,Charlottenburg-Wilm.,05,CW5,15,Barstraße,50,Leon-Jessel-Platz,040515,04051550
+04,Charlottenburg-Wilm.,05,CW5,15,Barstraße,51,Brabanter Platz,040515,04051551
+04,Charlottenburg-Wilm.,05,CW5,16,Volkspark Wilmersdorf,52,Nikolsburger Platz,040516,04051652
+04,Charlottenburg-Wilm.,05,CW5,16,Volkspark Wilmersdorf,53,Prager Platz,040516,04051653
+04,Charlottenburg-Wilm.,05,CW5,16,Volkspark Wilmersdorf,54,Wilhelmsaue,040516,04051654
+04,Charlottenburg-Wilm.,05,CW5,16,Volkspark Wilmersdorf,55,Babelsberger Straße,040516,04051655
+04,Charlottenburg-Wilm.,05,CW5,16,Volkspark Wilmersdorf,56,Hildegardstraße,040516,04051656
+04,Charlottenburg-Wilm.,06,CW6,17,Forst Grunewald,57,Forst Grunewald,040617,04061757
+05,Spandau,01,SPA 1,01,Hakenfelde,01,Hakenfelde Nord,050101,05010101
+05,Spandau,01,SPA 1,01,Hakenfelde,02,Goltzstraße,050101,05010102
+05,Spandau,01,SPA 1,01,Hakenfelde,03,Amorbacher Weg,050101,05010103
+05,Spandau,01,SPA 1,02,Falkenhagener Feld,04,Griesingerstr.,050102,05010204
+05,Spandau,01,SPA 1,02,Falkenhagener Feld,05,An der Tränke,050102,05010205
+05,Spandau,01,SPA 1,02,Falkenhagener Feld,06,Gütersloher Weg,050102,05010206
+05,Spandau,01,SPA 1,02,Falkenhagener Feld,07,Darbystr.,050102,05010207
+05,Spandau,01,SPA 1,02,Falkenhagener Feld,08,Germersheimer Platz,050102,05010208
+05,Spandau,01,SPA 1,02,Falkenhagener Feld,09,An der Kappe,050102,05010209
+05,Spandau,01,SPA 1,03,Spandau Mitte,10,Eckschanze,050103,05010310
+05,Spandau,01,SPA 1,03,Spandau Mitte,11,Eiswerder,050103,05010311
+05,Spandau,01,SPA 1,03,Spandau Mitte,12,Kurstr.,050103,05010312
+05,Spandau,01,SPA 1,03,Spandau Mitte,13,Ackerstr.,050103,05010313
+05,Spandau,01,SPA 1,03,Spandau Mitte,14,Carl-Schurz-Str.,050103,05010314
+05,Spandau,01,SPA 1,03,Spandau Mitte,39,Freiheit,050103,05010339
+05,Spandau,02,SPA 2,04,Brunsbütteler Damm,15,Isenburger Weg,050204,05020415
+05,Spandau,02,SPA 2,04,Brunsbütteler Damm,16,Am Heideberg,050204,05020416
+05,Spandau,02,SPA 2,04,Brunsbütteler Damm,17,Staakener Str.,050204,05020417
+05,Spandau,02,SPA 2,04,Brunsbütteler Damm,18,Spandauer Str.,050204,05020418
+05,Spandau,02,SPA 2,04,Brunsbütteler Damm,19,Magistratsweg,050204,05020419
+05,Spandau,02,SPA 2,04,Brunsbütteler Damm,20,Werkstr.,050204,05020420
+05,Spandau,02,SPA 2,05,Heerstraße Nord,21,Döberitzer Weg,050205,05020521
+05,Spandau,02,SPA 2,05,Heerstraße Nord,22,Pillnitzer Weg,050205,05020522
+05,Spandau,02,SPA 2,05,Heerstraße Nord,23,Maulbeerallee,050205,05020523
+05,Spandau,02,SPA 2,05,Heerstraße Nord,24,Weinmeisterhornweg,050205,05020524
+05,Spandau,02,SPA 2,06,Wilhelmstadt,25,Borkumer Str.,050206,05020625
+05,Spandau,02,SPA 2,06,Wilhelmstadt,26,Adamstr.,050206,05020626
+05,Spandau,02,SPA 2,06,Wilhelmstadt,27,Tiefwerder,050206,05020627
+05,Spandau,02,SPA 2,06,Wilhelmstadt,28,Graetschelsteig,050206,05020628
+05,Spandau,02,SPA 2,06,Wilhelmstadt,29,Börnicker Str.,050206,05020629
+05,Spandau,03,SPA 3,07,Haselhorst,30,Zitadellenweg,050307,05030730
+05,Spandau,03,SPA 3,07,Haselhorst,31,Gartenfelder Str.,050307,05030731
+05,Spandau,03,SPA 3,08,Siemensstadt,32,Rohrdamm,050308,05030832
+05,Spandau,03,SPA 3,08,Siemensstadt,33,Motardstr.,050308,05030833
+05,Spandau,04,SPA 4,09,Gatow / Kladow,34,Alt-Gatow,050409,05040934
+05,Spandau,04,SPA 4,09,Gatow / Kladow,35,Groß-Glienicker Weg,050409,05040935
+05,Spandau,04,SPA 4,09,Gatow / Kladow,36,Jägerallee,050409,05040936
+05,Spandau,04,SPA 4,09,Gatow / Kladow,37,Kladower Damm,050409,05040937
+05,Spandau,04,SPA 4,09,Gatow / Kladow,38,Kafkastr.,050409,05040938
+06,Steglitz - Zehlendorf,01,Region A,01,Schloßstr.,01,Fichtenberg,060101,06010101
+06,Steglitz - Zehlendorf,01,Region A,01,Schloßstr.,02,Schloßstr.,060101,06010102
+06,Steglitz - Zehlendorf,01,Region A,01,Schloßstr.,03,Markelstr.,060101,06010103
+06,Steglitz - Zehlendorf,01,Region A,02,Albrechtstr.,04,Munsterdamm,060102,06010204
+06,Steglitz - Zehlendorf,01,Region A,02,Albrechtstr.,05,Südende,060102,06010205
+06,Steglitz - Zehlendorf,01,Region A,02,Albrechtstr.,06,Stadtpark,060102,06010206
+06,Steglitz - Zehlendorf,01,Region A,02,Albrechtstr.,07,Mittelstr.,060102,06010207
+06,Steglitz - Zehlendorf,01,Region A,02,Albrechtstr.,08,Bergstr.,060102,06010208
+06,Steglitz - Zehlendorf,01,Region A,02,Albrechtstr.,09,Feuerbachstr.,060102,06010209
+06,Steglitz - Zehlendorf,01,Region A,02,Albrechtstr.,10,Bismarckstr.,060102,06010210
+06,Steglitz - Zehlendorf,02,Region B,03,Lankwitz,01,Alt-Lankwitz,060203,06020301
+06,Steglitz - Zehlendorf,02,Region B,03,Lankwitz,02,Komponistenviertel Lankwitz,060203,06020302
+06,Steglitz - Zehlendorf,02,Region B,03,Lankwitz,03,Lankwitz-Kirche,060203,06020303
+06,Steglitz - Zehlendorf,02,Region B,03,Lankwitz,04,Kaiser-Wilhelm-Str.,060203,06020304
+06,Steglitz - Zehlendorf,02,Region B,03,Lankwitz,05,Gemeindepark Lankwitz,060203,06020305
+06,Steglitz - Zehlendorf,02,Region B,03,Lankwitz,06,Lankwitz-Süd,060203,06020306
+06,Steglitz - Zehlendorf,02,Region B,04,Ostpreußendamm,07,Thermometersiedlung,060204,06020407
+06,Steglitz - Zehlendorf,02,Region B,04,Ostpreußendamm,08,Lichterfelde-Süd,060204,06020408
+06,Steglitz - Zehlendorf,02,Region B,04,Ostpreußendamm,09,Königsberger Str.,060204,06020409
+06,Steglitz - Zehlendorf,02,Region B,04,Ostpreußendamm,10,Oberhofer Platz,060204,06020410
+06,Steglitz - Zehlendorf,02,Region B,04,Ostpreußendamm,11,Schütte-Lanz-Str.,060204,06020411
+06,Steglitz - Zehlendorf,03,Region C,05,Teltower Damm,01,Berlepschstr.,060305,06030501
+06,Steglitz - Zehlendorf,03,Region C,05,Teltower Damm,02,Zehlendorf-Süd,060305,06030502
+06,Steglitz - Zehlendorf,03,Region C,05,Teltower Damm,03,Zehlendorf-Mitte,060305,06030503
+06,Steglitz - Zehlendorf,03,Region C,05,Teltower Damm,04,Teltower Damm,060305,06030504
+06,Steglitz - Zehlendorf,03,Region C,06,Drakestr.,05,Botanischer Garten,060306,06030605
+06,Steglitz - Zehlendorf,03,Region C,06,Drakestr.,06,Hindenburgdamm,060306,06030606
+06,Steglitz - Zehlendorf,03,Region C,06,Drakestr.,07,Goerzwerke,060306,06030607
+06,Steglitz - Zehlendorf,03,Region C,06,Drakestr.,08,Schweizer Viertel,060306,06030608
+06,Steglitz - Zehlendorf,03,Region C,06,Drakestr.,09,Augustaplatz,060306,06030609
+06,Steglitz - Zehlendorf,03,Region C,06,Drakestr.,10,Lichterfelde-West,060306,06030610
+06,Steglitz - Zehlendorf,04,Region D,07,Zehlendorf  Südwest,01,Wannsee,060407,06040701
+06,Steglitz - Zehlendorf,04,Region D,07,Zehlendorf  Südwest,02,Düppel,060407,06040702
+06,Steglitz - Zehlendorf,04,Region D,07,Zehlendorf  Südwest,03,Nikolassee,060407,06040703
+06,Steglitz - Zehlendorf,04,Region D,08,Zehlendorf  Nord,04,Krumme Lanke,060408,06040804
+06,Steglitz - Zehlendorf,04,Region D,08,Zehlendorf  Nord,05,Fischerhüttenstr.,060408,06040805
+06,Steglitz - Zehlendorf,04,Region D,08,Zehlendorf  Nord,06,Fischtal,060408,06040806
+06,Steglitz - Zehlendorf,04,Region D,08,Zehlendorf  Nord,07,Zehlendorf-Eiche,060408,06040807
+06,Steglitz - Zehlendorf,04,Region D,08,Zehlendorf  Nord,08,Hüttenweg,060408,06040808
+06,Steglitz - Zehlendorf,04,Region D,08,Zehlendorf  Nord,09,Thielallee,060408,06040809
+06,Steglitz - Zehlendorf,04,Region D,08,Zehlendorf  Nord,10,Dahlem,060408,06040810
+07,Tempelhof - Schöneberg,01,"Schöneberg-
+Nord",01,"Schöneberg-
+Nord",01,Wittenbergplatz/                Viktoria-Luise-Platz,070101,07010101
+07,Tempelhof - Schöneberg,01,"Schöneberg-
+Nord",01,"Schöneberg-
+Nord",02,Nollendorfplatz,070101,07010102
+07,Tempelhof - Schöneberg,01,"Schöneberg-
+Nord",01,"Schöneberg-
+Nord",03,Barbarossaplatz,070101,07010103
+07,Tempelhof - Schöneberg,01,"Schöneberg-
+Nord",01,"Schöneberg-
+Nord",04,Dennewitzplatz,070101,07010104
+07,Tempelhof - Schöneberg,02,"Schöneberg-
+Süd",02,"Schöneberg-
+Süd",01,Bayerischer Platz,070202,07020201
+07,Tempelhof - Schöneberg,02,"Schöneberg-
+Süd",02,"Schöneberg-
+Süd",02,Volkspark                          (Rudolf-Wilde-Park),070202,07020202
+07,Tempelhof - Schöneberg,02,"Schöneberg-
+Süd",02,"Schöneberg-
+Süd",03,Kaiser-Wilhelm-Platz,070202,07020203
+07,Tempelhof - Schöneberg,02,"Schöneberg-
+Süd",02,"Schöneberg-
+Süd",04,Schöneberger Insel,070202,07020204
+07,Tempelhof - Schöneberg,03,Friedenau,03,Friedenau,01,Friedenau,070303,07030301
+07,Tempelhof - Schöneberg,03,Friedenau,03,Friedenau,02,Ceciliengärten,070303,07030302
+07,Tempelhof - Schöneberg,03,Friedenau,03,Friedenau,03,Grazer Platz,070303,07030303
+07,Tempelhof - Schöneberg,04,Tempelhof,04,Tempelhof,01,Neu-Tempelhof,070404,07040401
+07,Tempelhof - Schöneberg,04,Tempelhof,04,Tempelhof,02,Lindenhofsiedlung,070404,07040402
+07,Tempelhof - Schöneberg,04,Tempelhof,04,Tempelhof,03,Manteuffelstr.,070404,07040403
+07,Tempelhof - Schöneberg,04,Tempelhof,04,Tempelhof,04,Marienhöhe,070404,07040404
+07,Tempelhof - Schöneberg,04,Tempelhof,04,Tempelhof,05,Rathaus Tempelhof,070404,07040405
+07,Tempelhof - Schöneberg,04,Tempelhof,04,Tempelhof,06,Germaniagarten,070404,07040406
+07,Tempelhof - Schöneberg,05,Mariendorf,05,Mariendorf,01,Rathausstr.,070505,07050501
+07,Tempelhof - Schöneberg,05,Mariendorf,05,Mariendorf,02,Fritz-Werner-Str.,070505,07050502
+07,Tempelhof - Schöneberg,05,Mariendorf,05,Mariendorf,03,Eisenacher Str.,070505,07050503
+07,Tempelhof - Schöneberg,05,Mariendorf,05,Mariendorf,04,Imbrosweg,070505,07050504
+07,Tempelhof - Schöneberg,05,Mariendorf,05,Mariendorf,05,Hundsteinweg,070505,07050505
+07,Tempelhof - Schöneberg,05,Mariendorf,05,Mariendorf,06,Birnhornweg,070505,07050506
+07,Tempelhof - Schöneberg,06,Marienfelde,06,Marienfelde,01,Marienfelder Allee Nordwest,070606,07060601
+07,Tempelhof - Schöneberg,06,Marienfelde,06,Marienfelde,02,Kirchstr.,070606,07060602
+07,Tempelhof - Schöneberg,06,Marienfelde,06,Marienfelde,03,Marienfelde Nordost,070606,07060603
+07,Tempelhof - Schöneberg,06,Marienfelde,06,Marienfelde,04,Marienfelde Süd,070606,07060604
+07,Tempelhof - Schöneberg,07,Lichtenrade,07,Lichtenrade,01,Kettinger Str./Schillerstr.,070707,07070701
+07,Tempelhof - Schöneberg,07,Lichtenrade,07,Lichtenrade,02,Alt-Lichtenrade/                 Töpchiner Weg,070707,07070702
+07,Tempelhof - Schöneberg,07,Lichtenrade,07,Lichtenrade,03,John-Locke-Str.,070707,07070703
+07,Tempelhof - Schöneberg,07,Lichtenrade,07,Lichtenrade,04,Nahariyastr.,070707,07070704
+07,Tempelhof - Schöneberg,07,Lichtenrade,07,Lichtenrade,05,Franziusweg/ Rohrbachstr.,070707,07070705
+07,Tempelhof - Schöneberg,07,Lichtenrade,07,Lichtenrade,06,Horstwalder Str./               Paplitzer Str. ,070707,07070706
+07,Tempelhof - Schöneberg,07,Lichtenrade,07,Lichtenrade,07,Wittelsbacherstr.,070707,07070707
+08,Neukölln,01,Neukölln,01,Schillerpromenade,15,Hasenheide,080101,08010115
+08,Neukölln,01,Neukölln,01,Schillerpromenade,16,Wissmannstraße,080101,08010116
+08,Neukölln,01,Neukölln,01,Schillerpromenade,17,Schillerpromenade,080101,08010117
+08,Neukölln,01,Neukölln,01,Schillerpromenade,18,Silbersteinstraße,080101,08010118
+08,Neukölln,01,Neukölln,02,Neuköllner Mitte/Zentrum,11,Flughafenstraße,080102,08010211
+08,Neukölln,01,Neukölln,02,Neuköllner Mitte/Zentrum,12,Rollberg,080102,08010212
+08,Neukölln,01,Neukölln,02,Neuköllner Mitte/Zentrum,13,Körnerpark,080102,08010213
+08,Neukölln,01,Neukölln,02,Neuköllner Mitte/Zentrum,14,Glasower Straße,080102,08010214
+08,Neukölln,01,Neukölln,03,Reuterstraße,1,Reuterkiez,080103,0801031
+08,Neukölln,01,Neukölln,03,Reuterstraße,2,Bouchéstraße,080103,0801032
+08,Neukölln,01,Neukölln,03,Reuterstraße,3,Donaustraße,080103,0801033
+08,Neukölln,01,Neukölln,04,Rixdorf,4,Rixdorf,080104,0801044
+08,Neukölln,01,Neukölln,04,Rixdorf,5,Hertzbergplatz,080104,0801045
+08,Neukölln,01,Neukölln,04,Rixdorf,6,Treptower Straße Nord,080104,0801046
+08,Neukölln,01,Neukölln,04,Rixdorf,7,Gewerbegebiet Ederstraße,080104,0801047
+08,Neukölln,01,Neukölln,05,Köllnische Heide,8,Weiße Siedlung,080105,0801058
+08,Neukölln,01,Neukölln,05,Köllnische Heide,9,Schulenburgpark,080105,0801059
+08,Neukölln,01,Neukölln,05,Köllnische Heide,10,Gewerbegebiet                  Köllnische Heide,080105,08010510
+08,Neukölln,02,Britz/Buckow,06,Britz,19,Buschkrugallee Nord,080206,08020619
+08,Neukölln,02,Britz/Buckow,06,Britz,20,Tempelhofer Weg,080206,08020620
+08,Neukölln,02,Britz/Buckow,06,Britz,21,Mohriner Allee Nord,080206,08020621
+08,Neukölln,02,Britz/Buckow,06,Britz,22,Parchimer Allee ,080206,08020622
+08,Neukölln,02,Britz/Buckow,06,Britz,23,Ortolanweg,080206,08020623
+08,Neukölln,02,Britz/Buckow,06,Britz,24,Britzer Garten,080206,08020624
+08,Neukölln,02,Britz/Buckow,06,Britz,25,Handwerker-Siedlung,080206,08020625
+08,Neukölln,02,Britz/Buckow,07,Buckow,26,Buckow West,080207,08020726
+08,Neukölln,02,Britz/Buckow,07,Buckow,27,Buckow Mitte,080207,08020727
+08,Neukölln,02,Britz/Buckow,07,Buckow,28,Buckow Ost,080207,08020728
+08,Neukölln,03,Gropiusstadt,08,Gropiusstadt,29,Gropiusstadt Nord,080308,08030829
+08,Neukölln,03,Gropiusstadt,08,Gropiusstadt,30,Gropiusstadt Süd,080308,08030830
+08,Neukölln,03,Gropiusstadt,08,Gropiusstadt,31,Gropiusstadt Ost,080308,08030831
+08,Neukölln,04,Buckow Nord/ Rudow,09,Buckow Nord,32,Goldhähnchenweg,080409,08040932
+08,Neukölln,04,Buckow Nord/ Rudow,09,Buckow Nord,33,Vogelviertel Süd,080409,08040933
+08,Neukölln,04,Buckow Nord/ Rudow,09,Buckow Nord,34,Vogelviertel Nord,080409,08040934
+08,Neukölln,04,Buckow Nord/ Rudow,10,Rudow,35,Blumenviertel,080410,08041035
+08,Neukölln,04,Buckow Nord/ Rudow,10,Rudow,36,Zittauer Straße,080410,08041036
+08,Neukölln,04,Buckow Nord/ Rudow,10,Rudow,37,Alt-Rudow,080410,08041037
+08,Neukölln,04,Buckow Nord/ Rudow,10,Rudow,38,Waßmannsdorfer Chaussee,080410,08041038
+08,Neukölln,04,Buckow Nord/ Rudow,10,Rudow,39,Frauenviertel,080410,08041039
+08,Neukölln,04,Buckow Nord/ Rudow,10,Rudow,40,Waltersdorfer Chaussee Ost,080410,08041040
+09,Treptow - Köpenick,01,Treptow- Köpenick 1,01,Alt  Treptow,01,Elsenstr.,090101,09010101
+09,Treptow - Köpenick,01,Treptow- Köpenick 1,01,Alt  Treptow,02,Am Treptower Park Nord,090101,09010102
+09,Treptow - Köpenick,01,Treptow- Köpenick 1,02,Plänterwald,01,Am Treptower Park Süd,090102,09010201
+09,Treptow - Köpenick,01,Treptow- Köpenick 1,02,Plänterwald,02,Köpenicker Landstraße,090102,09010202
+09,Treptow - Köpenick,01,Treptow- Köpenick 1,03,Baumschulenweg,01,Baumschulenstraße,090103,09010301
+09,Treptow - Köpenick,01,Treptow- Köpenick 1,03,Baumschulenweg,02,Späthsfelde,090103,09010302
+09,Treptow - Köpenick,01,Treptow- Köpenick 1,04,Johannisthal,01,Johannisthal West,090104,09010401
+09,Treptow - Köpenick,01,Treptow- Köpenick 1,04,Johannisthal,02,Johannisthal Ost,090104,09010402
+09,Treptow - Köpenick,02,Treptow- Köpenick 2,05,Oberschöneweide,01,Oberschöneweide West,090205,09020501
+09,Treptow - Köpenick,02,Treptow- Köpenick 2,05,Oberschöneweide,02,Oberschöneweide Ost,090205,09020502
+09,Treptow - Köpenick,02,Treptow- Köpenick 2,06,Niederschöneweide,01,Schnellerstr,090206,09020601
+09,Treptow - Köpenick,02,Treptow- Köpenick 2,06,Niederschöneweide,02,Oberspree,090206,09020602
+09,Treptow - Köpenick,02,Treptow- Köpenick 2,07,Adlershof,01,Adlershof West,090207,09020701
+09,Treptow - Köpenick,02,Treptow- Köpenick 2,07,Adlershof,02,Adlershof Ost,090207,09020702
+09,Treptow - Köpenick,02,Treptow- Köpenick 2,08,Kölln. Vorstadt/                  Spindlersf.,01,Spindlersfeld,090208,09020801
+09,Treptow - Köpenick,02,Treptow- Köpenick 2,08,Kölln. Vorstadt/                  Spindlersf.,02,Kölln. Vorstadt                ,090208,09020802
+09,Treptow - Köpenick,03,Treptow-Köpenick 3,09,Altglienicke,01,Dorf Altglienicke,090309,09030901
+09,Treptow - Köpenick,03,Treptow-Köpenick 3,09,Altglienicke,02,Wohngebiet II,090309,09030902
+09,Treptow - Köpenick,03,Treptow-Köpenick 3,09,Altglienicke,03,Kölner Viertel,090309,09030903
+09,Treptow - Köpenick,03,Treptow-Köpenick 3,10,Bohnsdorf,01,Bohnsdorf,090310,09031001
+09,Treptow - Köpenick,03,Treptow-Köpenick 3,11,Grünau,01,Grünau,090311,09031101
+09,Treptow - Köpenick,03,Treptow-Köpenick 3,12,Schmöckwitz/Karolinenhof/Rauchfangswerder,01,Karolinenhof,090312,09031201
+09,Treptow - Köpenick,03,Treptow-Köpenick 3,12,Schmöckwitz/Karolinenhof/Rauchfangswerder,02,Schmöckwitz/                      Rauchfangswerder,090312,09031202
+09,Treptow - Köpenick,04,Treptow-Köpenick  4,13,Köpenick-Süd,01,Kietzer Feld / Nachtheide,090413,09041301
+09,Treptow - Köpenick,04,Treptow-Köpenick  4,13,Köpenick-Süd,02,Wendenschloß,090413,09041302
+09,Treptow - Köpenick,04,Treptow-Köpenick  4,14,Allende-Viertel,01,Allende I,090414,09041401
+09,Treptow - Köpenick,04,Treptow-Köpenick  4,14,Allende-Viertel,02,Siedlung Krämmereiheide,090414,09041402
+09,Treptow - Köpenick,04,Treptow-Köpenick  4,14,Allende-Viertel,03,Allende II,090414,09041403
+09,Treptow - Köpenick,04,Treptow-Köpenick  4,15,Altstadt-Kietz,01,Altstadt-Kietz,090415,09041501
+09,Treptow - Köpenick,04,Treptow-Köpenick  4,16,Müggelheim,01,Müggelheim,090416,09041601
+09,Treptow - Köpenick,05,Treptow-Köpenick 5,17,Friedrichshagen,01,Hirschgarten,090517,09051701
+09,Treptow - Köpenick,05,Treptow-Köpenick 5,17,Friedrichshagen,02,Bölschestraße,090517,09051702
+09,Treptow - Köpenick,05,Treptow-Köpenick 5,18,Rahnsdorf/Hessenwinkel,01,Rahnsdorf/Hessenwinkel,090518,09051801
+09,Treptow - Köpenick,05,Treptow-Köpenick 5,19,Dammvorstadt,01,Dammvorstadt,090519,09051901
+09,Treptow - Köpenick,05,Treptow-Köpenick 5,20,Köpenick-Nord,01,Köpenick-Nord,090520,09052001
+10,Marzahn - Hellersdorf,01,Marzahn ,01,Marzahn-Nord,01,Marzahn-West,100101,10010101
+10,Marzahn - Hellersdorf,01,Marzahn ,01,Marzahn-Nord,02,Havemannstr.,100101,10010102
+10,Marzahn - Hellersdorf,01,Marzahn ,02,Marzahn-Mitte,03,Gewerbegebiet Bitterfelder Str.,100102,10010203
+10,Marzahn - Hellersdorf,01,Marzahn ,02,Marzahn-Mitte,04,Wuhletalstr.,100102,10010204
+10,Marzahn - Hellersdorf,01,Marzahn ,02,Marzahn-Mitte,05,Marzahn-Ost,100102,10010205
+10,Marzahn - Hellersdorf,01,Marzahn ,02,Marzahn-Mitte,06,Ringkolonnaden,100102,10010206
+10,Marzahn - Hellersdorf,01,Marzahn ,02,Marzahn-Mitte,07,Marzahner Promenade,100102,10010207
+10,Marzahn - Hellersdorf,01,Marzahn ,03,Marzahn-Süd,08,Marzahner Chaussee,100103,10010308
+10,Marzahn - Hellersdorf,01,Marzahn ,03,Marzahn-Süd,09,Springpfuhl,100103,10010309
+10,Marzahn - Hellersdorf,01,Marzahn ,03,Marzahn-Süd,10,Alt-Marzahn,100103,10010310
+10,Marzahn - Hellersdorf,01,Marzahn ,03,Marzahn-Süd,11,Landsberger Tor,100103,10010311
+10,Marzahn - Hellersdorf,02,Hellersdorf,04,Hellersdorf-Nord,12,Alte Hellersdorfer Straße,100204,10020412
+10,Marzahn - Hellersdorf,02,Hellersdorf,04,Hellersdorf-Nord,13,Gut Hellersdorf,100204,10020413
+10,Marzahn - Hellersdorf,02,Hellersdorf,04,Hellersdorf-Nord,14,Helle Mitte,100204,10020414
+10,Marzahn - Hellersdorf,02,Hellersdorf,04,Hellersdorf-Nord,15,Hellersdorfer Promenade,100204,10020415
+10,Marzahn - Hellersdorf,02,Hellersdorf,04,Hellersdorf-Nord,16,Böhlener Str.,100204,10020416
+10,Marzahn - Hellersdorf,02,Hellersdorf,05,Hellersdorf-Ost,17,Adele-Sandrock-Str.,100205,10020517
+10,Marzahn - Hellersdorf,02,Hellersdorf,05,Hellersdorf-Ost,18,Schleipfuhl,100205,10020518
+10,Marzahn - Hellersdorf,02,Hellersdorf,05,Hellersdorf-Ost,19,Boulevard Kastanienallee,100205,10020519
+10,Marzahn - Hellersdorf,02,Hellersdorf,06,Hellersdorf-Süd,20,Kaulsdorf-Nord II,100206,10020620
+10,Marzahn - Hellersdorf,02,Hellersdorf,06,Hellersdorf-Süd,21,Gelbes Viertel,100206,10020621
+10,Marzahn - Hellersdorf,02,Hellersdorf,06,Hellersdorf-Süd,22,Kaulsdorf-Nord I,100206,10020622
+10,Marzahn - Hellersdorf,02,Hellersdorf,06,Hellersdorf-Süd,23,Rotes Viertel,100206,10020623
+10,Marzahn - Hellersdorf,03,Biesdorf,07,Biesdorf,24,Oberfeldstr.,100307,10030724
+10,Marzahn - Hellersdorf,03,Biesdorf,07,Biesdorf,25,Buckower Ring,100307,10030725
+10,Marzahn - Hellersdorf,03,Biesdorf,07,Biesdorf,26,Alt-Biesdorf,100307,10030726
+10,Marzahn - Hellersdorf,03,Biesdorf,07,Biesdorf,27,Biesdorf-Süd,100307,10030727
+10,Marzahn - Hellersdorf,04,Kaulsdorf/       Mahlsdorf,08,Kaulsdorf,28,Kaulsdorf-Nord,100408,10040828
+10,Marzahn - Hellersdorf,04,Kaulsdorf/       Mahlsdorf,08,Kaulsdorf,29,Alt-Kaulsdorf,100408,10040829
+10,Marzahn - Hellersdorf,04,Kaulsdorf/       Mahlsdorf,08,Kaulsdorf,30,Kaulsdorf-Süd,100408,10040830
+10,Marzahn - Hellersdorf,04,Kaulsdorf/       Mahlsdorf,09,Mahlsdorf,31,Mahlsdorf-Nord,100409,10040931
+10,Marzahn - Hellersdorf,04,Kaulsdorf/       Mahlsdorf,09,Mahlsdorf,32,Alt-Mahlsdorf,100409,10040932
+10,Marzahn - Hellersdorf,04,Kaulsdorf/       Mahlsdorf,09,Mahlsdorf,33,Mahlsdorf-Süd,100409,10040933
+11,Lichtenberg,01,Hohenschönhausen Nord,01,"Malchow, Wartenberg und Falkenberg",01,Dorf Malchow,110101,11010101
+11,Lichtenberg,01, ,01,"Malchow, Wartenberg und Falkenberg",02,Dorf Wartenberg,110101,11010102
+11,Lichtenberg,01, ,01,"Malchow, Wartenberg und Falkenberg",03,Dorf Falkenberg,110101,11010103
+11,Lichtenberg,01, ,02,Neu-Hohenschönhausen Nord,04,Falkenberg Ost,110102,11010204
+11,Lichtenberg,01, ,02,Neu-Hohenschönhausen Nord,05,Falkenberg West,110102,11010205
+11,Lichtenberg,01, ,02,Neu-Hohenschönhausen Nord,06,Wartenberg Süd,110102,11010206
+11,Lichtenberg,01, ,02,Neu-Hohenschönhausen Nord,07,Wartenberg Nord,110102,11010207
+11,Lichtenberg,01, ,03,Neu-Hohenschönhausen Süd,08,Zingster Straße Ost,110103,11010308
+11,Lichtenberg,01, ,03,Neu-Hohenschönhausen Süd,09,Zingster Straße West,110103,11010309
+11,Lichtenberg,01, ,03,Neu-Hohenschönhausen Süd,10,Mühlengrund,110103,11010310
+11,Lichtenberg,02,Hohenschönhausen Süd ,04,Alt-Hohenschönhausen Nord,11,Malchower Weg,110204,11020411
+11,Lichtenberg,02,Hohenschönhausen Süd ,04,Alt-Hohenschönhausen Nord,12,Hauptstraße,110204,11020412
+11,Lichtenberg,02, ,05,Alt-Hohenschönhausen Süd,13,Orankesee,110205,11020513
+11,Lichtenberg,02, ,05,Alt-Hohenschönhausen Süd,14,Große-Leege-Straße,110205,11020514
+11,Lichtenberg,02, ,05,Alt-Hohenschönhausen Süd,15,Landsberger Allee,110205,11020515
+11,Lichtenberg,02, ,05,Alt-Hohenschönhausen Süd,16,Weiße Taube,110205,11020516
+11,Lichtenberg,03,Lichtenberg Nord,06,Fennpfuhl,17,Hohenschönhausener Straße,110306,11030617
+11,Lichtenberg,03,Lichtenberg Nord,06,Fennpfuhl,18,Fennpfuhl West,110306,11030618
+11,Lichtenberg,03,Lichtenberg Nord,06,Fennpfuhl,19,Fennpfuhl Ost,110306,11030619
+11,Lichtenberg,03, ,07,Alt-Lichtenberg,20,Herzbergstraße,110307,11030720
+11,Lichtenberg,03, ,07,Alt-Lichtenberg,21,Rüdigerstraße,110307,11030721
+11,Lichtenberg,03, ,08,Frankfurter Allee Süd,24,Frankfurter Allee Süd,110308,11030824
+11,Lichtenberg,04,Lichtenberg Mitte,09,Neu Lichtenberg,25,Victoriastadt,110409,11040925
+11,Lichtenberg,04,Lichtenberg Mitte,09,Neu Lichtenberg,26,Weitlingstraße,110409,11040926
+11,Lichtenberg,04,Lichtenberg Mitte,10,Friedrichsfelde Nord,22,Rosenfelder Ring,110410,11041022
+11,Lichtenberg,04,Lichtenberg Mitte,10,Friedrichsfelde Nord,23,Gensinger Straße,110410,11041023
+11,Lichtenberg,04,Lichtenberg Mitte,10,Friedrichsfelde Nord,27,Tierpark,110410,11041027
+11,Lichtenberg,04,Lichtenberg Mitte,11,Friedrichsfelde Süd,28,Sewanstraße,110411,11041128
+11,Lichtenberg,05,Lichtenberg Süd,12,Rummelsburger Bucht,29,Rummelsburg,110512,11051229
+11,Lichtenberg,05,Lichtenberg Süd,13,Karlshorst,30,Karlshorst West,110513,11051330
+11,Lichtenberg,05,Lichtenberg Süd,13,Karlshorst,31,Karlshorst Nord,110513,11051331
+11,Lichtenberg,05,Lichtenberg Süd,13,Karlshorst,32,Karlshorst Süd,110513,11051332
+12,Reinickendorf,10,Reinickendorf-Ost,31,Ost 1 - Reginhardstr.,15,Breitkopfbecken,121031,12103115
+12,Reinickendorf,10,Reinickendorf-Ost,31,Ost 1 - Reginhardstr.,16,Hausotterplatz,121031,12103116
+12,Reinickendorf,10,Reinickendorf-Ost,31,Ost 1 - Reginhardstr.,17,Letteplatz,121031,12103117
+12,Reinickendorf,10,Reinickendorf-Ost,32,Ost 2 - Alt-Reinickendorf,18,Teichstraße,121032,12103218
+12,Reinickendorf,10,Reinickendorf-Ost,32,Ost 2 - Alt-Reinickendorf,19,Schäfersee,121032,12103219
+12,Reinickendorf,10,Reinickendorf-Ost,32,Ost 2 - Alt-Reinickendorf,20,Humboldtstraße,121032,12103220
+12,Reinickendorf,21,Tegel,41,West 1 - Tegel-Süd/Flughafensee,25,Waldidyll/Flughafensee,122141,12214125
+12,Reinickendorf,21,Tegel,41,West 1 - Tegel-Süd/Flughafensee,26,Tegel-Süd,122141,12214126
+12,Reinickendorf,21,Tegel,44,West 4 - Auguste-Viktoria-Allee,21,Reinickes Hof,122144,12214421
+12,Reinickendorf,21,Tegel,44,West 4 - Auguste-Viktoria-Allee,22,Klixstr.,122144,12214422
+12,Reinickendorf,21,Tegel,44,West 4 - Auguste-Viktoria-Allee,23,Mellerbogen,122144,12214423
+12,Reinickendorf,21,Tegel,44,West 4 - Auguste-Viktoria-Allee,24,Scharnweberstr.,122144,12214424
+12,Reinickendorf,21,Tegel,45,West 5 - Tegel/Tegeler Forst,27,Alt-Tegel,122145,12214527
+12,Reinickendorf,21,Tegel,45,West 5 - Tegel/Tegeler Forst,28,Tegeler Forst,122145,12214528
+12,Reinickendorf,22,Heiligensee-Konradshöhe,42,West 2 - Heiligensee-Konradshöhe,29,Konradshöhe/Tegelort,122242,12224229
+12,Reinickendorf,22,Heiligensee-Konradshöhe,42,West 2 - Heiligensee-Konradshöhe,30,Heiligensee,122242,12224230
+12,Reinickendorf,23,Frohnau- Hermsdorf,11,Nord 1 - Frohnau/Hermsdorf,01,Hermsdorf,122311,12231101
+12,Reinickendorf,23,Frohnau- Hermsdorf,11,Nord 1 - Frohnau/Hermsdorf,02,Frohnau,122311,12231102
+12,Reinickendorf,30,Waidmannslust,12,Nord 2 - Waidmannslust/Wittenau/Lübars,03,Wittenau-Süd,123012,12301203
+12,Reinickendorf,30,Waidmannslust,12,Nord 2 - Waidmannslust/Wittenau/Lübars,04,Wittenau-Nord,123012,12301204
+12,Reinickendorf,30,Waidmannslust,12,Nord 2 - Waidmannslust/Wittenau/Lübars,05,Waidmannslust,123012,12301205
+12,Reinickendorf,30,Waidmannslust,12,Nord 2 - Waidmannslust/Wittenau/Lübars,06,Lübars,123012,12301206
+12,Reinickendorf,30,Waidmannslust,21,MV 1 - Märkisches Viertel,07,Schorfheidestr.,123021,12302107
+12,Reinickendorf,30,Waidmannslust,21,MV 1 - Märkisches Viertel,08,Märkisches Zentrum,123021,12302108
+12,Reinickendorf,30,Waidmannslust,21,MV 1 - Märkisches Viertel,09,Treuenbrietzener Str.,123021,12302109
+12,Reinickendorf,30,Waidmannslust,21,MV 1 - Märkisches Viertel,10,Dannenwalder Weg,123021,12302110
+12,Reinickendorf,30,Waidmannslust,22,MV 2 - Rollbergesiedlung,11,Lübarser Straße,123022,12302211
+12,Reinickendorf,30,Waidmannslust,22,MV 2 - Rollbergesiedlung,12,Rollbergesiedlung,123022,12302212
+12,Reinickendorf,30,Waidmannslust,43,West 3 - Borsigwalde/Freie Scholle,13,Borsigwalde,123043,12304313
+12,Reinickendorf,30,Waidmannslust,43,West 3 - Borsigwalde/Freie Scholle,14,Ziekowstraße/Freie Scholle,123043,12304314
