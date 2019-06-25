@@ -64,7 +64,7 @@ export default {
       this.selected = x.name;
 
 
-      if(selectedBz!="Tempelhof-Schöneberg"){return};
+      //if(selectedBz!="Tempelhof-Schöneberg"){return};
 
       selectedBz = toUrl(selectedBz);
       this.$router.push({ path: 'bezirk/' + selectedBz});
