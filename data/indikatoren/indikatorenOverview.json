@@ -8,20 +8,20 @@
 			"A4":{
 				"name":"A4",
 				"text-sm":"Grünanlagen",
-				"text-lg":"Relation qm öffentliche Grünanlagen zu EW gesamt",
+				"text-lg":"Relation der öffentlichen Grünanlagen zu EW gesamt",
 				"unit":"(qm je Einwohner)",
 				"average":16.4
 			},
 			"A5":{
 				"name":"A5",
 				"text-sm":"Spielplatzfläche",
-				"text-lg":"Relation qm öffentliche Spielplatzfläche zu EW gesamt",
+				"text-lg":"Relation der öffentlichen Spielplatzfläche zu EW gesamt",
 				"unit":"(qm je Einwohner)",
 				"average":0.6
 			},
 			"A6":{
 				"name":"A6",
-				"text-sm":"Kindertagesbetreuung u6",
+				"text-sm":"Kindertagesbetreuung unter 6 Jahren",
 				"text-lg":"Anteil der betreuten Kinder (Wohnort Kind) in öffentlich geförderter Kindertagesbetreuung an Kindern unter 6 Jahren",
 				"unit":"%",
 				"average":63.3
@@ -29,7 +29,7 @@
 			"A7":{
 				"name":"A7",
 				"text-sm":"Jugendfreizeit- einrichtungen",
-				"text-lg":"Relation Plätze in Jugendfreizeit- einrichtungen zu Kindern und Jugendlichen im Alter von 6 bis unter 25 Jahren",
+				"text-lg":"Relation der Plätze in Jugendfreizeit- einrichtungen zu Kindern und Jugendlichen im Alter von 6 bis unter 25 Jahren",
 				"unit":"",
 				"average":7.2
 			},
@@ -48,14 +48,14 @@
 		"indikatoren":{
 			"B1":{
 				"name":"B1",
-				"text-sm":"EW > 18 J",
+				"text-sm":"EW < 18 J",
 				"text-lg":"Anteil der Einwohner/innen (EW) unter 18 Jahren an EW gesamt",
 				"unit":"%",
 				"average":15.7
 			},
 			"B2":{
 				"name":"B2",
-				"text-sm":"EW <= 65 J",
+				"text-sm":"EW >= 65 J",
 				"text-lg":"Anteil der EW von 65 Jahren und älter an EW gesamt",
 				"unit":"%",
 				"average":19.1
@@ -70,7 +70,7 @@
 		"indikatoren":{
 			"C1":{
 				"name":"C1",
-				"text-sm":"Wohndauer < 5 J.",
+				"text-sm":"Wohndauer > 5 J.",
 				"text-lg":"Anteil der Einwohner/innen mit einer Wohndauer über 5 Jahre an derselben Adresse",
 				"unit":"%",
 				"average":64.6
@@ -84,7 +84,7 @@
 			},
 			"C3":{
 				"name":"C3",
-				"text-sm":"Wanderungssaldo EW < 6",
+				"text-sm":"Wanderungssaldo EW unter 6 Jahren",
 				"text-lg":"Wanderungssaldo Einwohner/innen unter 6 Jahren je 100 Einwohner/innen unter 6 Jahren",
 				"unit":"(je 100 Einwohner unter 6 Jahren)",
 				"average":1.0
@@ -99,7 +99,7 @@
 			"D1":{
 				"name":"D1",
 				"text-sm":"Sozialversicherungs- pflichtige",
-				"text-lg":"Anteil der sozialversicherungspfl. Beschäftigten am Wohnort an Einwohnern/innen im Alter 15 bis unter 65 Jahre",
+				"text-lg":"Anteil der sozialversicherungspfl. Beschäftigten an Einwohnern/innen im Alter 15 bis unter 65 Jahre",
 				"unit":"%",
 				"average":51.3
 			},
@@ -134,7 +134,7 @@
 			"D6":{
 				"name":"D6",
 				"text-sm":"Empfänger/innen von Grundsicherun >=65",
-				"text-lg":"Anteil Empfänger/innen von Grundsicherung (außerhalb von Einrich-tungen) nach SGB XII im Alter von 65 Jahren und älter an Einwohner/innen dieser Altersgruppe",
+				"text-lg":"Anteil Empfänger/innen von Grundsicherung (außerhalb von Einrichtungen) nach SGB XII im Alter von 65 Jahren und älter an Einwohner/innen dieser Altersgruppe",
 				"unit":"%",
 				"average":5.5
 			}					
@@ -177,7 +177,7 @@
 			"E6":{
 				"name":"E6",
 				"text-sm":"Schüler/innen mit Lernmittelkosten- befreiung",
-				"text-lg":"Anteil Schüler/innen mit Lernmittelkostenbefreiung an den Schüler/innen der öff. Grundschulen",
+				"text-lg":"Anteil Schüler/innen mit Lernmittelkosten- befreiung an den Schüler/innen der öff. Grundschulen",
 				"unit":"%",
 				"average":38.0
 			},
