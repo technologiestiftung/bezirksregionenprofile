@@ -25,6 +25,7 @@ For detailed explanation on how things work, checkout the [Nuxt.js docs](https:/
 
 ## Before you generate the site
 
+#no folder changes needed anymore: don't change anything
 The project currently runs in the base folder 'tsb'. To change this, do the following:
 
 ```
@@ -33,7 +34,7 @@ The project currently runs in the base folder 'tsb'. To change this, do the foll
 # adapt @font-face urls in style/typography.css accordingly
 
 ```
-
+#no adjustment of the url needed anymore: don't change anything
 Adjust the url:
 
 ```
@@ -42,6 +43,7 @@ Adjust the url:
 
 ```
 
+#no roots need to be add: don't change anything
 Add the routes:
 
 ```
