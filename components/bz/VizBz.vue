@@ -57,13 +57,13 @@ export default {
     compareWidth(){
       let bzrBZ = "BZR";
       if(this.bzName == this.bzrSelected){
-        bzrBZ = "BZ";
+        bzrBZ = "Bezirk";
       }
 
       // make plus in front of positive numbers to indicate that its x % MORE
       var addPlus = this.indikatorValuePercent > 0? "+" : ""
       const percentValue = " (" + addPlus + Math.round(this.indikatorValuePercent*10)/10 + "%)";
-      return this.compareSelected == "Berlin" ? bzrBZ + percentValue : "BZR" + percentValue;
+      return this.compareSelected == "Berlin" ? bzrBZ + percentValue : "Bezirksregion" + percentValue;
     }
   },
   methods: {
@@ -117,12 +117,12 @@ export default {
 
       }else{//if positive value
 
-        // if the value is larger than +100% then only draw the line until +105%
-        const linePosition = this.indikatorValuePercent <= 100?  (this.indikatorValuePercent / 2) + 50 + "%" : 105 + "%"
+        // if the value is larger than +100% then only draw the line until +125%
+        const linePosition = this.indikatorValuePercent <= 100?  (this.indikatorValuePercent / 2) + 50 + "%" : 125 + "%" //line +25%
         
         d3.select('#'+this.id + " .ani-rect").transition()
             .duration(animationDuration)
-            .attr("width",  this.indikatorValuePercent <= 100 ?  this.indikatorValuePercent / 2 + "%" : 55 + "%")
+            .attr("width",  this.indikatorValuePercent <= 100 ?  this.indikatorValuePercent / 2 + "%" : 75 + "%") //fill out +25%
             .attr("x","50%");
 
         d3.select('#'+this.id + " .bzr").transition()

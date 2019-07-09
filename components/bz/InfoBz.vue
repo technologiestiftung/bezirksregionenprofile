@@ -331,7 +331,7 @@ export default {
     margin-top: 2.2em;
 
     .viz{
-      flex-basis: calc(33% - 20px);;
+      flex-basis: calc(50% - 20px);; //50% changed width 
       margin: 10px;
       padding-bottom: 15px;
       background-color: white;
