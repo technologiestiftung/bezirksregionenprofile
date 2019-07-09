@@ -21,7 +21,7 @@
 			},
 			"A6":{
 				"name":"A6",
-				"text-sm":"Kindertagesbetreuung unter 6 Jahren",
+				"text-sm":"Kindertagesbetreuung unter 7 Jahren",
 				"text-lg":"Anteil der betreuten Kinder (Wohnort Kind) in öffentlich geförderter Kindertagesbetreuung an Kindern unter 6 Jahren",
 				"unit":"%",
 				"average":63.3
@@ -30,7 +30,7 @@
 				"name":"A7",
 				"text-sm":"Jugendfreizeit- einrichtungen",
 				"text-lg":"Relation der Plätze in Jugendfreizeit- einrichtungen zu Kindern und Jugendlichen im Alter von 6 bis unter 25 Jahren",
-				"unit":"",
+				"unit":"(je 100 EW von 6 bis unter 25 Jahren)",
 				"average":7.2
 			},
 			"A8":{
@@ -42,20 +42,20 @@
 			}
 		}
 	},
-	"2":{"name":"Demographie",
+	"2":{"name":"Demografie",
 		"class":"indGr2",
 		"id":"2",
 		"indikatoren":{
 			"B1":{
 				"name":"B1",
-				"text-sm":"EW < 18 Jahre",
+				"text-sm":"EW unter 18 Jahren",
 				"text-lg":"Anteil der Einwohner/innen (EW) unter 18 Jahren an EW gesamt",
 				"unit":"%",
 				"average":15.7
 			},
 			"B2":{
 				"name":"B2",
-				"text-sm":"EW >= 65 Jahre",
+				"text-sm":"EW im Alter von mind. 65 Jahre",
 				"text-lg":"Anteil der EW von 65 Jahren und älter an EW gesamt",
 				"unit":"%",
 				"average":19.1
@@ -84,7 +84,7 @@
 			},
 			"C3":{
 				"name":"C3",
-				"text-sm":"Wanderungssaldo EW unter 6 Jahren",
+				"text-sm":"Wanderungssaldo der EW unter 6 Jahren",
 				"text-lg":"Wanderungssaldo Einwohner/innen unter 6 Jahren je 100 Einwohner/innen unter 6 Jahren",
 				"unit":"(je 100 Einwohner unter 6 Jahren)",
 				"average":1.0
@@ -99,14 +99,14 @@
 			"D1":{
 				"name":"D1",
 				"text-sm":"Sozialversicherungs- pflichtige",
-				"text-lg":"Anteil der sozialversicherungspfl. Beschäftigten an Einwohnern/innen im Alter 15 bis unter 65 Jahren",
+				"text-lg":"Anteil der sozialversicherungspfl. Beschäftigten an Einwohnern/innen im Alter 15 bis 65 Jahren",
 				"unit":"%",
 				"average":51.3
 			},
 			"D2":{
 				"name":"D2",
 				"text-sm":"Arbeitslose",
-				"text-lg":"Anteil Arbeitsloser nach SGB II und SGB III an Einwohnern/innen im Alter 15 bis unter 65 Jahren",
+				"text-lg":"Anteil Arbeitsloser nach SGB II und SGB III an Einwohnern/innen im Alter 15 bis 65 Jahren",
 				"unit":"%",
 				"average":6.7
 			},
@@ -133,7 +133,7 @@
 			},
 			"D6":{
 				"name":"D6",
-				"text-sm":"Empfänger/innen von Grundsicherun >=65 Jahre",
+				"text-sm":"Empfänger/innen von Grundsicherung >=65 Jahre",
 				"text-lg":"Anteil Empfänger/innen von Grundsicherung (außerhalb von Einrichtungen) nach SGB XII im Alter von 65 Jahren und älter an Einwohner/innen dieser Altersgruppe",
 				"unit":"%",
 				"average":5.5
