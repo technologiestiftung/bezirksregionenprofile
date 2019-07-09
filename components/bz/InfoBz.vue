@@ -48,7 +48,7 @@
             
             <b>{{indikator['name']}}</b><div :class="['ampel','phase' + indDataParsed[indikator.name].phase]"></div><br>
             <div class="info-text">{{indikator['text-sm']}}</div>
-            <i class="icon-info-circled ind-info" @mouseover="showTooltip(index)" @mouseout="hideTooltip"/>
+            <i class="   ind-info" @mouseover="showTooltip(index)" @mouseout="hideTooltip"/>
             <div :class="['tooltip', infoVisible==index?'visible':'']">
               {{indikator['text-lg'] + ': '}} <b>{{indDataParsed[indikator.name].val}}</b> {{indikator['unit']}} 
 

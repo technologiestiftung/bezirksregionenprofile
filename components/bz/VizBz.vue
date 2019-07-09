@@ -52,7 +52,7 @@ export default {
       // if(this.bzName == this.bzrSelected){
       //   bzrBZ = "BZ";
       // }
-      return this.compareSelected == "Berlin" ? "Berlin" : "BZ";
+      return this.compareSelected == "Berlin" ? "Ø Berlin" : "Ø Bezirk"; 
     },
     compareWidth(){
       let bzrBZ = "BZR";
