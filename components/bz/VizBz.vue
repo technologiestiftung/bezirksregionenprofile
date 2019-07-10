@@ -6,6 +6,7 @@
   <svg :id="id">
 
       <rect x="0%" y="0%" width="100%" height="100%" class="background-rect"/> 
+
       <rect x="50%" y="0%" width="0%" height="100%" :class="[activeIndClass, 'ani-rect']"/> 
 
       <!-- delete label min and max as long as it is not correct with data -->
@@ -13,13 +14,19 @@
       <text x="100%" y="0%" class="label-top"></text> <!-- former min label -->
       <text x="100%" y="0%" class="label-top"></text>
 
+      <!-- postion of compare name (above the chart) -->
       <text x="50%" y="0%" class="label-top static" :id="getCompareName">{{getCompareName}}</text>
+      <!-- postion of choosen area (below chart) -->
       <text x="50%" y="100%" :class="[activeIndClass, 'label', 'bzr']">{{compareWidth}}</text>
 
+      <!-- postion of compare line: 50% is in the middle -->
       <line x1="50%" x2="50%" y1="100%" y2="0%" :class="[activeIndClass, 'compare-line']"></line>
 
-      <line x1="0%" x2="0" y1="100%" y2="0%" class="tick"></line>
+      <!-- left line  -->
+      <line x1="0%" x2="0%" y1="100%" y2="0%" class="tick"></line>
+      <!-- middle line  -->
       <line x1="50%" x2="50%" y1="100%" y2="0%" class="tick"></line>
+      <!-- right line  -->
       <line x1="100%" x2="100%" y1="100%" y2="0%" class="tick"></line>
 
   </svg> 
@@ -169,7 +176,7 @@ export default {
 
   svg{
 
-    width: 120px;
+    width: 180px; //increased dimensions of barchart from 120px
     height: 120px;
     overflow:visible;
     margin:10px;

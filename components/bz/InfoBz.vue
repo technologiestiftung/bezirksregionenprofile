@@ -49,12 +49,15 @@
             <b>{{indikator['name']}}</b><div :class="['ampel','phase' + indDataParsed[indikator.name].phase]"></div><br>
             <div class="info-text">{{indikator['text-sm']}}</div>
             <!-- icon-info-circled nnecessary to show little button -->
-            <!-- opens info text by click -->
-            <i class="icon-info-circled ind-info" @click="showTooltip(index)" @mouseout="hideTooltip"/>
+            <!-- opens info text by click and sets status of isInfoVisible to true-->
+            <i class="icon-info-circled ind-info" @click="showTooltip(index)"/> 
+            <!-- closes info text by click -->
+            <i class="icon-info-circled ind-info" v-show="isInfoVisible" @click="hideTooltip" />
             <div :class="['tooltip', infoVisible==index?'visible':'']">
               {{indikator['text-lg'] + ': '}} <b>{{indDataParsed[indikator.name].val}}</b> {{indikator['unit']}} 
 
             </div>
+
             
           </div>
 
@@ -166,7 +169,8 @@ export default {
       }
 
     },
-    data(){
+    // by default
+    data(){ 
         return{
           activeInd :1,
           activeIndClass:"indGr1",
@@ -174,7 +178,8 @@ export default {
           compareSelected:"Berlin",
           showDropdown:false,
           isModalVisible: false,
-          infoVisible:""
+          isInfoVisible: false,
+          infoVisible: false
         }
     },
     // props: ["mainColor"],
@@ -207,9 +212,11 @@ export default {
       },
       showTooltip(id){
         this.infoVisible = id;
+        this.isInfoVisible = true;
       },
       hideTooltip(){
-        this.infoVisible = "";
+        this.infoVisible = false;
+        this.isInfoVisible = false;
       }
 
     },
@@ -359,7 +366,7 @@ export default {
 
       .tooltip{
         background-color: #fff;
-        width: 150px;
+        width: 200px; //increased from 150px
         position: absolute;
         right: 0px;
         top: 20px;
@@ -395,7 +402,7 @@ export default {
 
       .ampel{
         margin-left:.7em;
-        margin-top: 1px;
+        margin-top: 3px; //increasde from 1px
         position: absolute;
         // transition:.3s;
       }
