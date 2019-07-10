@@ -44,12 +44,13 @@
           >
 
 
-
           <div class="viz-text">
             
             <b>{{indikator['name']}}</b><div :class="['ampel','phase' + indDataParsed[indikator.name].phase]"></div><br>
             <div class="info-text">{{indikator['text-sm']}}</div>
-            <i class="icon-info-circled ind-info" @mouseover="showTooltip(index)" @mouseout="hideTooltip"/>
+            <!-- icon-info-circled nnecessary to show little button -->
+            <!-- opens info text by click -->
+            <i class="icon-info-circled ind-info" @click="showTooltip(index)" @mouseout="hideTooltip"/>
             <div :class="['tooltip', infoVisible==index?'visible':'']">
               {{indikator['text-lg'] + ': '}} <b>{{indDataParsed[indikator.name].val}}</b> {{indikator['unit']}} 
 
@@ -332,7 +333,7 @@ export default {
     margin-top: 2.2em;
 
     .viz{
-      flex-basis: calc(50% - 20px);; //50% changed width 
+      flex-basis: calc(50% - 20px);; //changed width of viz-boxes
       margin: 10px;
       padding-bottom: 15px;
       background-color: white;
