@@ -1,10 +1,10 @@
 ref,type,datasource,content
-1,titel,,Stadträumliche Struktur
+1,titel,,"Stadträumliche Struktur"
 1,text,,"Absatz 1 - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
 1,text,,"Absatz 2 - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
 1,table,taballe_1,tabelle_1
 1,text,,"Absatz 3 - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
 1,titel-sm,,1.1. Teltowkanal in Marienfelde 
 1,text,,"Absatz 4 - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
-2,titel,,Demografische Struktur
+2,titel,,"Demografische Struktur"
 2,text,,"Absatz 1 - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
