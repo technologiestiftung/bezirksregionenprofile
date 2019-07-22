@@ -1,5 +1,6 @@
-LOR-ID,Name,Bevölkerung
-2212,Name Eins,45
-2212,Name Zwei,778
-2246,Name Drei,46
-4247,Name Vier,47
+LOR-ID,LOR-Name,Durchschnittsalter,< 18-Jährige,Anteil < 18-Jährige,Anteil < 18-J. t-5,65-Jährige und Ältere,Anteil 65-Jährige und Ältere,Anteil 65-J. und Ältere t-5
+07030301,Friedenau,43.8,3790,15.7,0.2,4574,19,2.2
+07030302,Ceciliengärten,43.3,1419,15.4,-0.2,1698,18.4,1.4
+07030303,Grazer Platz,40.6,2034,16.7,-0.9,1808,14.8,0.7
+070303,Friedenau,42.8,7243,15.9,-0.2,8080,17.8,1.6
+07,Tempelhof-Schöneberg,44.2,40713,14.9,0.4,70734,20.7,0.5
