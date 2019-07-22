@@ -6,7 +6,12 @@
 
     	<h4>Wie Geht es den Berliner Bezirken?</h4>
 
-    	<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+    	<p>In welchem Kiez gibt es viele Spielplätze? Wo ziehen überdurchschnittlich viele Berliner*innen hin?
+
+Der Ist-Zustand der Berliner Bezirke - und der kleingliedrigeren Bezirksregionen - wird in sogenannten Bezirks(regionen)profilen festegehalten. 
+Anhand von Kernindikatoren zu den Themen "Wohnen", "Demographie", "Dynamik", "Arbeitsmarkt" und "Kinder und Jungend" wird eine vergleichbare Datengrundlage zu sozialraumorientierten Themen geschaffen. 
+In dieser Anwendung werden diese Kernindikatoren interaktiv aufbereitet und - soweit vorliegend - die ausführlichen Berichte der Bezirke bereitgestellt.</p>
+<p><b>Klicke auf einen Bezirk, über den Du mehr erfahren möchtest.</b>
       <p class="more-link"><nuxt-link to="/about">Mehr erfahren...</nuxt-link></p>
     	
     </div>
