@@ -75,7 +75,7 @@
       </div>
 
 
-      <div class="info" @click="showModal" ><i class="icon-info-circled" /> Legende</div>
+      <div class="info" @click="showModal" ><i class="icon-info-circled" /> Hilfe</div>
 
       <modal v-show="isModalVisible" @close="closeModal" />
 
