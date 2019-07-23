@@ -39,7 +39,25 @@
           class="modal-body"
           id="modalDescription"
         >
-          <img src="img/graf-info.png">
+        <div>
+          <p>
+            Für jeden Kernindikator wird der Wert des Bezirks (der Bezirksregion) mit 
+            Berlin (bzw. für Bezirksregionen wahlweise mit Berlin oder dem Bezirk) verglichen. 
+            Die Abweichung vom Vergleichswert wird in Prozent angezeigt.
+          </p>
+        </div>
+        <div align="center">
+            <img src="img/vgl-berlin.png">  
+        </div>
+        <div>
+          <p>
+             Ein Hover über das "i" bei jedem Kernindikator zeigt eine ausführlichere Erklärung des Indikators sowie den genauen Wert an.
+          </p>
+        </div>
+        <div align="center">
+          <img src="img/info-i.png">  
+        </div>
+        <!-- <img src="img/graf-info.png"> -->
 
         </section>
 
@@ -111,6 +129,6 @@
   }
 
   img{
-    width: 50vw;
+    width: 12vw;
   }
 </style>
