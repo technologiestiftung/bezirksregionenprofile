@@ -23,6 +23,13 @@
       </ol>
       </p>
       <br>
+      <h2>Datengrundlage</h2>
+      <p>
+        Die Daten der Kernindikatoren stammen von xxx und sind hier verfügbar xxx.
+        Die Datenprofile der einzelnen Bezirksregionen stammen von den jeweiligen Datenkoordinator*innen.
+        Auf die ursprünglichen Profile wird auf der Seite der jeweiligen Bezirksregion verlinkt.
+      </p>
+      <br>
       <h2>Bezirksregionenprofile</h2>
       <h3>Rahmen für integrierte Entwicklung</h3>
       <p> Die Bezirksregionenprofile sind ein wesentlicher Baustein für die Umsetzung der Sozialraumorientierung im Kontext der Rahmenstrategie Soziale Stadt(teil)Entwicklung. Sie beschreiben den Ist-Zustand und die Entwicklung der Bezirksregionen. Sie bilden eine einheitliche und (berlinweit) abgestimmte Arbeits- und Verständigungsgrundlage für ein sozialraumorientiertes, gemeinsames und abgestimmtes Handeln von Verwaltung, Politik, lokalen Akteur_en und Bewohner_innen. Mit ihnen wird ein Überblick über die vielschichtigen Herausforderungen und ungleichzeitigen Entwicklungsprozesse auf Bezirksregionenebene wie auch ein aktueller Überblick über die Fachplanungen ermöglicht.
