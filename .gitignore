@@ -1,3 +1,9 @@
+.ipynb_checkpoints
+*.xlsx
+*.xls
+raw_bz_ki.csv
+
+
 # dependencies
 node_modules
 
