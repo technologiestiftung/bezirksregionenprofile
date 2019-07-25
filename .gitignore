@@ -1,8 +1,11 @@
-.ipynb_checkpoints
-*.xlsx
-*.xls
+# data specific filees
 raw_bz_ki.csv
+raw_bzr_ki.xlsx
+LOR-Schluesselsystematik_2019.xls
+sources.txt
 
+# python
+.ipynb_checkpoints
 
 # dependencies
 node_modules

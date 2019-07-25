@@ -1,11 +1,15 @@
 <template>
-  <section v-if='bzData && indData'>
+  <section v-if="bzData && indData">
     <intro-bz :name="bezirkName" :nameClass="nameClass" :introData="bzData"></intro-bz>
     <div class="content-main">
       <map-bz :bezirk="bezirkName" v-on:bzRChanged="changeBzR"></map-bz>
-      <info-bz :bzrSelected="bzrSelected" :bzName="bzData.name" :indData="indData" :indDataBz="indDataBz"></info-bz>
+      <info-bz
+        :bzrSelected="bzrSelected"
+        :bzName="bzData.name"
+        :indData="indData"
+        :indDataBz="indDataBz"
+      ></info-bz>
     </div>
-
   </section>
 </template>
 
@@ -66,8 +70,11 @@
           axios.get(url + '/data/bz-data/'+this.$route.params.bezirk+'/bzr-data/'+toUrl(name)+'/indikatoren.csv').then((response)=>
             this.indData = toIndikatorenJSON(Papa,response.data)
           )
-
-        }
+          const me = this;
+          axios.get(url + '/data/bz-data/'+this.$route.params.bezirk+'/indikatoren.csv').then(function(response){
+            me.indDataBz = toIndikatorenJSON(Papa,response.data);
+            })
+          }
 
       },
       getBzData(){ //
@@ -104,8 +111,8 @@
 </script>
 
 <style lang="scss" scoped>
-  .progress > * {
-    max-height: 150px;
-    max-width: 150px;
-  }
+.progress > * {
+  max-height: 150px;
+  max-width: 150px;
+}
 </style>

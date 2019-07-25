@@ -20,7 +20,7 @@
           <!-- <li><a href="mailto:xxx@xxx.de"><i class="icon-mail" /></a></li> -->
           <li><a target="_blank" href="https://twitter.com/tsbberlin"><i class="demo-icon icon-twitter" /></a></li>
           <li><a target="_blank" href="https://www.facebook.com/Technologiestiftung/"><i class="demo-icon icon-facebook-squared" /></a></li>
-          <li><a target="_blank" href="https://github.com/"><i class="demo-icon icon-github-circled" /></a></li>
+          <li><a target="_blank" href="https://github.com/technologiestiftung/"><i class="demo-icon icon-github-circled" /></a></li>
         </ul>
       </li>
     </ul>

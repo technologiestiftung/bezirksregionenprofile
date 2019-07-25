@@ -8,7 +8,6 @@ module.exports = function toIndikatorenJSON (Papa,data) {
 		newData[jsonData[i].name].val = jsonData[i].wert;
 		newData[jsonData[i].name].phaseB =  jsonData[i].phase_b;
 		newData[jsonData[i].name].phaseBz =  jsonData[i].phase_bz;
-		newData[jsonData[i].name].average =  jsonData[i].average;
 	}
 
 	return newData;

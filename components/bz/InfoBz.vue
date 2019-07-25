@@ -75,7 +75,7 @@
       </div>
 
 
-      <div class="info" @click="showModal" ><i class="icon-info-circled" /> Legende</div>
+      <div class="info" @click="showModal" ><i class="icon-info-circled" /> Hilfe</div>
 
       <modal v-show="isModalVisible" @close="closeModal" />
 
@@ -134,8 +134,7 @@ export default {
 
           }else{ //if compared with BZ
 
-
-            const averageVal = this.indDataBz[x].average; //compare with the data from the BZ not BZR
+            const averageVal = this.indDataBz[x].val; //compare with the data from the BZ not BZR
             const currentVal = newIndData[x].val;
             const deviationVal = ((currentVal-averageVal)/averageVal) * 100; //Abweichung vom Durchschnittswert
 
