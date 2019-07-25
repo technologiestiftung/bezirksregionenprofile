@@ -172,7 +172,7 @@ export default {
           compareSelected:"Berlin",
           showDropdown:false,
           isModalVisible: false,
-          infoVisible:""
+          infoVisible: true
         }
     },
     // props: ["mainColor"],
