@@ -81,7 +81,7 @@
       getSourceUrl(){
         //get the url where the vis data is
         const url = process.env.NODE_ENV === 'production' ? this.url : this.urldev;
-        return '/data/bz-data/' + toUrl(this.getBzName) + '/bzr-data/' +this.$route.params.bezirksregion+'/data/';
+        return url + '/data/bz-data/' + toUrl(this.getBzName) + '/bzr-data/' +this.$route.params.bezirksregion+'/data/';
       }
 
     },
