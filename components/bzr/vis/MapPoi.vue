@@ -67,7 +67,7 @@ export default {
                 "type": "Feature",
                 "geometry": {
                     "type": "Point",
-                    "coordinates": [this.visData[i].lat, this.visData[i].lng]
+                    "coordinates": [this.visData[i].lng, this.visData[i].lat]
                 },
                 "properties": {
                     "text": this.visData[i].text,
