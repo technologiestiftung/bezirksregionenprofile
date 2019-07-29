@@ -66,7 +66,8 @@
 
         }else{//if bzr then load new data from bzr source
 
-          const url = process.env.NODE_ENV === 'production' ? this.url : this.urldev;
+          //const url = process.env.NODE_ENV === 'production' ? this.url : this.urldev;
+          const url = ''
           axios.get(url + '/data/bz-data/'+this.$route.params.bezirk+'/bzr-data/'+toUrl(name)+'/indikatoren.csv').then((response)=>
             this.indData = toIndikatorenJSON(Papa,response.data)
           )
@@ -78,14 +79,16 @@
 
       },
       getBzData(){ //
-        const url = process.env.NODE_ENV === 'production' ? this.url : this.urldev;
+        //const url = process.env.NODE_ENV === 'production' ? this.url : this.urldev;
+        const url = ''
         axios.get(url + '/data/bz-data/'+this.$route.params.bezirk+'/bz-overview.json').then((response)=>
           this.bzData = response.data
         )
       },
       getIndData(){ //get the info about Kernidikatoren such as the description etc
         const me = this;
-        const url = process.env.NODE_ENV === 'production' ? this.url : this.urldev;
+        //const url = process.env.NODE_ENV === 'production' ? this.url : this.urldev;
+        const url = ''
         axios.get(url + '/data/bz-data/'+this.$route.params.bezirk+'/indikatoren.csv').then(function(response){
           const responseData = toIndikatorenJSON(Papa,response.data);
           me.indData = responseData;
