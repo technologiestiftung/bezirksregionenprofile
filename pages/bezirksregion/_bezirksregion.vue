@@ -80,9 +80,8 @@
       },
       getSourceUrl(){
         //get the url where the vis data is
-        //const url = process.env.NODE_ENV === 'production' ? this.url : this.urldev;
-        const url = ''
-        return url + '/data/bz-data/' + toUrl(this.getBzName) + '/bzr-data/' +this.$route.params.bezirksregion+'/data/';
+        const url = process.env.NODE_ENV === 'production' ? this.url : this.urldev;
+        return '/data/bz-data/' + toUrl(this.getBzName) + '/bzr-data/' +this.$route.params.bezirksregion+'/data/';
       }
 
     },
@@ -91,8 +90,7 @@
     },
     methods:{
       getBzrData(){ //
-        //const url = process.env.NODE_ENV === 'production' ? this.url : this.urldev;
-        const url = ''
+        const url = process.env.NODE_ENV === 'production' ? this.url : this.urldev;
         axios.get(url + '/data/bz-data/' + toUrl(this.getBzName) + '/bzr-data/' +this.$route.params.bezirksregion+'/bzr-overview.json').then((response)=>
           this.bzrIntroData = response.data
         )
@@ -101,8 +99,7 @@
         this.themaSelected=themaId;
       },
       getDatenblattData(){ //
-        //const url = process.env.NODE_ENV === 'production' ? this.url : this.urldev;
-        const url = ''
+        const url = process.env.NODE_ENV === 'production' ? this.url : this.urldev;
         axios.get(url + '/data/bz-data/' + toUrl(this.getBzName) + '/bzr-data/' +this.$route.params.bezirksregion+'/datenblatt.csv').then((response)=>
           this.datenblatt = Papa.parse(response.data,{header: true}).data
         )
