@@ -67,9 +67,10 @@ figure > img {
 }
 
 table {
-  width: 100%;
+  width: auto;
   border-spacing: 0;
   border-collapse: separate;
+  text-align: right;
 
   tr, td, th {
     padding: 0;
