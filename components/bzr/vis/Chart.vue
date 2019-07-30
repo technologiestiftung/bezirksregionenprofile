@@ -74,8 +74,9 @@ export default {
           // or
           //width: 100 // this makes bar width 100px
       },
+      // added some more colours --> tsb blue / $color-accent / $color-indGr2 / tsb red / light red / even mor light red / dark grey
       color: {
-        pattern: ['#1E3791','#E60032']
+        pattern: ['#1E3791','#04A6F0 ', '#64B9E6', '#E60032', '#ff4d73', '#ff99af', '#999999']
       },
       legend: {
           show: false

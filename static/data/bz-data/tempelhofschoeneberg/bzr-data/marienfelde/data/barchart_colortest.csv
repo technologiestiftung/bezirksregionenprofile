@@ -1,0 +1,4 @@
+label,ylabel,xlabel,Montag,Dienstag,Mittwoch,Donnerstag,Freitag,Samstag ,Sonntag
+KW 01,Arbeitszeit in Stunden,Wochentage je Kalenderwoche,8,9,8,4,4,2,0.5
+KW 02,,,Wed May 08 2019 00:00:00 GMT+0200 (MESZ),8,4,6,6,0.5,0.5
+KW 03,,,8,6,10,4,2,0.5,4
