@@ -136,8 +136,8 @@ export default {
   // }
 
   th, td {
-    min-width: 120px;
-    padding: 10px 20px;
+    min-width: 70px;
+    padding: 5px 5px;
   }
 
   th.active {
