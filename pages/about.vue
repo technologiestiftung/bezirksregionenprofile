@@ -43,20 +43,58 @@
       <span id="dots">...</span>
       </p>
       
-      <!-- TEST RUBRIK - NOT WORKING -->
-      <span id="more">
-      <h4>Wohnen</h4>
-      <p>Die Rubrik Wohnen beschreibt die Merkmale der Bezirksregion als Wohnort.</p>
-      <h5>Kernindikator A4 - Grünanlagen</h5>
-      <p>
-      Gibt das Verhältnis zwischen öffentlichen Grünanlagen und Einwohner/innen an.
-      Die Angabe erfolgt in Quadratmeter pro Einwohner/in. Als öffentliche Grünanlagen werden dabei folgende Grünanlagen berücksichtigt: Grünanlagen in Wohngebieten, Parks und Erholungsgebiete, Stadtplätze, Ufergrünzüge, Badewiesen und Kinderspielplätze.
-      Nicht eingerechnet werden die eintrittspflichtigen Anlagen (Britzer Garten, Botanischer Garten, Erholungspark Marzahn, Naturpark Schöneberger Südgelände, Botanische Anlage Blankenfel-de, Tierpark, Zoologischer Garten).
-      </p>
-      </span>
-      <!-- span "more" closes -->
+        <!-- TEST RUBRIK - NOT WORKING -->
+        <div id="more">
+          <h4>Wohnen</h4>
+          <p>Die Rubrik Wohnen beschreibt die Merkmale der Bezirksregion als Wohnort.</p>
+            <h5>Kernindikator A4 - Grünanlagen</h5>
+            <p>
+            Gibt das Verhältnis zwischen öffentlichen Grünanlagen und Einwohner/innen an.
+            Die Angabe erfolgt in Quadratmeter pro Einwohner/in. Als öffentliche Grünanlagen werden dabei folgende Grünanlagen berücksichtigt: Grünanlagen in Wohngebieten, Parks und Erholungsgebiete, Stadtplätze, Ufergrünzüge, Badewiesen und Kinderspielplätze.
+            Nicht eingerechnet werden die eintrittspflichtigen Anlagen (Britzer Garten, Botanischer Garten, Erholungspark Marzahn, Naturpark Schöneberger Südgelände, Botanische Anlage Blankenfel-de, Tierpark, Zoologischer Garten).
+            </p>
+            <h5>Kernindikator A5 - Spielplatzfläche</h5>
+            <p>
+              Gibt das Verhältnis zwischen anrechenbaren öffentlichen Spielplätzen und Einwohner/innen an.
+              Die Angabe erfolgt in Quadratmeter pro Einwohner/in. Angerechnet auf die Versorgung mit öffentlichen Spielplatzflächen werden alle Spielplatzflä-chen, die vom Land Berlin unterhalten werden.
+              Spielanlagen auf Schulhöfen werden angerechnet, wenn ihre Benutzung außerhalb der Schulzeit gesichert ist.
+              Nicht angerechnet werden grundsätzlich die Waldspielplätze und die als Kinderbauernhöfe geführten Anlagen.
+              Betrachtet wird die <b>Nettospielfläche</b>, das heißt direkt bespielbare Flächen ohne das Rahmengrün. In Berlin gilt gemäß § 4 Kinderspielplatzgesetz ein Richtwert von 1,0 qm nutzbarer Fläche (Nettospielfläche) je EW. 
+            </p> 
+            <h5>Kernindikator A6 - Kinderbetreeung für Kinder unter 7 Jahren</h5>
+            <p>
+              Gibt an, wie viel Prozent der Kinder unter 7 Jahren eine öffentlich geförderte Kindertagesbetreuung in Kindertageseinrichtungen oder Kindertagespflegeeinrichtungen in Anspruch nehmen.
+              Die Zuordnung bezieht sich auf den Wohnort des Kindes, nicht auf den Standort der Einrichtung.
+              Zu den öffentlich geförderten Kindertagsbetreuungen zählen in Berlin Kindertageseinrichtungen (Kitas).
+              Dazu gehören Krippen und Kindergärten.
+              Seit dem 01.08.2018 ist die Kita für alle kostenfrei und nur der Verpflegungsanteil in Höhe von 23 € ist weiterhin zu zahlen.
+              Im Zusammenspiel mit der Änderung des Schuleintrittalters (Eintritt um 3 Monate verschoben und nur möglich, wenn Kind zum 30. September eines Jahres das 6. Lebensjahr vollendet) ist in Zukunft mit einem Anstieg der Kindertagsbetreuungen zu rechnen.
+            </p>
+            <h5>Kernindikator A7 - Jugendfreizeiteinrichtungen</h5>
+            <p>
+              Gibt an, für wie viel Prozent der Einwohner/innen im Alter von 6 bis unter 25 Jahren Plätze in öffentlichen und öffentlich geförderten Jugendfreizeiteinrichtungen zur Verfügun stehen.
+              Der Begriff „Jugendfreizeiteinrichtung“ (JFE) umfasst im Wesentlichen Orte der Offenen Kinder- und Jugendarbeit, d.h. Räume und Häuser mit einer Vielzahl unterschiedlicher Angebote wie bspw. Projekte, Gruppenarbeiten, Workshops oder Veranstaltungen.
+              Hauptzielgruppe sind die ca. 10- bis unter 18-Jährigen.
+              Gemäß Richtwert sollen für 11,4 Prozent der 6 bis unter 25-Jährigen Plätze in öffentlichen und öffentlich geförderten JFE's bereitgestellt werden.
+              Aus diesem Indikator lassen sich keine Aussagen im Hinblick auf Qualitäten, Personalsituation, interkulturelle Öffnung der Einrichtungen etc. ableiten.
+            </p> 
+            <h5>Kernindikator A8 - Straftaten</h5>
+            <p>
+              Gibt an, wie viele kiezbezogene Straftaten im Laufe eines betracheten Kalenderjahres je 100 Einwohner/innen begangen wurden.
+              Die Angabe erfolgt in Häufigkeitszahl (HZ) je 100 EW.
+              Als kiezbezogene Straftaten der Polizeilichen Krimimalstatistik (PKS) in Berlin werden aufgenommen: Automateneinbruch, Bedrohung, Einbruch in Kita/Jugendheim/Schule, Freiheitsberaubung, Keller- und Bodeneinbruch, Körperverletzung und Körperverletzung in der Öffentlichkeit, Misshandlung von Kindern und Schutzbefohlenen, Nötigung, Sachbeschädigung an Kfz, Widerstand gegen Vollstreckungsbeamte und Wohnungseinbruch.
+              Berücksichtig werden nur **kiezbezogene Straftaten mit Tatort**, wobei 90-95% aller in der PKS registrierten Straftaten zu den Bezirkregionen und Planungsräumen zugeordnet werden können.
+            </p> 
+          <h4>Demografie</h4>
+          <p>Die Rubrik Demografie beschreibt die demografische Struktur der Wohnbevölkerung.</p>
+          <h5>...</h5>
 
-      <button onclick="readMore()" id="myBtn">Alle Kernindikatoren anzeigen</button>
+
+
+        </div>
+        <!-- span "more" closes -->
+
+      <button @click="this.readMore" id="myBtn">Alle Kernindikatoren anzeigen</button>
 
       <br>
       <br>
@@ -100,7 +138,26 @@
   text-align: center;*/
 }
 
-#more {display: none;}
+#more {
+  display: none;
+  font-size: 80%;
+}
+
+#more p {
+  padding-left: 2em;
+  width: 98%;
+}
+
+#more h4 {
+  padding-top: 2em;
+  padding-left: 1.6em;
+}
+
+#more h5 {
+  padding-top: 1em;
+  padding-left: 1.9em;
+}
+
 
 #myBtn {
     background-color: #1E3791;
@@ -127,30 +184,34 @@
 
 
 <script>
+  export default {
+    name: 'About',
+    methods: {
+      readMore() {
+        console.log('inside read more');
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
 
-function readMore() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
+        console.log(dots, moreText, btnText);
 
-  if (dots.style.display !== "none"){
-    dots.style.display = "none";
-    btnText.innerHTML = "Weniger anzeigen";
-    moreText.style.display = "Alle Kernindikatoren anzeigen";
+        if (dots.style.display == "none") {
+          dots.style.display = "inline";
+          btnText.style.display = "Alle Kernindikatoren anzeigen";
+          moreText.style.display = "none";
+        }
+
+        else {
+          dots.style.display = "none";
+          btnText.innerHTML = "Weniger anzeigen";
+          moreText.style.display = "inline";
+        }
+      } 
+    },
+    // mounted() {
+    //   this.readMore();
+    // }
   }
-
-  else {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Weniger anzeigen";
-    moreText.style.display = "none";
-  }
-} 
-
-export default {
-
-}
-
-
 </script>
 
 
