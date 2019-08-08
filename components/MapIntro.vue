@@ -55,9 +55,6 @@ export default {
     methods:{
     onSelect(x){
 
-      console.log(x)
-
-
 
       let selectedBz = x.name;
 
