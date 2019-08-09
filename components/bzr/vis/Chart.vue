@@ -42,8 +42,6 @@ export default {
       newData.push(newArray);
     };
 
-    console.log("newData",newData,label)
-
     // document.getElementById(this.chartId).style.height = "250px";
     c3.generate({
       bindto: '#' + this.chartId,

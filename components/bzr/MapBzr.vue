@@ -63,8 +63,6 @@ export default {
           "features": selectedPlr
         }
 
-        console.log(selectedPlr)
-
         let selectedBbox = bbox(selectedBzR);
         selectedBbox = [[selectedBbox[0],selectedBbox[1]],[selectedBbox[2],selectedBbox[3]]]
 
