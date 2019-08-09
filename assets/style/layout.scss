@@ -136,7 +136,10 @@ $small-width: 1200px;
 
     .navigation{
       padding:$padding;
+      max-height: 70vh; //makes vertical navbar scrollable
+      overflow-y: auto; //makes vertical navbar scrollable
     }
+
   }
 
   .content-main-bzr-info{
