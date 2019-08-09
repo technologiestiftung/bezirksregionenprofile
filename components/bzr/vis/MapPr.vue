@@ -40,9 +40,13 @@ export default {
 
         //prepair the data
         const bezirksregion = this.bzrName;
-        let selectedPlr = this.planungsraeume.features.filter(function( obj ) {
+
+        // make deep copy, so the values dont override one another
+        let selectedPlr = JSON.parse(JSON.stringify(
+            this.planungsraeume.features.filter(function( obj ) {
           return obj.properties.BZRNAME == bezirksregion;
-        });
+        }))
+        )
 
         const mapColor = this.visData[0].color;
         const mapUnit = this.visData[0].einheit;
@@ -57,16 +61,22 @@ export default {
     		totalValue+=Number(this.visData[i].wert);
     	};
 
+        
+
     	//give each geom a value/wert
-    	maxValue = Math.max(...maxValue);
+        maxValue = Math.max(...maxValue);
+        let values = [];
     	for (var i = 0; i < selectedPlr.length; i++) {
-    		selectedPlr[i].properties.wert = mapData[Number(selectedPlr[i].properties.spatial_name)].wert / totalValue;
+            selectedPlr[i].properties.wert = mapData[Number(selectedPlr[i].properties.spatial_name)].wert / totalValue;
     	}
+        
+        console.log(selectedPlr[0].properties.wert)
 
         selectedPlr ={
           "type": "FeatureCollection",
           "features": selectedPlr
         }
+
 
         let selectedBbox = bbox(selectedPlr);
         selectedBbox = [[selectedBbox[0],selectedBbox[1]],[selectedBbox[2],selectedBbox[3]]];
@@ -118,10 +128,11 @@ export default {
                 "source":"planungsraeume",
                 "paint":{
                     "fill-color": mapColor,
-                    "fill-opacity": ["get","wert"]
+                    "fill-opacity": ["get", "wert"]
                 }
+                
             });
-            
+
         })
 
         // // Create a popup, but don't add it to the map yet.
@@ -133,6 +144,8 @@ export default {
 
 
         map.on('mousemove', 'planungsraeume', (e)=> {
+
+            
 
             // Change the cursor style as a UI indicator.
             // map.getCanvas().style.cursor = 'pointer';
