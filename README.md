@@ -101,6 +101,7 @@ About the csv structure:
 titel -> title
 titel-sm -> titel small
 text -> text
+image -> image
 barchart -> barchart
 map-pr -> map planungsräume / choropleth map
 linechart -> linechart 
