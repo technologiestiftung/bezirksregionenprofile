@@ -78,7 +78,7 @@
   
 </template>
 
-<style>
+<style scoped>
   #legend_s1{
     float: none;
   }
@@ -177,7 +177,7 @@
     border-radius: 2px;
   }
 
-  img{
+  img {
     width: 14vw;
     margin-top: -1em;
     margin-left: 2em;

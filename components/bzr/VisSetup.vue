@@ -8,7 +8,9 @@
     <h5 class="blatt-el-titel-sm" v-if="visInfo.type=='titel-sm'">{{visInfo.content}}</h5>
     <!-- Text -->
     <p class="blatt-el-text" v-if="visInfo.type=='text'" v-html="visInfo.content">{{visInfo.content}}</p>
-    <!-- Chart -->
+    <!-- Image -->
+    <img class="blatt-el-img" :src="'./data/images/' + visInfo.datasource" :alt="visInfo.content" v-if="visInfo.type=='image'">
+    <!-- Chart --> 
     <chart v-if="visInfo.type=='barchart' || visInfo.type=='linechart' || visInfo.type=='piechart'" :visData="visData" :chartId="chartId" :visType="visInfo.type"></chart>
     <!-- Table -->
     <tabelchart v-if="visInfo.type=='table'" :visData="visData"></tabelchart> 
@@ -56,7 +58,7 @@ export default {
   },
   methods: {
     getData(){
-      if(this.visInfo.datasource==""){
+      if((this.visInfo.datasource=="") || (this.visInfo.type == 'image')) {
         this.visData = true;
       }else{
         axios.get(this.sourceUrl + "/" + this.visInfo.datasource + '.csv').then((response)=>
@@ -84,6 +86,11 @@ export default {
     .blatt-el-titel{
       color: $tsb-darkblue;
       // font-family: $font-family-bold;
+    }
+
+    .blatt-el-img {
+      width: 100%;
+      height: auto;
     }
 
     .blatt-el-titel-sm{

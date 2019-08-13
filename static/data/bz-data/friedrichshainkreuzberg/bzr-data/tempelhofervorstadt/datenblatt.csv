@@ -11,9 +11,8 @@ ref,type,datasource,content
 2,linechart,kinder_verlauf,
 3,titel,,Beispiel Barchart
 3,barchart,kinder_alter,
-3,text,,<img src="/data/images/bz-ID_bezeichnender_name.png" alt="Beschreibung des Screenshots.">
+3,image,bz-ID_bezeichnender_name.png,Beschreibung des Screenshots.
 3,titel-sm,,"Wenn kein Bild gefunden wird, sieht man den Alternativtext:"
-3,text,,"<p style='text-align:center;'><img src='/data/images/test-img.png' alt='Alternativtext zum Bild' height='250' width=' auto'></p>"
 ,,,
 ,,,
 ,,,
