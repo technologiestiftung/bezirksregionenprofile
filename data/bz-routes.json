@@ -1,3 +1,14 @@
 {
-	"tempelhof-schoeneberg":{}
+	"mitte":{}, 
+	"friedrichshainkreuzberg":{}, 
+	"pankow":{},
+	"charlottenburgwilmersdorf":{}, 
+	"spandau":{}, 
+	"steglitzzehlendorf":{},
+	"tempelhofschoeneberg":{}, 
+	"neukoelln":{}, 
+	"treptowkoepenick":{},
+	"marzahnhellersdorf":{}, 
+	"lichtenberg":{}, 
+	"reinickendorf":{}
 }
