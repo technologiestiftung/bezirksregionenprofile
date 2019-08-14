@@ -13,6 +13,7 @@ ref,type,datasource,content
 3,barchart,kinder_alter,
 3,image,bz-ID_bezeichnender_name.png,Beschreibung des Screenshots.
 3,titel-sm,,"Wenn kein Bild gefunden wird, sieht man den Alternativtext:"
+3,image,falsche-url.png,Das ist ein Alternativtext zum Bild.
 ,,,
 ,,,
 ,,,
