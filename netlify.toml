@@ -3,6 +3,8 @@
   command = "npm run generate:production"
   publish = "dist"
 
+[build.environment]
+  NODE_OPTIONS = "--max_old_space_size=4096"
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
   #[[redirects]]

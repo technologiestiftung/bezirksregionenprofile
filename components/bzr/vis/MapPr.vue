@@ -70,7 +70,6 @@ export default {
             selectedPlr[i].properties.wert = mapData[Number(selectedPlr[i].properties.spatial_name)].wert / totalValue;
     	}
         
-        console.log(selectedPlr[0].properties.wert)
 
         selectedPlr ={
           "type": "FeatureCollection",

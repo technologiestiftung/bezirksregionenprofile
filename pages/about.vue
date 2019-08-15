@@ -188,12 +188,12 @@
     name: 'About',
     methods: {
       readMore() {
-        console.log('inside read more');
+        //console.log('inside read more');
         var dots = document.getElementById("dots");
         var moreText = document.getElementById("more");
         var btnText = document.getElementById("myBtn");
 
-        console.log(dots, moreText, btnText);
+        //console.log(dots, moreText, btnText);
 
         if (dots.style.display == "none") {
           dots.style.display = "inline";
