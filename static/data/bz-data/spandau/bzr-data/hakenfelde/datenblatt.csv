@@ -8,7 +8,7 @@ ref,type,datasource,content
 1,text,,Hier kann Herr Kruse die Tabelle beschreiben.
 1,map-poi,Haselhorst poi_Vorlage,
 1,text,,Die Einwohner dichte kan......
-1,map-poi,KG_POI1,KG: Poi in Hakenfelde
+1,map-prognostiziert,KG_POI1,KG: Poi in Hakenfelde
 1,barchart,KG_barchart,KG: Balkendiagramm
 1,linechart,Hasel_barchart_Vorlage,
 1,barchart,Hasel_barchart_Vorlage,
