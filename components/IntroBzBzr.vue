@@ -67,6 +67,11 @@ h5{
   text-transform: uppercase;
 }
 
+.intro-text p{
+  max-width: 100%;
+  padding-bottom: 0.8em;
+}
+
 .intro-text{
 
   display:block;
