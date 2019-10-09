@@ -98,10 +98,12 @@ small + p {
 
 table {
   thead {
+    table-layout: fixed;
     font-weight: bold;
     font-size: 0.8rem;
     letter-spacing: 0.05em;
     text-align: left;
+    word-wrap: break-word;
   }
 
   tbody {

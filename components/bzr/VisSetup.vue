@@ -89,7 +89,9 @@ export default {
     }
 
     .blatt-el-img {
-      width: 100%;
+      display: block;
+      margin: auto;
+      width: 65%;
       height: auto;
     }
 
